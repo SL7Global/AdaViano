@@ -73,7 +73,7 @@
       <a href="#certificates" style="color:#1A1A16">CERTIFICATES</a>
       <a href="#story" style="color:#1A1A16">STORY</a>
     </nav>
-    <a href="#rfq" style="background:#1A1A16;color:#F7F2E8;padding:13px 22px;font:600 11px/1 Karla,sans-serif;letter-spacing:.16em" style-hover="background:#C2601F">REQUEST A QUOTE</a>
+    <a href="#rfq" onClick="{{ goRfq }}" style="background:#1A1A16;color:#F7F2E8;padding:13px 22px;font:600 11px/1 Karla,sans-serif;letter-spacing:.16em" style-hover="background:#C2601F">REQUEST A QUOTE</a>
   </div>
 </header>
 
@@ -92,7 +92,7 @@
       <p style="margin:0 0 20px;font-size:15.5px;line-height:1.65;color:#4A4A40;text-wrap:pretty">Malatya apricots, wild-harvested organic preserves and cold-pressed Aegean olive oil — from the producer, not an intermediary. AdaViano quotes, sells and delivers within the United States.</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap">
         <a href="#/categories" style="background:#C2601F;color:#F7F2E8;padding:14px 22px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em" style-hover="background:#1A1A16">VIEW CATEGORIES</a>
-        <a href="#rfq" style="border:1px solid #1A1A16;padding:14px 22px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#1A1A16" style-hover="background:#1A1A16;color:#F7F2E8">REQUEST SAMPLES</a>
+        <a href="#rfq" onClick="{{ goRfq }}" style="border:1px solid #1A1A16;padding:14px 22px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#1A1A16" style-hover="background:#1A1A16;color:#F7F2E8">REQUEST SAMPLES</a>
       </div>
     </div>
   </div>
@@ -172,7 +172,7 @@
         </div>
       <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:24px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em">
         <a href="#/group/apricots" style="color:#1A1A16">OPEN THE APRICOT PAGE →</a>
-        <a href="#rfq" style="color:#C2601F">REQUEST PRICING →</a>
+        <a href="#rfq" onClick="{{ goRfq }}" style="color:#C2601F">REQUEST PRICING →</a>
       </div>
     </div>
   </div>
@@ -226,7 +226,7 @@
         </div>
       <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:24px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em">
         <a href="#/group/preserves" style="color:#F7F2E8">OPEN THE PRESERVES PAGE →</a>
-        <a href="#rfq" style="color:#E9B877">REQUEST PRICING →</a>
+        <a href="#rfq" onClick="{{ goRfq }}" style="color:#E9B877">REQUEST PRICING →</a>
       </div>
     </div>
     <div style="aspect-ratio:5/4;overflow:hidden;border:1px solid rgba(247,242,232,.24);background:#26301F">
@@ -256,7 +256,7 @@
         </div>
       <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:24px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em">
         <a href="#/group/olive-oil" style="color:#1A1A16">OPEN THE OLIVE OIL PAGE →</a>
-        <a href="#rfq" style="color:#C2601F">REQUEST PRICING →</a>
+        <a href="#rfq" onClick="{{ goRfq }}" style="color:#C2601F">REQUEST PRICING →</a>
       </div>
     </div>
   </div>
@@ -346,7 +346,7 @@
         <h2 data-split="1" style="margin:0 0 20px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(32px,3.8vw,56px);line-height:1.02;letter-spacing:-.02em">Documents come with every order</h2>
         <p style="margin:0 0 28px;font-size:15.5px;line-height:1.7;color:#4A4A40;text-wrap:pretty">The certificates belong to the producer: ISO 9001, ISO 22000:2018 and FSSC 22000 are issued to the producer. AdaViano keeps the pack on file and sends it with the sample, together with the certificate of analysis for the lot.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a href="#rfq" style="background:#1A1A16;color:#F7F2E8;padding:15px 24px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em" style-hover="background:#C2601F">REQUEST DOCUMENT PACK</a>
+          <a href="#rfq" onClick="{{ goRfq }}" style="background:#1A1A16;color:#F7F2E8;padding:15px 24px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em" style-hover="background:#C2601F">REQUEST DOCUMENT PACK</a>
         </div>
       </div>
       <div style="display:grid;gap:1px;background:#D8CDB6;border:1px solid #D8CDB6;align-content:start">
@@ -443,7 +443,7 @@
 <section style="max-width:1440px;margin:80px auto 0;padding:0 40px">
   <div style="border:1px solid #1A1A16;background:#EFE6D4;padding:36px 32px;display:flex;gap:28px;align-items:center;justify-content:space-between;flex-wrap:wrap">
     <p style="margin:0;max-width:40em;font-family:Newsreader,serif;font-weight:200;font-size:clamp(24px,2.6vw,36px);line-height:1.1;letter-spacing:-.02em">Tell us the products and volumes you need.</p>
-    <a href="#rfq" style="background:#C2601F;color:#F7F2E8;padding:16px 26px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;white-space:nowrap" style-hover="background:#1A1A16">REQUEST PRICING</a>
+    <a href="#rfq" onClick="{{ goRfq }}" style="background:#C2601F;color:#F7F2E8;padding:16px 26px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;white-space:nowrap" style-hover="background:#1A1A16">REQUEST PRICING</a>
   </div>
 </section>
 </sc-if>
@@ -496,7 +496,7 @@
       <p style="margin:26px 0 0;max-width:34em;font-size:17px;line-height:1.7;color:#33332B;text-wrap:pretty">{{ groupInfo.lead }}</p>
       <p style="margin:18px 0 0;max-width:34em;font-size:15.5px;line-height:1.7;color:#4A4A40;text-wrap:pretty">{{ groupInfo.detail }}</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px">
-        <a href="#rfq" style="background:#C2601F;color:#F7F2E8;padding:16px 26px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em" style-hover="background:#1A1A16">REQUEST PRICING</a>
+        <a href="#rfq" onClick="{{ goRfq }}" style="background:#C2601F;color:#F7F2E8;padding:16px 26px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em" style-hover="background:#1A1A16">REQUEST PRICING</a>
         <a href="#/" style="border:1px solid #1A1A16;color:#1A1A16;padding:16px 26px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em" style-hover="background:#1A1A16;color:#F7F2E8">BACK TO HOME</a>
       </div>
     </div>
@@ -532,7 +532,7 @@
       <h3 style="margin:0 0 8px;font-family:Newsreader,serif;font-weight:300;font-size:26px">{{ groupInfo.noteTitle }}</h3>
       <p style="margin:0;max-width:46em;font-size:14.5px;line-height:1.65;color:rgba(247,242,232,.8)">{{ groupInfo.note }}</p>
     </div>
-    <a href="#rfq" style="justify-self:end;border:1px solid #E9B877;color:#E9B877;padding:15px 24px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;white-space:nowrap" style-hover="background:#E9B877;color:#1A1A16">ASK OUR SALES DESK</a>
+    <a href="#rfq" onClick="{{ goRfq }}" style="justify-self:end;border:1px solid #E9B877;color:#E9B877;padding:15px 24px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;white-space:nowrap" style-hover="background:#E9B877;color:#1A1A16">ASK OUR SALES DESK</a>
   </div>
 </section>
 
@@ -885,6 +885,14 @@ class Component extends DCLogic {
     }
   }
 
+  scrollToRfq() {
+    const jump = () => {
+      const el = document.getElementById("rfq");
+      if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 70, behavior: "smooth" });
+    };
+    jump(); setTimeout(jump, 90);
+  }
+
   setMeta(sel, attr, val) {
     const el = document.head.querySelector(sel);
     if (el) el.setAttribute(attr, val);
@@ -1074,7 +1082,11 @@ class Component extends DCLogic {
       groupHref: p.group === "Apricots" ? "#/group/apricots" : p.group === "Olive Oil" ? "#/group/olive-oil" : "#/group/preserves",
       fit: p.group === "Apricots" ? "cover" : "contain",
       pad: p.group === "Apricots" ? "0" : "14px",
-      ask: () => this.setState({ inquiry: p.group === "Preserves" ? p.name + " preserves" : p.name })
+      ask: (e) => {
+        if (e && e.preventDefault) e.preventDefault();
+        this.setState({ inquiry: p.group === "Preserves" ? p.name + " preserves" : p.name });
+        this.scrollToRfq();
+      }
     }));
     const cur = withUrl.find((p) => p.slug === this.state.route) || null;
     const groupDefs = [
@@ -1155,6 +1167,7 @@ class Component extends DCLogic {
       sent: this.state.sent,
       notSent: !this.state.sent,
       inquiryProduct: this.state.inquiry,
+      goRfq: (e) => { if (e && e.preventDefault) e.preventDefault(); this.scrollToRfq(); },
       setInquiry: (e) => this.setState({ inquiry: e.target.value }),
       send: () => this.setState({ sent: true })
     };
