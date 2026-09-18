@@ -1,1911 +1,1178 @@
-// GENERATED from dc-runtime/src/*.ts — do not edit. Rebuild with `cd dc-runtime && bun run build`.
-"use strict";
-(() => {
-  var __defProp = Object.defineProperty;
-  var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-  var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>AdaViano — WishneFood Dried Apricots, Organic Preserves &amp; Olive Oil in the USA</title>
+<meta name="description" content="AdaViano brings WishneFood to the United States: Malatya dried apricots, wild-harvested organic fruit preserves and cold-pressed Aegean extra virgin olive oil for American importers, manufacturers and retail.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20fill%3D%27%231A1A16%27%2F%3E%3Ccircle%20cx%3D%2732%27%20cy%3D%2736%27%20r%3D%2719%27%20fill%3D%27%23E08A2E%27%2F%3E%3Cpath%20d%3D%27M32%2018c0%208-3%2012-3%2018s3%2010%203%2010%27%20stroke%3D%27%23C2601F%27%20stroke-width%3D%272.5%27%20fill%3D%27none%27%2F%3E%3Cpath%20d%3D%27M33%2018c4-6%2010-7%2013-6-1%205-6%209-13%208z%27%20fill%3D%27%235C7A46%27%2F%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#2F3D2A">
+<link rel="canonical" href="https://adaviano.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AdaViano">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://adaviano.com/">
+<meta property="og:title" content="AdaViano — WishneFood Dried Apricots, Organic Preserves &amp; Olive Oil in the USA">
+<meta property="og:description" content="Malatya dried apricots, wild-harvested organic fruit preserves and cold-pressed Aegean olive oil — nine WishneFood products, one producer, sold and delivered in the United States.">
+<meta property="og:image" content="assets/hero-banner.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AdaViano — WishneFood in the United States">
+<meta name="twitter:description" content="Malatya dried apricots, organic fruit preserves and cold-pressed Aegean olive oil from a single Anatolian producer.">
+<meta name="twitter:image" content="assets/hero-banner.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://adaviano.com/#org","name":"AdaViano","description":"WishneFood in the United States: dried apricots, organic fruit preserves and cold-pressed extra virgin olive oil.","url":"https://adaviano.com/","email":"info@adaviano.com","address":{"@type":"PostalAddress","streetAddress":"125 Town Park Drive, Suite 300","addressLocality":"Kennesaw","addressRegion":"GA","postalCode":"30144","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"brand":{"@type":"Brand","name":"WishneFood"}},
+ {"@type":"WebSite","@id":"https://adaviano.com/#site","url":"https://adaviano.com/","name":"AdaViano","publisher":{"@id":"https://adaviano.com/#org"},"inLanguage":"en-US"}
+]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#F7F2E8;color:#1A1A16;font-family:Karla,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:#C2601F;text-decoration:none}
+  a:hover{color:#2F3D2A}
+  input,select,textarea,button{font:inherit;color:inherit}
+  ::selection{background:#E9B877}
+  html{scroll-behavior:smooth}
+  @keyframes wf-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes wf-word{from{opacity:0;transform:translateY(.5em) rotate(1.2deg)}to{opacity:1;transform:none}}
+  @keyframes wf-curtain{0%{transform:scaleY(1)}100%{transform:scaleY(0)}}
+  @keyframes wf-rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
 
-  // src/react.ts
-  function getReact() {
-    const R = window.React;
-    if (!R) throw new Error("dc-runtime: window.React is not available yet");
-    return R;
-  }
-  function getReactDOM() {
-    const RD = window.ReactDOM;
-    if (!RD) throw new Error("dc-runtime: window.ReactDOM is not available yet");
-    return RD;
-  }
-  var h = ((...args) => getReact().createElement(
-    ...args
-  ));
+<div style="max-width:100%;overflow-x:hidden">
 
-  // src/parse.ts
-  function parseDcDocument(doc) {
-    const dc = doc.querySelector("x-dc");
-    if (!dc) return null;
-    const scriptEl = doc.querySelector("script[data-dc-script]");
-    const { props, preview } = parseDataProps(
-      scriptEl?.getAttribute("data-props") ?? null
-    );
-    return {
-      template: dc.innerHTML,
-      js: scriptEl ? scriptEl.textContent || "" : "",
-      props,
-      preview
+<div style="position:fixed;inset:0;background:#2F3D2A;z-index:200;transform-origin:top center;animation:wf-curtain .9s .35s cubic-bezier(.76,0,.24,1) both;display:grid;place-items:center;pointer-events:none">
+  <span style="font:200 44px/1 Newsreader,serif;color:#F7F2E8;letter-spacing:.02em">AdaViano</span>
+</div>
+
+<a href="#top" style="position:absolute;left:-9999px;top:0;background:#1A1A16;color:#F7F2E8;padding:12px 18px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;z-index:300" style-focus="left:12px;top:12px">SKIP TO CONTENT</a>
+
+<header style="position:sticky;top:0;z-index:40;background:rgba(247,242,232,.9);backdrop-filter:blur(12px);border-bottom:1px solid #1A1A16">
+  <div style="max-width:1440px;margin:0 auto;padding:16px 40px;display:flex;align-items:center;gap:20px 28px;flex-wrap:wrap">
+    <a href="#/" style="display:flex;flex-direction:column;line-height:1;gap:4px;color:#1A1A16">
+      <span style="font-family:Newsreader,serif;font-weight:300;font-size:26px;letter-spacing:.02em">AdaViano</span>
+    </a>
+    <nav aria-label="Primary" style="display:flex;gap:14px 20px;flex-wrap:wrap;margin-left:auto;font:600 11px/1 Karla,sans-serif;letter-spacing:.16em">
+      <a href="#producer" style="color:#1A1A16">ABOUT</a>
+      <a href="#/all" style="color:#1A1A16">ALL PRODUCTS</a>
+      <a href="#/categories" style="color:#1A1A16">CATEGORIES</a>
+      <a href="#/group/apricots" style="color:#1A1A16">APRICOTS</a>
+      <a href="#/group/preserves" style="color:#1A1A16">PRESERVES</a>
+      <a href="#/group/olive-oil" style="color:#1A1A16">OLIVE OIL</a>
+      <a href="#certificates" style="color:#1A1A16">CERTIFICATES</a>
+      <a href="#story" style="color:#1A1A16">STORY</a>
+    </nav>
+    <a href="#rfq" onClick="{{ goRfq }}" style="background:#6B4226;color:#F7F2E8;padding:13px 22px;font:600 11px/1 Karla,sans-serif;letter-spacing:.16em" style-hover="background:#4A2D19">REQUEST A QUOTE</a>
+  </div>
+</header>
+
+<main>
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div style="width:100%;border-bottom:1px solid #1A1A16;background:#EFE6D4;overflow:hidden">
+  <img fetchpriority="high" src="assets/hero-banner.jpg" width="3950" alt="AdaViano dried apricots, rosehip preserves and cold-pressed olive oil" style="display:block;width:100%;height:auto;aspect-ratio:3950/1088;object-fit:cover">
+</div>
+
+<section id="top" style="max-width:1440px;margin:0 auto;padding:44px 40px 0">
+  <div style="display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:end;padding-bottom:24px;border-bottom:2px solid #1A1A16">
+    <div>
+      <h1 data-split="1" style="margin:0;font-family:Newsreader,serif;font-weight:200;font-size:clamp(34px,4.6vw,64px);line-height:1.02;letter-spacing:-.02em;color:#1A1A16;text-wrap:balance">A unique Anatolian heritage, stocked and shipped in the United States.</h1>
+    </div>
+    <div>
+      <p style="margin:0 0 20px;font-size:15.5px;line-height:1.65;color:#4A4A40;text-wrap:pretty">Malatya apricots, wild-harvested organic preserves and cold-pressed Aegean olive oil — from the producer, not an intermediary. AdaViano quotes, sells and delivers within the United States.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="#/categories" style="background:#C2601F;color:#F7F2E8;padding:14px 22px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em" style-hover="background:#1A1A16">VIEW CATEGORIES</a>
+        <a href="#rfq" onClick="{{ goRfq }}" style="border:1px solid #1A1A16;padding:14px 22px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#1A1A16" style-hover="background:#1A1A16;color:#F7F2E8">REQUEST SAMPLES</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<section id="products" data-reveal="1" data-screen-label="Products index" style="max-width:1440px;margin:96px auto 0;padding:0 40px">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;border-bottom:2px solid #1A1A16;padding-bottom:22px">
+    <p style="margin:0;font:600 18px/1 Karla,sans-serif;letter-spacing:.24em;color:#C2601F">PRODUCTS</p>
+    <a href="#/all" style="font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#1A1A16" style-hover="color:#C2601F">SEE ALL PRODUCTS →</a>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#D8CDB6;margin-top:1px">
+    <a href="#/group/apricots" style="background:#F7F2E8;padding:30px 26px 26px;display:flex;flex-direction:column;color:#1A1A16" style-hover="background:#EFE6D4">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+        <div style="display:flex;align-items:center;gap:14px">
+          <span style="display:flex;width:54px;height:54px;border:1px solid #1A1A16;align-items:center;justify-content:center;flex:none;background:#FFF6E6"><svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true"><path d="M16 8.4c1.4-1 4.8-1.2 6.6.9 2.3 2.7 1.7 8-1.6 11.4-1.9 2-3.5 2.6-5 2.6s-3.1-.6-5-2.6C7.7 17.3 7.1 12 9.4 9.3c1.8-2.1 5.2-1.9 6.6-.9Z" fill="#E98C2E"/><path d="M16 8.6c-1.3 3.9-1.3 10.2 0 14.7" stroke="#C2601F" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M16.3 8.2c-.4-2.4.9-4.3 3.6-4.9.5 2.7-1 4.5-3.6 4.9Z" fill="#4E6B36"/><path d="M15.9 8.2c.1-1.4-.4-2.6-1.6-3.4" stroke="#4E6B36" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg></span>
+          <h3 style="margin:0;font-family:Newsreader,serif;font-weight:200;font-size:34px;line-height:1;letter-spacing:-.02em">Apricots</h3>
+        </div>
+        <span style="font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">5 PRODUCTS</span>
+      </div>
+      <span style="margin-top:auto;padding-top:34px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#C2601F">ALL APRICOTS →</span>
+    </a>
+
+    <a href="#/group/preserves" style="background:#F7F2E8;padding:30px 26px 26px;display:flex;flex-direction:column;color:#1A1A16" style-hover="background:#EFE6D4">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+        <div style="display:flex;align-items:center;gap:14px">
+          <span style="display:flex;width:54px;height:54px;border:1px solid #1A1A16;align-items:center;justify-content:center;flex:none;background:#FDF0EC"><svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true"><rect x="10.2" y="4.6" width="11.6" height="3" rx="1" fill="#C2601F"/><path d="M10 10.2c0-1.4 1.1-2.5 2.5-2.5h7c1.4 0 2.5 1.1 2.5 2.5v13.3c0 1.5-1.2 2.7-2.7 2.7h-6.6c-1.5 0-2.7-1.2-2.7-2.7z" fill="#EFE6D4" stroke="#1A1A16" stroke-width="1.2"/><path d="M10.6 15.6c1.9-1.7 3.7-1.7 5.5 0 1.8 1.6 3.6 1.6 5.3-.1v7.9c0 1.3-1 2.3-2.3 2.3h-6.4c-1.2 0-2.1-1-2.1-2.2z" fill="#A83B22"/></svg></span>
+          <h3 style="margin:0;font-family:Newsreader,serif;font-weight:200;font-size:34px;line-height:1;letter-spacing:-.02em">Preserves</h3>
+        </div>
+        <span style="font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">3 PRODUCTS</span>
+      </div>
+      <span style="margin-top:auto;padding-top:34px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#C2601F">ALL PRESERVES →</span>
+    </a>
+
+    <a href="#/group/olive-oil" style="background:#F7F2E8;padding:30px 26px 26px;display:flex;flex-direction:column;color:#1A1A16" style-hover="background:#EFE6D4">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+        <div style="display:flex;align-items:center;gap:14px">
+          <span style="display:flex;width:54px;height:54px;border:1px solid #1A1A16;align-items:center;justify-content:center;flex:none;background:#F2F4EA"><svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true"><rect x="14.2" y="4" width="3.6" height="3.4" rx=".8" fill="#1A1A16"/><path d="M14.4 7.4c0 1.9-3.6 3.4-3.6 7v9.3c0 1.4 1.1 2.5 2.5 2.5h5.4c1.4 0 2.5-1.1 2.5-2.5v-9.3c0-3.6-3.6-5.1-3.6-7z" fill="#E9B877" stroke="#3F5233" stroke-width="1.3"/><path d="M11 18.6h10v5.2c0 1.3-1 2.3-2.3 2.3h-5.4c-1.3 0-2.3-1-2.3-2.3z" fill="#7E9142"/><path d="M16 12.4c1.7 1.9 2.6 3.3 2.6 4.3a2.6 2.6 0 0 1-5.2 0c0-1 .9-2.4 2.6-4.3Z" fill="#FFF6E6" stroke="#3F5233" stroke-width="1"/></svg></span>
+          <h3 style="margin:0;font-family:Newsreader,serif;font-weight:200;font-size:34px;line-height:1;letter-spacing:-.02em">Olive Oil</h3>
+        </div>
+        <span style="font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">1 PRODUCT</span>
+      </div>
+      <span style="margin-top:auto;padding-top:34px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#C2601F">OLIVE OIL PAGE →</span>
+    </a>
+  </div>
+</section>
+
+<section id="portfolio" data-reveal="1" style="max-width:1440px;margin:80px auto 0;padding:0 40px">
+  <div style="display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:end;border-bottom:2px solid #1A1A16;padding-bottom:26px">
+    <div>
+      <p style="margin:0 0 12px;font:600 11px/1 Karla,sans-serif;letter-spacing:.24em;color:#C2601F">WHAT WE SELL</p>
+      <h2 data-split="1" style="margin:0;font-family:Newsreader,serif;font-weight:200;font-size:clamp(34px,4.6vw,68px);line-height:1;letter-spacing:-.02em">Nine products, three groups</h2>
+    </div>
+  </div>
+</section>
+
+<section data-reveal="1" style="max-width:1440px;margin:96px auto 0;padding:0 40px">
+  <div style="display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center">
+    <div style="aspect-ratio:5/4;overflow:hidden;border:1px solid #1A1A16;background:#EFE6D4">
+      <img data-kenburns="1" src="assets/apricots-drying.jpg" alt="Malatya apricots drying on reed mats" style="width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.06);transition:transform 1.4s cubic-bezier(.2,.7,.2,1)">
+    </div>
+    <div>
+      <div style="font:600 10.5px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F">GROUP 01 · 5 PRODUCTS</div>
+      <h3 style="margin:14px 0 16px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(34px,4.4vw,62px);line-height:1;letter-spacing:-.02em">Apricots</h3>
+      <p style="margin:0;max-width:36em;font-size:16.5px;line-height:1.7;color:#33332B;text-wrap:pretty">Grown in the fertile soil of Malatya, the region that produces most of the world's dried apricots. Offered sulphured, with the bright orange colour, or naturally sun-dried, with the deep brown colour — whole, diced or as kernel.</p>
+        <div style="display:grid;gap:1px;background:#E6DCC7;border-top:1px solid #E6DCC7;border-bottom:1px solid #E6DCC7;margin-top:26px">
+          <sc-for list="{{ apricots }}" as="p" hint-placeholder-count="5">
+            <a href="{{ p.url }}" style="background:#FFFCF5;display:flex;align-items:center;gap:14px;padding:14px 6px;color:#1A1A16" style-hover="background:#EFE6D4">
+              <span style="flex:1;font-size:16px">{{ p.name }}</span>
+              <span style="font-size:13px;color:#8A8272">{{ p.tr }}</span>
+              <sc-if value="{{ p.organic }}" hint-placeholder-val="{{ false }}"><span style="border:1px solid #2F3D2A;color:#2F3D2A;padding:4px 7px;font:600 8.5px/1 Karla,sans-serif;letter-spacing:.12em;white-space:nowrap">ORGANIC OPTION</span></sc-if>
+              <span style="font:600 12px/1 Karla,sans-serif;color:#C2601F">→</span>
+            </a>
+          </sc-for>
+        </div>
+      <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:24px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em">
+        <a href="#/group/apricots" style="color:#1A1A16">OPEN THE APRICOT PAGE →</a>
+        <a href="#rfq" onClick="{{ goRfq }}" style="color:#C2601F">REQUEST PRICING →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-reveal="1" data-screen-label="Apricot nutrition" style="margin-top:96px;background:#EFE6D4;border-top:1px solid #1A1A16;padding:72px 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 40px">
+    <div style="display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start">
+      <div>
+        <div style="font:600 10.5px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F">WHY APRICOTS</div>
+        <h2 style="margin:14px 0 0;font-family:Newsreader,serif;font-weight:200;font-size:clamp(30px,3.6vw,50px);line-height:1.02;letter-spacing:-.02em">A snack that carries<br>its own nutrition</h2>
+        <p style="margin:20px 0 0;max-width:34em;font-size:16px;line-height:1.7;color:#4A4A40;text-wrap:pretty">Anatolian apricots are naturally dense in vitamins, fibre and energy — which is why they sell as a health snack as readily as a bakery ingredient. Every claim below is taken from the producer's own product descriptions.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#1A1A16;border:1px solid #1A1A16">
+        <div style="background:#F7F2E8;padding:26px 24px">
+          <div style="font-family:Newsreader,serif;font-weight:200;font-size:34px;line-height:1;color:#C2601F">Vitamins</div>
+          <p style="margin:12px 0 0;font-size:14.5px;line-height:1.6;color:#4A4A40;text-wrap:pretty">Whole sundried and diced apricots alike are described as packed with vitamins — the reason they read as a wellness snack, not a confection.</p>
+        </div>
+        <div style="background:#F7F2E8;padding:26px 24px">
+          <div style="font-family:Newsreader,serif;font-weight:200;font-size:34px;line-height:1;color:#C2601F">Fibre</div>
+          <p style="margin:12px 0 0;font-size:14.5px;line-height:1.6;color:#4A4A40;text-wrap:pretty">Naturally high in fibre, which is what makes dried apricot a staple of breakfast cereals, bars and trail mixes.</p>
+        </div>
+        <div style="background:#F7F2E8;padding:26px 24px">
+          <div style="font-family:Newsreader,serif;font-weight:200;font-size:34px;line-height:1;color:#C2601F">Natural energy</div>
+          <p style="margin:12px 0 0;font-size:14.5px;line-height:1.6;color:#4A4A40;text-wrap:pretty">The sweetness is the fruit's own. Diced apricots are rich in natural energy, and the sundried whole fruit is offered as a delicious way to boost energy and well-being.</p>
+        </div>
+        <div style="background:#F7F2E8;padding:26px 24px">
+          <div style="font-family:Newsreader,serif;font-weight:200;font-size:34px;line-height:1;color:#C2601F">Healthy fats</div>
+          <p style="margin:12px 0 0;font-size:14.5px;line-height:1.6;color:#4A4A40;text-wrap:pretty">Apricot kernels are nutrient-dense and rich in healthy fats, vitamins and minerals — a slightly nutty note for smoothies, salads and snacking.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-reveal="1" style="margin-top:88px;background:#2F3D2A;color:#F7F2E8;padding:80px 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:.98fr 1.02fr;gap:56px;align-items:center">
+    <div>
+      <div style="font:600 10.5px/1 Karla,sans-serif;letter-spacing:.2em;color:#E9B877">GROUP 02 · 3 FRUITS · 4 RECIPES</div>
+      <h3 style="margin:14px 0 16px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(34px,4.4vw,62px);line-height:1;letter-spacing:-.02em">Organic Preserves</h3>
+      <p style="margin:0;max-width:36em;font-size:16.5px;line-height:1.7;color:rgba(247,242,232,.82);text-wrap:pretty">Wild-harvested Anatolian fruit, small batch crafted under the supervision of food engineers — a marmalade heritage that began in 1975 in the Merzifon district of Amasya. Each fruit comes as organic marmalade, organic purée, traditional or natural marmalade, in 40–400 g jars and 2.5–20 kg pails.</p>
+        <div style="display:grid;gap:1px;background:rgba(247,242,232,.22);border-top:1px solid rgba(247,242,232,.22);border-bottom:1px solid rgba(247,242,232,.22);margin-top:26px">
+          <sc-for list="{{ fruits }}" as="p" hint-placeholder-count="3">
+            <a href="{{ p.url }}" style="background:#2F3D2A;display:flex;align-items:center;gap:14px;padding:14px 6px;color:#F7F2E8" style-hover="background:#3A4A33">
+              <span style="flex:1;font-size:16px">{{ p.name }}</span>
+              <span style="font-size:13px;color:rgba(247,242,232,.6)">{{ p.tr }}</span>
+              <span style="border:1px solid #E9B877;color:#E9B877;padding:4px 7px;font:600 8.5px/1 Karla,sans-serif;letter-spacing:.12em;white-space:nowrap">ORGANIC OPTION</span>
+              <span style="font:600 12px/1 Karla,sans-serif;color:#E9B877">→</span>
+            </a>
+          </sc-for>
+        </div>
+      <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:24px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em">
+        <a href="#/group/preserves" style="color:#F7F2E8">OPEN THE PRESERVES PAGE →</a>
+        <a href="#rfq" onClick="{{ goRfq }}" style="color:#E9B877">REQUEST PRICING →</a>
+      </div>
+    </div>
+    <div style="aspect-ratio:5/4;overflow:hidden;border:1px solid rgba(247,242,232,.24);background:#26301F">
+      <img loading="lazy" decoding="async" src="assets/preserves-table.jpg" alt="Organic preserve jars with rosehip and cornelian cherry" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+  </div>
+</section>
+
+<section data-reveal="1" style="max-width:1440px;margin:88px auto 0;padding:0 40px">
+  <div style="display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center">
+    <div style="aspect-ratio:5/4;overflow:hidden;border:1px solid #1A1A16;background:#EFE6D4">
+      <img loading="lazy" decoding="async" src="assets/olive-oil-bread.jpg" alt="Cold-pressed extra virgin olive oil poured over bread" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div>
+      <div style="font:600 10.5px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F">GROUP 03 · 1 PRODUCT</div>
+      <h3 style="margin:14px 0 16px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(34px,4.4vw,62px);line-height:1;letter-spacing:-.02em">Extra Virgin Olive Oil</h3>
+      <p style="margin:0;max-width:36em;font-size:16.5px;line-height:1.7;color:#33332B;text-wrap:pretty">Hand-selected Aegean olives, first cold press, purely mechanical extraction — no heat, no additives. A rich, distinct, earthy flavour for drizzling, salads, mezze and everyday cooking.</p>
+        <div style="display:grid;gap:1px;background:#E6DCC7;border-top:1px solid #E6DCC7;border-bottom:1px solid #E6DCC7;margin-top:26px">
+          <sc-for list="{{ oil }}" as="p" hint-placeholder-count="1">
+            <a href="{{ p.url }}" style="background:#FFFCF5;display:flex;align-items:center;gap:14px;padding:14px 6px;color:#1A1A16" style-hover="background:#EFE6D4">
+              <span style="flex:1;font-size:16px">{{ p.name }}</span>
+              <span style="font-size:13px;color:#8A8272">{{ p.tr }}</span>
+              <sc-if value="{{ p.organic }}" hint-placeholder-val="{{ false }}"><span style="border:1px solid #2F3D2A;color:#2F3D2A;padding:4px 7px;font:600 8.5px/1 Karla,sans-serif;letter-spacing:.12em;white-space:nowrap">ORGANIC OPTION</span></sc-if>
+              <span style="font:600 12px/1 Karla,sans-serif;color:#C2601F">→</span>
+            </a>
+          </sc-for>
+        </div>
+      <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:24px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em">
+        <a href="#/group/olive-oil" style="color:#1A1A16">OPEN THE OLIVE OIL PAGE →</a>
+        <a href="#rfq" onClick="{{ goRfq }}" style="color:#C2601F">REQUEST PRICING →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="producer" data-reveal="1" style="max-width:1440px;margin:0 auto;padding:88px 40px 0">
+  <div style="display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:start">
+    <div>
+      <p style="margin:0 0 14px;font:600 11px/1 Karla,sans-serif;letter-spacing:.24em;color:#C2601F">THE PRODUCER AND THE DISTRIBUTOR</p>
+      <h2 data-split="1" style="margin:0;font-family:Newsreader,serif;font-weight:200;font-size:clamp(34px,4.6vw,64px);line-height:1;letter-spacing:-.02em;text-wrap:balance">From the heart of Malatya, directly to your shelves.</h2>
+    </div>
+    <div style="display:grid;gap:20px">
+      <p style="margin:0;font-size:16px;line-height:1.72;color:#33332B;text-wrap:pretty">The producer’s story began in 1982, trading dried apricots in the Darende district of Malatya — the region that grows most of the world’s dried apricots. By 1992 the next generation had taken the business over and begun exporting under its own name, and in 2010 it was established as a dried food and kernels company. It sells as the producer, not an intermediary.</p>
+      <p style="margin:0;font-size:16px;line-height:1.72;color:#4A4A40;text-wrap:pretty">AdaViano brings that portfolio to the United States. We hold one portfolio — nine products across apricots, organic preserves and olive oil — and sell it here: quotations, samples, certificates, orders and delivery.</p>
+    </div>
+  </div>
+</section>
+
+<section data-reveal="1" style="max-width:1440px;margin:0 auto;padding:80px 40px 0">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:36px">
+    <div style="border-top:2px solid #1A1A16;padding-top:16px">
+      <div style="font-family:Newsreader,serif;font-weight:200;font-size:64px;line-height:1;color:#C2601F"><span data-count="85">0</span>%</div>
+      <div style="margin-top:8px;font-size:15px;line-height:1.35;color:#1A1A16;font-weight:600">of the world’s dried apricots come from Malatya</div>
+      <p style="margin:10px 0 0;font-size:13.5px;line-height:1.6;color:#4A4A40;text-wrap:pretty">Dried apricots are grown mainly in Malatya, which accounts for 85% of world production. Treated with sulphur they keep their bright orange colour; dried naturally they turn brown and take on a different texture.</p>
+    </div>
+    <div style="border-top:2px solid #1A1A16;padding-top:16px">
+      <div style="font-family:Newsreader,serif;font-weight:200;font-size:64px;line-height:1;color:#C2601F"><span data-count="1975">0</span></div>
+      <div style="margin-top:8px;font-size:15px;line-height:1.35;color:#1A1A16;font-weight:600">marmalade cooked in Merzifon since</div>
+      <p style="margin:10px 0 0;font-size:13.5px;line-height:1.6;color:#4A4A40;text-wrap:pretty">The preserve line goes back to rosehip marmalade cooked in traditional cauldrons over wood fire in the Merzifon district of Amasya. The same recipes are still small batch crafted from wild-harvested fruit gathered in its most natural state.</p>
+    </div>
+    <div style="border-top:2px solid #1A1A16;padding-top:16px">
+      <div style="font-family:Newsreader,serif;font-weight:200;font-size:64px;line-height:1;color:#C2601F"><span data-count="1982">0</span></div>
+      <div style="margin-top:8px;font-size:15px;line-height:1.35;color:#1A1A16;font-weight:600">the producer in dried fruit since</div>
+      <p style="margin:10px 0 0;font-size:13.5px;line-height:1.6;color:#4A4A40;text-wrap:pretty">The business began in a small shop in the Darende district, trading dried apricots, and became a pioneer of that trade in the Turkish market. Exports under its own name followed in 1992, and the present company in 2010.</p>
+    </div>
+    <div style="border-top:2px solid #1A1A16;padding-top:16px">
+      <div style="font-family:Newsreader,serif;font-weight:200;font-size:64px;line-height:1;color:#C2601F"><span data-count="3">0</span></div>
+      <div style="margin-top:8px;font-size:15px;line-height:1.35;color:#1A1A16;font-weight:600">food-safety systems certified at the producer</div>
+      <p style="margin:10px 0 0;font-size:13.5px;line-height:1.6;color:#4A4A40;text-wrap:pretty">ISO 9001, ISO 22000:2018 and FSSC 22000 are held at the producer. AdaViano keeps the pack on file and sends it with every quotation.</p>
+    </div>
+  </div>
+</section>
+
+<section id="how" data-reveal="1" style="margin-top:96px;background:#2F3D2A;color:#F7F2E8;padding:88px 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 40px">
+    <div style="display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:end;border-bottom:1px solid rgba(247,242,232,.28);padding-bottom:26px">
+      <div>
+        <p style="margin:0 0 12px;font:600 11px/1 Karla,sans-serif;letter-spacing:.24em;color:#E9B877">HOW WE WORK</p>
+        <h2 data-split="1" style="margin:0;font-family:Newsreader,serif;font-weight:200;font-size:clamp(34px,4.8vw,70px);line-height:1;letter-spacing:-.02em">From your spec to your shelf</h2>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(247,242,232,.22);border:1px solid rgba(247,242,232,.22);margin-top:44px">
+      <div style="background:#2F3D2A;padding:26px 22px 28px">
+        <div style="font-family:Newsreader,serif;font-weight:200;font-size:46px;line-height:1;color:#E9B877">01</div>
+        <h3 style="margin:14px 0 10px;font-family:Newsreader,serif;font-weight:300;font-size:22px;line-height:1.15">One qualified source</h3>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(247,242,232,.78)">The producer behind every offer is evaluated on quality, delivery capability and consistency, and we represent only that one house — so you buy the producer’s own output, judged before it is offered.</p>
+      </div>
+      <div style="background:#2F3D2A;padding:26px 22px 28px">
+        <div style="font-family:Newsreader,serif;font-weight:200;font-size:46px;line-height:1;color:#E9B877">02</div>
+        <h3 style="margin:14px 0 10px;font-family:Newsreader,serif;font-weight:300;font-size:22px;line-height:1.15">Quote and terms</h3>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(247,242,232,.78)">Terms are negotiated and the agreement is structured to protect your interests — priced per product, grade and quantity, in dollars.</p>
+      </div>
+      <div style="background:#2F3D2A;padding:26px 22px 28px">
+        <div style="font-family:Newsreader,serif;font-weight:200;font-size:46px;line-height:1;color:#E9B877">03</div>
+        <h3 style="margin:14px 0 10px;font-family:Newsreader,serif;font-weight:300;font-size:22px;line-height:1.15">Sample, spec and documents</h3>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(247,242,232,.78)">You review a sample against the spec and receive the producer’s certificates and the analysis for the lot before you commit to the order.</p>
+      </div>
+      <div style="background:#2F3D2A;padding:26px 22px 28px">
+        <div style="font-family:Newsreader,serif;font-weight:200;font-size:46px;line-height:1;color:#E9B877">04</div>
+        <h3 style="margin:14px 0 10px;font-family:Newsreader,serif;font-weight:300;font-size:22px;line-height:1.15">Order confirmed here</h3>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(247,242,232,.78)">Your order is placed with AdaViano and scheduled against production or available stock — one purchase order, one invoice, one point of contact.</p>
+      </div>
+      <div style="background:#2F3D2A;padding:26px 22px 28px">
+        <div style="font-family:Newsreader,serif;font-weight:200;font-size:46px;line-height:1;color:#E9B877">05</div>
+        <h3 style="margin:14px 0 10px;font-family:Newsreader,serif;font-weight:300;font-size:22px;line-height:1.15">Delivery and follow-up</h3>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(247,242,232,.78)">Goods are delivered to your warehouse or store, and the same contact stays with the account for repeat orders, quality questions and forecasting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certificates" data-reveal="1" style="max-width:1440px;margin:96px auto 0;padding:0 40px">
+  <div style="border:1px solid #1A1A16;background:#EFE6D4;padding:56px 48px">
+    <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:56px">
+      <div>
+        <p style="margin:0 0 12px;font:600 11px/1 Karla,sans-serif;letter-spacing:.24em;color:#C2601F">QUALITY</p>
+        <h2 data-split="1" style="margin:0 0 20px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(32px,3.8vw,56px);line-height:1.02;letter-spacing:-.02em">Documents come with every order</h2>
+        <p style="margin:0 0 28px;font-size:15.5px;line-height:1.7;color:#4A4A40;text-wrap:pretty">The certificates belong to the producer: ISO 9001, ISO 22000:2018 and FSSC 22000 are issued to the producer. AdaViano keeps the pack on file and sends it with the sample, together with the certificate of analysis for the lot.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="#rfq" onClick="{{ goRfq }}" style="background:#1A1A16;color:#F7F2E8;padding:15px 24px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em" style-hover="background:#C2601F">REQUEST DOCUMENT PACK</a>
+        </div>
+      </div>
+      <div style="display:grid;gap:1px;background:#D8CDB6;border:1px solid #D8CDB6;align-content:start">
+        <sc-for list="{{ certs }}" as="c" hint-placeholder-count="6">
+          <div style="background:#FFFCF5;padding:24px 22px">
+            <div style="width:22px;height:22px;border:1.5px solid #C2601F;border-radius:50%;margin-bottom:18px"></div>
+            <div style="font:600 12px/1.2 Karla,sans-serif;letter-spacing:.14em;color:#C2601F">{{ c.name }}</div>
+            <div style="margin-top:8px;font-size:14.5px;font-weight:600;color:#1A1A16">{{ c.title }}</div>
+            <div style="margin-top:7px;font-size:12.5px;line-height:1.55;color:#8A8272">{{ c.scope }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="margin-top:72px;background:#1A1A16;color:#F7F2E8;padding:20px 0;overflow:hidden">
+  <div style="display:flex;width:max-content;animation:wf-marquee 38s linear infinite">
+    <div style="display:flex;gap:44px;padding-right:44px;font:600 13px/1 Karla,sans-serif;letter-spacing:.2em;align-items:center">
+      <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="12">
+        <span style="white-space:nowrap;color:#F7F2E8">{{ m }}</span>
+      </sc-for>
+    </div>
+    <div style="display:flex;gap:44px;padding-right:44px;font:600 13px/1 Karla,sans-serif;letter-spacing:.2em;align-items:center" aria-hidden="true">
+      <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="12">
+        <span style="white-space:nowrap;color:#F7F2E8">{{ m }}</span>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<section id="story" data-reveal="1" style="max-width:1440px;margin:96px auto 0;padding:0 40px">
+  <p style="margin:0 0 12px;font:600 11px/1 Karla,sans-serif;letter-spacing:.24em;color:#C2601F">THE PRODUCER WE REPRESENT</p>
+  <h2 data-split="1" style="margin:0 0 44px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(36px,5vw,72px);line-height:1;letter-spacing:-.02em">From a shop in Darende to American shelves</h2>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#D8CDB6;border-top:2px solid #1A1A16;border-left:1px solid #D8CDB6">
+    <sc-for list="{{ timeline }}" as="t" hint-placeholder-count="5">
+      <div style="background:#F7F2E8;padding:26px 22px 30px">
+        <div style="font-family:Newsreader,serif;font-weight:200;font-size:40px;line-height:1;color:#C2601F">{{ t.year }}</div>
+        <p style="margin:14px 0 0;font-size:14.5px;line-height:1.6;color:#4A4A40">{{ t.text }}</p>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+</sc-if>
+
+<sc-if value="{{ isAllProducts }}" hint-placeholder-val="{{ false }}">
+<section style="max-width:1440px;margin:0 auto;padding:40px 40px 0">
+  <div style="display:flex;gap:10px;align-items:center;font:600 10.5px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">
+    <a href="#/" style="color:#8A8272">HOME</a><span>/</span>
+    <span style="color:#1A1A16">ALL PRODUCTS</span>
+  </div>
+  <div style="display:flex;align-items:baseline;justify-content:space-between;gap:40px;flex-wrap:wrap;border-bottom:2px solid #1A1A16;padding-bottom:22px;margin-top:32px">
+    <h1 style="margin:0;font:600 18px/1 Karla,sans-serif;letter-spacing:.24em;color:#C2601F">ALL PRODUCTS</h1>
+    <div style="display:flex;gap:18px;flex-wrap:wrap;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em">
+      <a href="#/group/apricots" style="color:#1A1A16" style-hover="color:#C2601F">APRICOTS</a>
+      <a href="#/group/preserves" style="color:#1A1A16" style-hover="color:#C2601F">PRESERVES</a>
+      <a href="#/group/olive-oil" style="color:#1A1A16" style-hover="color:#C2601F">OLIVE OIL</a>
+    </div>
+  </div>
+</section>
+
+<sc-for list="{{ groups }}" as="g" hint-placeholder-count="3">
+<section style="max-width:1440px;margin:64px auto 0;padding:0 40px">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;border-bottom:1px solid #1A1A16;padding-bottom:16px">
+    <div>
+      <div style="font:600 10.5px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F">{{ g.eyebrow }}</div>
+      <h2 style="margin:12px 0 0;font-family:Newsreader,serif;font-weight:200;font-size:clamp(28px,3.4vw,48px);line-height:1;letter-spacing:-.02em">{{ g.title }}</h2>
+    </div>
+    <a href="{{ g.href }}" style="font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#1A1A16" style-hover="color:#C2601F">{{ g.cta }}</a>
+  </div>
+  <p style="margin:18px 0 0;max-width:52em;font-size:15.5px;line-height:1.7;color:#4A4A40;text-wrap:pretty">{{ g.lead }}</p>
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:28px">
+    <sc-for list="{{ g.items }}" as="p" hint-placeholder-count="3">
+      <a data-tilt="1" href="{{ p.url }}" style="background:#FFFCF5;border:1px solid #1A1A16;color:#1A1A16;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s">
+        <div style="aspect-ratio:4/3;overflow:hidden;background:#F9F4E9;display:grid;place-items:center;padding:{{ p.pad }}">
+          <img loading="lazy" decoding="async" src="assets/dried-apricot.jpeg" data-src="{{ p.img }}" alt="{{ p.name }}" style="width:100%;height:100%;object-fit:{{ p.fit }};display:block">
+        </div>
+        <div style="padding:24px;display:flex;flex-direction:column;flex:1">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div style="font:600 10px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F">{{ p.tag }}</div>
+            <sc-if value="{{ p.organic }}" hint-placeholder-val="{{ false }}"><span style="border:1px solid #2F3D2A;color:#2F3D2A;padding:4px 8px;font:600 9px/1 Karla,sans-serif;letter-spacing:.14em">ORGANIC OPTION</span></sc-if>
+          </div>
+          <h3 style="margin:12px 0 8px;font-family:Newsreader,serif;font-weight:200;font-size:30px;line-height:1.05;letter-spacing:-.02em">{{ p.name }}</h3>
+          <p style="margin:0 0 18px;font-size:14.5px;line-height:1.6;color:#4A4A40;text-wrap:pretty">{{ p.blurb }}</p>
+          <span style="margin-top:auto;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#C2601F">OPEN PRODUCT →</span>
+        </div>
+      </a>
+    </sc-for>
+  </div>
+</section>
+</sc-for>
+
+<section style="max-width:1440px;margin:80px auto 0;padding:0 40px">
+  <div style="border:1px solid #1A1A16;background:#EFE6D4;padding:36px 32px;display:flex;gap:28px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+    <p style="margin:0;max-width:40em;font-family:Newsreader,serif;font-weight:200;font-size:clamp(24px,2.6vw,36px);line-height:1.1;letter-spacing:-.02em">Tell us the products and volumes you need.</p>
+    <a href="#rfq" onClick="{{ goRfq }}" style="background:#C2601F;color:#F7F2E8;padding:16px 26px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;white-space:nowrap" style-hover="background:#1A1A16">REQUEST PRICING</a>
+  </div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isCategories }}" hint-placeholder-val="{{ false }}">
+<section style="max-width:1440px;margin:0 auto;padding:40px 40px 0">
+  <div style="display:flex;gap:10px;align-items:center;font:600 10.5px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">
+    <a href="#/" style="color:#8A8272">HOME</a><span>/</span>
+    <span style="color:#1A1A16">CATEGORIES</span>
+  </div>
+  <div style="display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:end;border-bottom:2px solid #1A1A16;padding-bottom:26px;margin-top:32px">
+    <div>
+      <p style="margin:0 0 12px;font:600 11px/1 Karla,sans-serif;letter-spacing:.24em;color:#C2601F">CATEGORIES</p>
+      <h1 style="margin:0;font-family:Newsreader,serif;font-weight:200;font-size:clamp(38px,5.2vw,78px);line-height:1;letter-spacing:-.025em">Three groups, nine products</h1>
+    </div>
+  </div>
+  <div style="display:grid;gap:1px;background:#D8CDB6;border:1px solid #D8CDB6;margin-top:32px">
+    <sc-for list="{{ groups }}" as="g" hint-placeholder-count="3">
+      <a href="{{ g.href }}" style="background:#FFFCF5;color:#1A1A16;display:grid;grid-template-columns:320px 1fr auto;gap:36px;align-items:center;padding:26px 30px 26px 26px" style-hover="background:#EFE6D4">
+        <div style="aspect-ratio:5/4;overflow:hidden;background:#F9F4E9;border:1px solid #E2D8C2">
+          <img loading="lazy" decoding="async" src="assets/dried-apricot.jpeg" data-src="{{ g.img }}" alt="{{ g.title }}" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div>
+          <div style="font:600 10.5px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F">{{ g.eyebrow }}</div>
+          <h2 style="margin:12px 0 10px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(30px,3.6vw,50px);line-height:1;letter-spacing:-.02em">{{ g.title }}</h2>
+          <p style="margin:0 0 16px;max-width:44em;font-size:15.5px;line-height:1.65;color:#4A4A40;text-wrap:pretty">{{ g.lead }}</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <sc-for list="{{ g.items }}" as="p" hint-placeholder-count="3">
+              <span style="border:1px solid #C9BEA6;color:#4A4A40;padding:7px 12px;font-size:12.5px">{{ p.name }}</span>
+            </sc-for>
+          </div>
+        </div>
+        <span style="font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;white-space:nowrap;color:#1A1A16">{{ g.cta }}</span>
+      </a>
+    </sc-for>
+  </div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isGroup }}" hint-placeholder-val="{{ false }}">
+<section style="max-width:1440px;margin:0 auto;padding:40px 40px 0">
+  <div style="display:flex;gap:10px;align-items:center;font:600 10.5px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">
+    <a href="#/" style="color:#8A8272">HOME</a><span>/</span>
+    <span style="color:#1A1A16">{{ groupInfo.upper }}</span>
+  </div>
+  <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:56px;margin-top:32px;align-items:start">
+    <div>
+      <p style="margin:0 0 14px;font:600 11px/1 Karla,sans-serif;letter-spacing:.24em;color:#C2601F">{{ groupInfo.eyebrow }}</p>
+      <h1 style="margin:0;font-family:Newsreader,serif;font-weight:200;font-size:clamp(40px,5.6vw,84px);line-height:.98;letter-spacing:-.025em">{{ groupInfo.title }}</h1>
+      <p style="margin:26px 0 0;max-width:34em;font-size:17px;line-height:1.7;color:#33332B;text-wrap:pretty">{{ groupInfo.lead }}</p>
+      <p style="margin:18px 0 0;max-width:34em;font-size:15.5px;line-height:1.7;color:#4A4A40;text-wrap:pretty">{{ groupInfo.detail }}</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px">
+        <a href="#rfq" onClick="{{ goRfq }}" style="background:#C2601F;color:#F7F2E8;padding:16px 26px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em" style-hover="background:#1A1A16">REQUEST PRICING</a>
+        <a href="#/" style="border:1px solid #1A1A16;color:#1A1A16;padding:16px 26px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em" style-hover="background:#1A1A16;color:#F7F2E8">BACK TO HOME</a>
+      </div>
+    </div>
+    <div style="border:1px solid #1A1A16;overflow:hidden;background:#F9F4E9;aspect-ratio:4/3">
+      <img loading="lazy" decoding="async" src="assets/dried-apricot.jpeg" data-src="{{ groupInfo.img }}" alt="{{ groupInfo.title }}" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+  </div>
+</section>
+
+<section style="max-width:1440px;margin:72px auto 0;padding:0 40px">
+  <h2 style="margin:0 0 26px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(28px,3.2vw,44px);line-height:1.05;letter-spacing:-.02em;border-bottom:2px solid #1A1A16;padding-bottom:18px">{{ groupInfo.countLabel }}</h2>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+    <sc-for list="{{ groupProducts }}" as="p" hint-placeholder-count="3">
+      <a data-tilt="1" href="{{ p.url }}" style="background:#FFFCF5;border:1px solid #1A1A16;color:#1A1A16;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s">
+        <div style="aspect-ratio:4/3;overflow:hidden;background:#F9F4E9;display:grid;place-items:center;padding:{{ p.pad }}">
+          <img loading="lazy" decoding="async" src="assets/dried-apricot.jpeg" data-src="{{ p.img }}" alt="{{ p.name }}" style="width:100%;height:100%;object-fit:{{ p.fit }};display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)">
+        </div>
+        <div style="padding:26px;display:flex;flex-direction:column;flex:1">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div style="font:600 10px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F">{{ p.tag }}</div>
+            <sc-if value="{{ p.organic }}" hint-placeholder-val="{{ false }}"><span style="border:1px solid #2F3D2A;color:#2F3D2A;padding:4px 8px;font:600 9px/1 Karla,sans-serif;letter-spacing:.14em">ORGANIC OPTION</span></sc-if>
+          </div>
+          <h3 style="margin:14px 0 4px;font-family:Newsreader,serif;font-weight:300;font-size:28px;line-height:1.1">{{ p.name }}</h3>
+          <div style="font-size:13px;color:#8A8272">{{ p.tr }}</div>
+          <p style="margin:14px 0 0;font-size:14px;line-height:1.6;color:#4A4A40">{{ p.blurb }}</p>
+          <div style="margin-top:auto;padding-top:22px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#1A1A16">VIEW PRODUCT PAGE →</div>
+        </div>
+      </a>
+    </sc-for>
+  </div>
+  <div style="margin-top:28px;background:#2F3D2A;color:#F7F2E8;padding:34px 32px;display:grid;grid-template-columns:1.4fr .6fr;gap:32px;align-items:center">
+    <div>
+      <h3 style="margin:0 0 8px;font-family:Newsreader,serif;font-weight:300;font-size:26px">{{ groupInfo.noteTitle }}</h3>
+      <p style="margin:0;max-width:46em;font-size:14.5px;line-height:1.65;color:rgba(247,242,232,.8)">{{ groupInfo.note }}</p>
+    </div>
+    <a href="#rfq" onClick="{{ goRfq }}" style="justify-self:end;border:1px solid #E9B877;color:#E9B877;padding:15px 24px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;white-space:nowrap" style-hover="background:#E9B877;color:#1A1A16">ASK OUR SALES DESK</a>
+  </div>
+</section>
+
+<section style="max-width:1440px;margin:64px auto 0;padding:0 40px">
+  <h2 style="margin:0 0 22px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(28px,3.2vw,44px);line-height:1.05;letter-spacing:-.02em;border-bottom:2px solid #1A1A16;padding-bottom:18px">Other groups</h2>
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px">
+    <sc-for list="{{ otherGroups }}" as="g" hint-placeholder-count="2">
+      <a href="{{ g.href }}" style="background:#FFFCF5;border:1px solid #1A1A16;color:#1A1A16;display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:center;padding:20px 24px 20px 20px" style-hover="background:#EFE6D4">
+        <div style="aspect-ratio:4/3;overflow:hidden;background:#F9F4E9">
+          <img loading="lazy" decoding="async" src="assets/olive-oil.png" data-src="{{ g.img }}" alt="{{ g.title }}" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div>
+          <div style="font:600 10px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F">{{ g.eyebrow }}</div>
+          <h3 style="margin:10px 0 6px;font-family:Newsreader,serif;font-weight:300;font-size:26px;line-height:1.1">{{ g.title }}</h3>
+          <p style="margin:0;font-size:14px;line-height:1.55;color:#4A4A40">{{ g.short }}</p>
+        </div>
+      </a>
+    </sc-for>
+  </div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isProduct }}" hint-placeholder-val="{{ false }}">
+<section style="max-width:1440px;margin:0 auto;padding:40px 40px 0">
+  <div style="display:flex;gap:10px;align-items:center;font:600 10.5px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">
+    <a href="#/" style="color:#8A8272">HOME</a><span>/</span>
+    <a href="{{ product.groupHref }}" style="color:#8A8272">{{ product.groupUpper }}</a><span>/</span>
+    <span style="color:#1A1A16">{{ product.upper }}</span>
+  </div>
+  <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:56px;margin-top:32px;align-items:start">
+    <div>
+      <p style="margin:0 0 14px;font:600 11px/1 Karla,sans-serif;letter-spacing:.24em;color:#C2601F">{{ product.tag }}</p>
+      <h1 style="margin:0;font-family:Newsreader,serif;font-weight:200;font-size:clamp(40px,6vw,88px);line-height:.98;letter-spacing:-.025em">{{ product.name }}</h1>
+      <div style="margin-top:10px;font-family:Newsreader,serif;font-style:italic;font-size:22px;color:#8A8272">{{ product.tr }}</div>
+      <p style="margin:26px 0 0;max-width:34em;font-size:17px;line-height:1.7;color:#33332B;text-wrap:pretty">{{ product.blurb }}</p>
+      <p style="margin:18px 0 0;max-width:34em;font-size:15.5px;line-height:1.7;color:#4A4A40;text-wrap:pretty">{{ product.detail }}</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px">
+        <a href="#rfq" onClick="{{ product.ask }}" style="background:#C2601F;color:#F7F2E8;padding:16px 26px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em" style-hover="background:#1A1A16">REQUEST A QUOTE FOR THIS PRODUCT</a>
+        <a href="#/" style="border:1px solid #1A1A16;color:#1A1A16;padding:16px 26px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em" style-hover="background:#1A1A16;color:#F7F2E8">ALL PRODUCTS</a>
+      </div>
+    </div>
+    <div style="border:1px solid #1A1A16;overflow:hidden;background:#F9F4E9;aspect-ratio:4/3;display:grid;place-items:center">
+      <img loading="lazy" decoding="async" src="assets/dried-apricot.jpeg" data-src="{{ product.img }}" alt="{{ product.name }}" style="width:100%;height:100%;object-fit:contain;display:block">
+    </div>
+  </div>
+</section>
+
+<section style="max-width:1440px;margin:72px auto 0;padding:0 40px">
+  <h2 style="margin:0 0 22px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(28px,3.2vw,44px);line-height:1.05;letter-spacing:-.02em;border-bottom:2px solid #1A1A16;padding-bottom:18px">Specification</h2>
+  <div style="border:1px solid #1A1A16;background:#FFFCF5">
+    <sc-for list="{{ productSpecs }}" as="s" hint-placeholder-count="6">
+      <div style="display:grid;grid-template-columns:220px 1fr;gap:24px;padding:18px 24px;border-bottom:1px solid #D8CDB6;font-size:15px">
+        <div style="font:600 11px/1.4 Karla,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8A8272">{{ s.k }}</div>
+        <div style="color:#33332B;line-height:1.6">{{ s.v }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<sc-if value="{{ productCalWhole }}" hint-placeholder-val="{{ false }}">
+<section style="max-width:1440px;margin:64px auto 0;padding:0 40px">
+  <h2 style="margin:0 0 22px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(28px,3.2vw,44px);line-height:1.05;letter-spacing:-.02em;border-bottom:2px solid #1A1A16;padding-bottom:18px">Calibration</h2>
+  <div style="border:1px solid #1A1A16;max-width:640px">
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;background:#1A1A16;color:#F7F2E8;font:600 10.5px/1.3 Karla,sans-serif;letter-spacing:.18em">
+      <div style="padding:16px 20px">SIZE</div>
+      <div style="padding:16px 20px">PIECES PER KG</div>
+    </div>
+    <sc-for list="{{ calWhole }}" as="c" hint-placeholder-count="9">
+      <div style="display:grid;grid-template-columns:1fr 1.4fr;border-top:1px solid #D8CDB6;background:#FFFCF5;font-size:15px;color:#33332B">
+        <div style="padding:16px 20px;font-weight:600;color:#1A1A16">{{ c.size }}</div>
+        <div style="padding:16px 20px">{{ c.count }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <p style="margin:16px 0 0;font-size:13.5px;color:#8A8272">Whole pitted dried apricots are graded by piece count per kilogram. Tell us the size when requesting a quote.</p>
+</section>
+</sc-if>
+
+<sc-if value="{{ productCalDiced }}" hint-placeholder-val="{{ false }}">
+<section style="max-width:1440px;margin:64px auto 0;padding:0 40px">
+  <h2 style="margin:0 0 22px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(28px,3.2vw,44px);line-height:1.05;letter-spacing:-.02em;border-bottom:2px solid #1A1A16;padding-bottom:18px">Dice sizes</h2>
+  <div style="display:flex;flex-wrap:wrap;gap:1px;background:#D8CDB6;border:1px solid #1A1A16">
+    <sc-for list="{{ calDiced }}" as="d" hint-placeholder-count="6">
+      <div style="flex:1 1 150px;background:#FFFCF5;padding:22px 20px">
+        <div style="font-family:Newsreader,serif;font-weight:200;font-size:34px;line-height:1;color:#1A1A16">{{ d.size }}</div>
+        <div style="margin-top:8px;font:600 10.5px/1 Karla,sans-serif;letter-spacing:.16em;color:#C2601F">MM</div>
+      </div>
+    </sc-for>
+  </div>
+  <p style="margin:16px 0 0;font-size:13.5px;color:#8A8272">Diced dried apricots are cut to size and rice-floured. Tell us the dice size when requesting a quote.</p>
+</section>
+</sc-if>
+
+<sc-if value="{{ productIsFruit }}" hint-placeholder-val="{{ false }}">
+<section style="max-width:1440px;margin:64px auto 0;padding:0 40px">
+  <h2 style="margin:0 0 22px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(28px,3.2vw,44px);line-height:1.05;letter-spacing:-.02em;border-bottom:2px solid #1A1A16;padding-bottom:18px">Recipe styles &amp; sizes</h2>
+  <div style="border:1px solid #1A1A16">
+    <div style="display:grid;grid-template-columns:1.1fr 1.6fr 1.1fr 1.2fr;background:#1A1A16;color:#F7F2E8;font:600 10.5px/1.3 Karla,sans-serif;letter-spacing:.18em">
+      <div style="padding:16px 20px">RECIPE</div>
+      <div style="padding:16px 20px">COMPOSITION</div>
+      <div style="padding:16px 20px">RETAIL JARS</div>
+      <div style="padding:16px 20px">FOOD-SERVICE</div>
+    </div>
+    <sc-for list="{{ recipes }}" as="r" hint-placeholder-count="4">
+      <div style="display:grid;grid-template-columns:1.1fr 1.6fr 1.1fr 1.2fr;border-top:1px solid #D8CDB6;background:#FFFCF5;font-size:14.5px;color:#33332B">
+        <div style="padding:19px 20px;font-weight:600;color:#1A1A16">{{ r.name }}</div>
+        <div style="padding:19px 20px;line-height:1.5">{{ r.comp }}</div>
+        <div style="padding:19px 20px">{{ r.jars }}</div>
+        <div style="padding:19px 20px">{{ r.fs }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:20px">
+    <sc-for list="{{ productBenefits }}" as="b" hint-placeholder-count="4">
+      <span style="background:#EFE6D4;color:#4A4A40;padding:8px 12px;font-size:12px;font-weight:600;letter-spacing:.05em">{{ b }}</span>
+    </sc-for>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:22px">
+    <sc-for list="{{ freeFrom }}" as="f" hint-placeholder-count="9">
+      <span style="border:1px solid #C9BEA6;color:#4A4A40;padding:8px 14px;font:600 11px/1 Karla,sans-serif;letter-spacing:.12em">{{ f }}</span>
+    </sc-for>
+  </div>
+  <p style="margin:16px 0 0;font-size:13.5px;color:#8A8272">Every recipe is available in all three fruits. Small batch crafted under the supervision of food engineers, with fresh production after order. Same quality and taste since 1975.</p>
+</section>
+</sc-if>
+
+<section style="max-width:1440px;margin:64px auto 0;padding:0 40px">
+  <h2 style="margin:0 0 22px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(28px,3.2vw,44px);line-height:1.05;letter-spacing:-.02em;border-bottom:2px solid #1A1A16;padding-bottom:18px">Other products</h2>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#D8CDB6;border:1px solid #D8CDB6">
+    <sc-for list="{{ others }}" as="o" hint-placeholder-count="8">
+      <a href="{{ o.url }}" style="background:#FFFCF5;display:flex;align-items:center;gap:16px;padding:16px 18px;color:#1A1A16" style-hover="background:#EFE6D4">
+        <div style="flex:0 0 auto;width:64px;height:64px;overflow:hidden;background:#F9F4E9;border-radius:2px;padding:{{ o.pad }}">
+          <img loading="lazy" decoding="async" src="assets/dried-apricot.jpeg" data-src="{{ o.img }}" alt="{{ o.name }}" style="width:100%;height:100%;display:block;object-fit:{{ o.fit }};transition:transform .5s cubic-bezier(.2,.7,.2,1)"></img>
+        </div>
+        <div style="min-width:0">
+          <div style="font:600 9.5px/1 Karla,sans-serif;letter-spacing:.18em;color:#C2601F">{{ o.group }}</div>
+          <div style="margin-top:8px;font-family:Newsreader,serif;font-weight:300;font-size:18px;line-height:1.2">{{ o.name }}</div>
+          <div style="margin-top:4px;font-size:12px;color:#8A8272">{{ o.tr }}</div>
+        </div>
+      </a>
+    </sc-for>
+  </div>
+</section>
+</sc-if>
+
+<section id="rfq" data-reveal="1" style="margin-top:96px;background:#EFE6D4;border-top:1px solid #1A1A16;padding:88px 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 1.05fr;gap:64px">
+    <div>
+      <p style="margin:0 0 12px;font:600 11px/1 Karla,sans-serif;letter-spacing:.24em;color:#C2601F">CONTACT</p>
+      <h2 data-split="1" style="margin:0 0 22px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(34px,4.4vw,64px);line-height:1;letter-spacing:-.02em">Tell us what you need and where it is going.</h2>
+      <p style="margin:0 0 34px;font-size:15.5px;line-height:1.7;color:#4A4A40;max-width:32em;text-wrap:pretty">AdaViano quotes, contracts and delivers. Send us your company details and what you are looking for — you get pricing, the product specification and the producer’s certificate pack, and samples are arranged for confirmed commercial inquiries.</p>
+      <div style="display:grid;gap:18px;font-size:15px;color:#33332B">
+        <div><span style="display:block;font:600 10px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F;margin-bottom:6px">EMAIL</span><a href="mailto:info@adaviano.com" style="color:#33332B">info@adaviano.com</a></div>
+        <div><span style="display:block;font:600 10px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F;margin-bottom:6px">ADDRESS</span>125 Town Park Drive, Suite 300<br>Kennesaw, GA 30144</div>
+      </div>
+    </div>
+    <div style="background:#FFFCF5;border:1px solid #1A1A16;padding:36px">
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="padding:52px 8px;text-align:center;animation:wf-rise .4s ease both">
+          <h3 style="margin:0 0 12px;font-family:Newsreader,serif;font-weight:300;font-size:30px">Request received</h3>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:#4A4A40">Our desk will come back with pricing and the document pack for what you asked about.</p>
+        </div>
+      </sc-if>
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <div style="display:grid;gap:16px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <label style="display:grid;gap:8px;font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">COMPANY
+              <input placeholder="Acme Foods Inc." style="border:1px solid #C9BEA6;background:#FFFDF9;padding:13px;font:400 14.5px Karla,sans-serif;letter-spacing:0" style-focus="border-color:#C2601F;outline:none">
+            </label>
+            <label style="display:grid;gap:8px;font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">CONTACT NAME
+              <input placeholder="Full name" style="border:1px solid #C9BEA6;background:#FFFDF9;padding:13px;font:400 14.5px Karla,sans-serif;letter-spacing:0" style-focus="border-color:#C2601F;outline:none">
+            </label>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <label style="display:grid;gap:8px;font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">EMAIL
+              <input placeholder="you@company.com" style="border:1px solid #C9BEA6;background:#FFFDF9;padding:13px;font:400 14.5px Karla,sans-serif;letter-spacing:0" style-focus="border-color:#C2601F;outline:none">
+            </label>
+            <label style="display:grid;gap:8px;font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">PHONE
+              <input placeholder="+1 (555) 123-4567" style="border:1px solid #C9BEA6;background:#FFFDF9;padding:13px;font:400 14.5px Karla,sans-serif;letter-spacing:0" style-focus="border-color:#C2601F;outline:none">
+            </label>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <label style="display:grid;gap:8px;font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">STATE
+              <input placeholder="Georgia" style="border:1px solid #C9BEA6;background:#FFFDF9;padding:13px;font:400 14.5px Karla,sans-serif;letter-spacing:0" style-focus="border-color:#C2601F;outline:none">
+            </label>
+            <label style="display:grid;gap:8px;font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">COMPANY WEBSITE
+              <input placeholder="www.company.com" style="border:1px solid #C9BEA6;background:#FFFDF9;padding:13px;font:400 14.5px Karla,sans-serif;letter-spacing:0" style-focus="border-color:#C2601F;outline:none">
+            </label>
+          </div>
+          <label style="display:grid;gap:8px;font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">NOTES
+            <textarea rows="3" value="{{ inquiryProduct }}" onChange="{{ setInquiry }}" placeholder="Which products, volumes, packing format and any organic requirement…" style="border:1px solid #C9BEA6;background:#FFFDF9;padding:13px;font:400 14.5px/1.55 Karla,sans-serif;letter-spacing:0;resize:vertical" style-focus="border-color:#C2601F;outline:none"></textarea>
+          </label>
+          <button onClick="{{ send }}" style="margin-top:4px;background:#C2601F;color:#F7F2E8;border:none;padding:16px;font:600 11.5px Karla,sans-serif;letter-spacing:.16em;cursor:pointer" style-hover="background:#1A1A16">SEND REQUEST</button>
+          <p style="margin:0;font-size:12px;line-height:1.5;color:#8A8272">We quote trade volumes; samples are arranged for confirmed commercial inquiries.</p>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer style="background:#1A1A16;color:#C8C2B2;padding:0 0 30px">
+  <div style="overflow:hidden;border-bottom:1px solid #33332B;padding:26px 0">
+    <div style="display:flex;width:max-content;animation:wf-marquee 30s linear infinite">
+      <div style="display:flex;gap:40px;padding-right:40px;font-family:Newsreader,serif;font-weight:200;font-size:42px;color:#F7F2E8;white-space:nowrap">
+        <span>Apricot</span><span style="color:#C2601F">·</span><span>Olive Oil</span><span style="color:#C2601F">·</span><span>Organic Preserves</span><span style="color:#C2601F">·</span>
+      </div>
+      <div style="display:flex;gap:40px;padding-right:40px;font-family:Newsreader,serif;font-weight:200;font-size:42px;color:#F7F2E8;white-space:nowrap" aria-hidden="true">
+        <span>Apricot</span><span style="color:#C2601F">·</span><span>Olive Oil</span><span style="color:#C2601F">·</span><span>Organic Preserves</span><span style="color:#C2601F">·</span>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1440px;margin:0 auto;padding:56px 40px 0;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px">
+    <div>
+      <div style="font-family:Newsreader,serif;font-weight:300;font-size:24px;color:#F7F2E8">AdaViano</div>
+      <p style="margin:14px 0 0;font-size:13.5px;line-height:1.65;max-width:26em">We distribute apricots, cold-pressed olive oil and organic fruit preserves — produced in Malatya, Turkey — to US importers, food manufacturers and retail.</p>
+    </div>
+    <div style="display:grid;gap:9px;font-size:13.5px;align-content:start">
+      <div style="font:600 10px/1 Karla,sans-serif;letter-spacing:.2em;color:#E9B877;margin-bottom:6px">APRICOTS</div>
+      <sc-for list="{{ apricots }}" as="p" hint-placeholder-count="5">
+        <a href="{{ p.url }}" style="color:#C8C2B2">{{ p.name }}</a>
+      </sc-for>
+    </div>
+    <div style="display:grid;gap:9px;font-size:13.5px;align-content:start">
+      <div style="font:600 10px/1 Karla,sans-serif;letter-spacing:.2em;color:#E9B877;margin-bottom:6px">OIL &amp; PRESERVES</div>
+      <a href="#/product/extra-virgin-olive-oil" style="color:#C8C2B2">Extra Virgin Olive Oil</a>
+      <sc-for list="{{ fruits }}" as="p" hint-placeholder-count="3">
+        <a href="{{ p.url }}" style="color:#C8C2B2">{{ p.name }}</a>
+      </sc-for>
+    </div>
+    <div style="display:grid;gap:9px;font-size:13.5px;align-content:start">
+      <div style="font:600 10px/1 Karla,sans-serif;letter-spacing:.2em;color:#E9B877;margin-bottom:6px">GET IN TOUCH</div>
+      <a href="mailto:info@adaviano.com" style="color:#C8C2B2">info@adaviano.com</a>
+      <span style="color:#C8C2B2;line-height:1.6">125 Town Park Drive, Suite 300<br>Kennesaw, GA 30144</span>
+    </div>
+  </div>
+  <div style="max-width:1440px;margin:48px auto 0;padding:22px 40px 0;border-top:1px solid #33332B;font-size:12px;color:#87816F;display:flex;gap:20px;flex-wrap:wrap">
+    <span>© 2026 AdaViano. Produced in Malatya · Turkey.</span>
+    <span style="margin-left:auto">Product of Turkey</span>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { route: "", sent: false, inquiry: "" };
+
+  static CERT = "ISO 9001 · ISO 22000 · FSSC 22000";
+
+  products() {
+    const C = Component.CERT;
+    const jarSpecs = [
+      ["Origin", "Anatolia, Turkey"],
+      ["Form", "Marmalade · purée"],
+      ["Processing", "Small batch crafted, cooked fresh after order"],
+      ["Use", "Toast · pastries · desserts"],
+      ["Certificates", C],
+      ["Recipes", "Organic marmalade · organic purée · traditional · natural"],
+      ["Retail jars", "40 · 260 · 350 g (280 / 400 g traditional)"],
+      ["Food-service", "2.5 · 5 · 10 · 20 kg"],
+      ["Production", "Under food-engineer supervision; organic status confirmed on request"]
+    ];
+    return [
+      { slug: "dried-apricot", img: "assets/dried-apricot-whole.jpg", group: "Apricots", cal: "whole",
+        tag: "APRICOT · 01 · WHOLE", name: "Dried Apricot", tr: "Whole",
+        blurb: "Whole dried apricots from Malatya, the region that grows roughly 85% of the world's dried apricots.",
+        detail: "Available sulphured, which preserves the bright orange colour, or naturally dried, which gives a deeper brown colour and a different texture. A versatile staple for snacking, baking and confectionery.",
+        specs: [["Origin","Malatya, Turkey"],["Form","Whole"],["Processing","Sulphured or naturally dried"],["Use","Snacking · baking · confectionery"],["Certificates",C]] },
+      { slug: "sundried-apricot", img: "assets/sundried-apricot-tray.jpg", group: "Apricots", cal: "whole",
+        organic: true, tag: "APRICOT · 02 · SUN-DRIED", name: "Sundried Apricot", tr: "Whole · sun-dried",
+        blurb: "Whole apricots naturally dried under the Anatolian sun, also available as an organic option.",
+        detail: "Naturally dried without treatment, packed with vitamins, fibre and natural sweetness. Eaten on its own as a snack, or used in salads, desserts and other recipes.",
+        specs: [["Origin","Anatolia, Turkey"],["Form","Whole"],["Processing","Naturally sun-dried"],["Organic","Organic option available"],["Use","Snacking · salads · desserts"],["Certificates",C]] },
+      { slug: "diced-apricot", img: "assets/diced-apricot.jpeg", group: "Apricots", cal: "diced",
+        tag: "APRICOT · 03 · DICED", name: "Diced Apricot", tr: "Diced",
+        blurb: "Anatolian apricots dried and diced into sweet, chewy bite-sized pieces.",
+        detail: "Diced for convenience, rich in vitamins, fibre and natural energy. Used for snacking or added to baked goods, cereal and salads.",
+        specs: [["Origin","Anatolia, Turkey"],["Form","Diced"],["Processing","Dried and diced"],["Use","Bakery · cereal · salads"],["Certificates",C]] },
+      { slug: "natural-diced-apricot", img: "assets/natural-diced-apricot-pile.jpg", group: "Apricots", cal: "diced",
+        tag: "APRICOT · 04 · NATURAL", name: "Natural Diced Apricot", tr: "Diced · sun-dried",
+        blurb: "Anatolian apricots naturally sun-dried and diced into bite-sized pieces.",
+        detail: "Dried under the sun without treatment, then diced, keeping the pure natural sweetness of the fruit. Used in desserts, cereal and salads.",
+        specs: [["Origin","Anatolia, Turkey"],["Form","Diced"],["Processing","Naturally sun-dried and diced"],["Use","Desserts · cereal · salads"],["Certificates",C]] },
+      { slug: "apricot-kernel", img: "assets/apricot-kernel-wood.jpg", group: "Apricots", cal: null,
+        tag: "APRICOT · 05 · KERNEL", name: "Apricot Kernel", tr: "Whole kernel",
+        blurb: "Whole kernels from Anatolian apricots, with a slightly nutty flavour.",
+        detail: "Rich in healthy fats, vitamins and minerals. Used in smoothies, salads and confectionery, or eaten on its own as a snack.",
+        specs: [["Origin","Anatolia, Turkey"],["Form","Whole kernel"],["Processing","Shelled and dried"],["Use","Smoothies · salads · snacking"],["Certificates",C]] },
+      { slug: "extra-virgin-olive-oil", img: "assets/olive-oil.png", group: "Olive Oil", cal: null,
+        organic: true, tag: "OLIVE OIL · COLD-PRESSED", name: "Cold-Pressed Extra Virgin Olive Oil", tr: "Extra virgin · first press",
+        blurb: "A single extra virgin oil from hand-selected Aegean olives — first cold-pressed, mechanically extracted, nothing added.",
+        detail: "Aegean olives carry an enticing aroma and a very rich, distinct, earthy flavour. Available as an organic option.",
+        specs: [["Origin","Aegean region, Turkey"],["Form","Extra virgin olive oil"],["Processing","Cold-pressed, first press · no additives"],["Extraction","Mechanical means only"],["Net volume","33.8 fl oz (1 L) bottle"],["Servings","66 × 1 tbsp (15 ml)"],["Certificates",C],["Olives","Hand-selected"],["Organic","Organic option available"]] },
+      { slug: "rosehip-preserves", img: "assets/rosehip.png", texture: "assets/rosehip-texture.png", group: "Preserves", cal: null, isFruit: true,
+        tag: "Rosa canina", name: "Rosehip", tr: "Wild-harvested preserve",
+        blurb: "The fruit of the wild rose, wild-harvested from the mountains of Anatolia and small batch crafted into preserves.",
+        detail: "Exceptionally rich in vitamin C and antioxidants. Made in all four recipe styles — organic marmalade, sugar-free organic purée, traditional and natural — following the preserve heritage begun in Merzifon in 1975.",
+        benefits: ["Rich in Vitamin C","Antioxidant","Anti-inflammatory","Supports immunity","Aids digestion"],
+        specs: [...jarSpecs,["Botanical","Rosa canina"],["Sourcing","Wild-harvested, mountains of Anatolia"]] },
+      { slug: "hawthorn-preserves", img: "assets/hawthorn.png", texture: "assets/hawthorn-texture.png", group: "Preserves", cal: null, isFruit: true,
+        tag: "Crataegus spp.", name: "Hawthorn", tr: "Wild-harvested preserve",
+        blurb: "A traditional Anatolian fruit, wild-harvested from the mountains and small batch crafted into preserves.",
+        detail: "Long valued for heart health, antioxidants and circulation. Made in all four recipe styles — organic marmalade, sugar-free organic purée, traditional and natural — following the preserve heritage begun in Merzifon in 1975.",
+        benefits: ["Supports heart health","Antioxidant-rich","Improves circulation","Supports digestion"],
+        specs: [...jarSpecs,["Botanical","Crataegus spp."],["Sourcing","Wild-harvested, mountains of Anatolia"]] },
+      { slug: "cornelian-cherry-preserves", img: "assets/cornelian-cherry.png", texture: "assets/cornelian-cherry-texture.png", group: "Preserves", cal: null, isFruit: true,
+        tag: "Wild-harvested", name: "Cornelian Cherry", tr: "Wild-harvested preserve",
+        blurb: "Bright, tart-sweet red berries, wild-harvested from the mountains of Anatolia and small batch crafted into preserves.",
+        detail: "Rich in antioxidants and vitamins A, C and E. Made in all four recipe styles — organic marmalade, sugar-free organic purée, traditional and natural — following the preserve heritage begun in Merzifon in 1975.",
+        benefits: ["High in antioxidants","Vitamins A · C · E","Anti-inflammatory","Supports skin health"],
+        specs: [...jarSpecs,["Botanical","Cornus mas"],["Sourcing","Wild-harvested, mountains of Anatolia"]] }
+    ];
+  }
+
+  componentDidMount() {
+    this.syncRoute();
+    this._hash = () => this.syncRoute(true);
+    window.addEventListener("hashchange", this._hash);
+    this.enhance();
+  }
+  componentDidUpdate() { this.enhance(); }
+  componentWillUnmount() {
+    window.removeEventListener("hashchange", this._hash);
+    this.teardown && this.teardown();
+  }
+
+  syncRoute(scroll) {
+    const h = window.location.hash || "";
+    const m = h.match(/^#\/product\/([a-z0-9-]+)/i);
+    const route = m ? m[1] : "";
+    const gm = h.match(/^#\/group\/([a-z0-9-]+)/i);
+    const groupRoute = gm ? gm[1] : (/^#\/categories/i.test(h) ? "__all" : (/^#\/all/i.test(h) ? "__products" : ""));
+    const isRouteHash = /^#\/(product|group)\//i.test(h) || /^#\/categories/i.test(h) || /^#\/all/i.test(h);
+    const anchorId = !isRouteHash && /^#[a-z][a-z0-9-]*$/i.test(h) ? h.slice(1) : "";
+    if (route !== this.state.route || groupRoute !== this.state.groupRoute) {
+      this.setState({ route: route, groupRoute: groupRoute, inquiry: route ? this.state.inquiry : "" });
+    }
+    if (!scroll) return;
+    if (anchorId) {
+      const jump = () => {
+        const el = document.getElementById(anchorId);
+        if (el) window.scrollTo(0, el.getBoundingClientRect().top + window.pageYOffset - 70);
+      };
+      jump(); setTimeout(jump, 80); setTimeout(jump, 240);
+    } else {
+      window.scrollTo(0, 0);
+      setTimeout(() => window.scrollTo(0, 0), 60);
+    }
+  }
+
+  scrollToRfq() {
+    const jump = () => {
+      const el = document.getElementById("rfq");
+      if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 70, behavior: "smooth" });
     };
-  }
-  function parseDcText(src) {
-    const openMatch = /<x-dc(?:\s[^>]*)?>/.exec(src);
-    if (!openMatch) return null;
-    const close = src.lastIndexOf("</x-dc>");
-    if (close === -1 || close < openMatch.index) return null;
-    const template = src.slice(openMatch.index + openMatch[0].length, close);
-    const doc = new DOMParser().parseFromString(src, "text/html");
-    const scriptEl = doc.querySelector("script[data-dc-script]");
-    const { props, preview } = parseDataProps(
-      scriptEl?.getAttribute("data-props") ?? null
-    );
-    return {
-      template,
-      js: scriptEl ? scriptEl.textContent || "" : "",
-      props,
-      preview
-    };
-  }
-  function parseDataProps(raw) {
-    if (!raw) return { props: null, preview: null };
-    let parsed;
-    try {
-      parsed = JSON.parse(raw);
-    } catch {
-      return { props: null, preview: null };
-    }
-    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
-      return { props: null, preview: null };
-    }
-    const obj = parsed;
-    const preview = obj.$preview && typeof obj.$preview === "object" ? obj.$preview : null;
-    const rest = {};
-    for (const k of Object.keys(obj)) {
-      if (k[0] !== "$") rest[k] = obj[k];
-    }
-    return { props: Object.keys(rest).length ? rest : null, preview };
-  }
-  function dcNameFromPath(pathname) {
-    let p = pathname || "";
-    try {
-      p = decodeURIComponent(p);
-    } catch {
-    }
-    const base = p.split("/").pop() || "Root";
-    return base.replace(/\.dc\.html$/, "").replace(/\.html?$/, "") || "Root";
+    jump(); setTimeout(jump, 90);
   }
 
-  // src/boot.ts
-  var BASE_CSS = `
-    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
-      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
-      border-radius:2px;box-sizing:border-box;overflow:hidden}
-    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
-    html.sc-dc-streaming .sc-placeholder,
-    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
-      background:color-mix(in srgb,currentColor 5%,transparent);
-      border-color:transparent}
-    html.sc-dc-streaming .sc-placeholder::before,
-    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
-      position:absolute;inset:0;pointer-events:none;
-      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
-      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
-    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
-    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
-      background:color-mix(in srgb,currentColor 8%,transparent)}
-    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
-      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
-    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
-      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
-      border-radius:2px;box-sizing:border-box;color:transparent;
-      user-select:none}
-    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
-      color:color-mix(in srgb,currentColor 50%,transparent);
-      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
-      padding:0 3px}
-    .sc-host.sc-has-error{position:relative}
-    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
-      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
-      border-radius:4px;white-space:pre-wrap;pointer-events:none}
-    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts \u2014 keep both
-       in sync until dc-runtime regains a build step. */
-    @media print {
-      @page { margin: 0.5cm; }
-      figure, table { break-inside: avoid; }
-      #dc-root, #dc-root > .sc-host { height: auto; }
-      *, *::before, *::after {
-        print-color-adjust: exact; -webkit-print-color-adjust: exact;
-        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
-        animation-delay: -99s !important; animation-duration: .001s !important;
-        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
-        animation-play-state: running !important; transition-duration: 0s !important;
+  setMeta(sel, attr, val) {
+    const el = document.head.querySelector(sel);
+    if (el) el.setAttribute(attr, val);
+  }
+
+  updateSeo() {
+    const base = "https://adaviano.com/";
+    const h = window.location.hash || "";
+    const all = this.products();
+    const cur = all.find((p) => p.slug === this.state.route) || null;
+    const gKey = this.state.groupRoute;
+    let title = "AdaViano — WishneFood Dried Apricots, Organic Preserves & Olive Oil in the USA";
+    let desc = "AdaViano brings WishneFood to the United States: Malatya dried apricots, wild-harvested organic fruit preserves and cold-pressed Aegean extra virgin olive oil.";
+    let ld = null;
+    if (cur) {
+      title = cur.name + " — WishneFood | AdaViano";
+      desc = cur.blurb;
+      ld = { "@context": "https://schema.org", "@type": "Product", name: cur.name, description: cur.blurb,
+        brand: { "@type": "Brand", name: "WishneFood" }, category: cur.group,
+        countryOfOrigin: "TR", image: cur.img,
+        offers: { "@type": "Offer", availability: "https://schema.org/InStock", areaServed: "US", seller: { "@type": "Organization", name: "AdaViano" } } };
+    } else if (gKey === "__products") {
+      title = "All Products — WishneFood | AdaViano";
+      desc = "Every WishneFood product AdaViano sells in the United States: five apricot products, three organic fruit preserves and cold-pressed extra virgin olive oil.";
+    } else if (gKey === "__all") {
+      title = "Product Categories — WishneFood | AdaViano";
+      desc = "Three product groups, nine WishneFood products: apricots, organic fruit preserves and extra virgin olive oil.";
+    } else if (gKey) {
+      const names = { apricots: "Apricots", preserves: "Organic Fruit Preserves", "olive-oil": "Extra Virgin Olive Oil" };
+      if (names[gKey]) {
+        title = names[gKey] + " — WishneFood | AdaViano";
+        desc = names[gKey] + " from a single Anatolian producer, distributed in the United States by AdaViano.";
       }
     }
-  `;
-  var FULL_PAGE_CSS = "html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}";
-  function rootNameForDocument(doc, loc) {
-    let bootPath = loc.pathname || "";
-    if (!/\.dc\.html?$/i.test(safeDecode(bootPath))) {
-      try {
-        bootPath = new URL(doc.baseURI || "/").pathname;
-      } catch {
-      }
-    }
-    return dcNameFromPath(bootPath);
+    document.title = title;
+    this.setMeta('meta[name="description"]', "content", desc);
+    this.setMeta('meta[property="og:title"]', "content", title);
+    this.setMeta('meta[property="og:description"]', "content", desc);
+    this.setMeta('meta[name="twitter:title"]', "content", title);
+    this.setMeta('meta[name="twitter:description"]', "content", desc);
+    this.setMeta('link[rel="canonical"]', "href", base + h);
+    this.setMeta('meta[property="og:url"]', "content", base + h);
+    let node = document.getElementById("route-ld");
+    if (ld) {
+      if (!node) { node = document.createElement("script"); node.id = "route-ld"; node.type = "application/ld+json"; document.head.appendChild(node); }
+      node.textContent = JSON.stringify(ld);
+    } else if (node) { node.remove(); }
   }
-  function safeDecode(s) {
-    try {
-      return decodeURIComponent(s);
-    } catch {
-      return s;
-    }
+
+  enhance() {
+    const root = document.body;
+    document.documentElement.lang = "en";
+    this.updateSeo();
+    root.querySelectorAll('img[data-src]').forEach((img) => {
+      const s = img.getAttribute("data-src");
+      if (s && !s.includes("{{") && img.getAttribute("src") !== s) img.setAttribute("src", s);
+    });
+    this.splitHeadings(root);
+    this.observeReveals(root);
+    this.wireTilt(root);
+    this.wireRail(root);
+    this.mountChrome();
   }
-  function boot(runtime, doc = document) {
-    const parsed = parseDcDocument(doc);
-    if (!parsed) return null;
-    const React = getReact();
-    const rootName = rootNameForDocument(doc, location);
-    runtime.markFetched(rootName);
-    runtime.setRootName(rootName);
-    runtime.adoptParsed(rootName, parsed);
-    if (!window.__resources) {
-      fetch(location.href).then((res) => res.ok ? res.text() : "").then((t) => {
-        const raw = t ? parseDcText(t) : null;
-        if (raw?.template) runtime.updateHtml(rootName, raw.template);
-      }).catch(() => {
+
+  splitHeadings(root) {
+    root.querySelectorAll('[data-split]:not([data-split-done])').forEach((el) => {
+      const words = (el.textContent || "").trim().split(/\s+/);
+      if (!words.length) return;
+      el.setAttribute("data-split-done", "1");
+      el.textContent = "";
+      words.forEach((w, i) => {
+        const s = document.createElement("span");
+        s.textContent = w + (i < words.length - 1 ? " " : "");
+        s.style.display = "inline-block";
+        s.style.whiteSpace = "pre";
+        s.style.animation = `wf-word .85s ${0.3 + i * 0.045}s cubic-bezier(.2,.7,.2,1) both`;
+        el.appendChild(s);
       });
-    }
-    const dc = doc.querySelector("x-dc");
-    const hostEl = doc.createElement("div");
-    hostEl.id = "dc-root";
-    dc.replaceWith(hostEl);
-    if (!parsed.preview) {
-      const s = doc.createElement("style");
-      s.textContent = FULL_PAGE_CSS;
-      doc.head.appendChild(s);
-    }
-    const Root = runtime.getDC(rootName);
-    const entry = runtime.registry.get(rootName);
-    function StandaloneRoot() {
-      const [, setTick] = React.useState(0);
-      React.useEffect(() => {
-        const sub = () => setTick((n) => n + 1);
-        entry.subs.add(sub);
-        return () => {
-          entry.subs.delete(sub);
-        };
-      }, []);
-      const defaults = React.useMemo(() => {
-        const d = {};
-        for (const k in entry.propsMeta || {}) {
-          const v = entry.propsMeta?.[k]?.default;
-          if (v !== void 0) d[k] = v;
-        }
-        return d;
-      }, [entry.propsMeta]);
-      return h(Root, { ...defaults, ...entry.propOverrides || {} });
-    }
-    const ReactDOM = getReactDOM();
-    if (ReactDOM.createRoot)
-      ReactDOM.createRoot(hostEl).render(h(StandaloneRoot));
-    else ReactDOM.render(h(StandaloneRoot), hostEl);
-    return rootName;
-  }
-
-  // src/expr.ts
-  var IDENT_RE = /^[A-Za-z_$][A-Za-z0-9_$]*/;
-  var NUMBER_RE = /^-?\d+(\.\d+)?$/;
-  function resolve(vals, src) {
-    const expr = String(src).trim();
-    if (!expr) return void 0;
-    if (expr[0] === "(" && expr[expr.length - 1] === ")" && parensWrapWhole(expr)) {
-      return resolve(vals, expr.slice(1, -1));
-    }
-    const eq = findTopLevelEquality(expr);
-    if (eq) {
-      const lv = resolve(vals, expr.slice(0, eq.index));
-      const rv = resolve(vals, expr.slice(eq.index + eq.op.length));
-      switch (eq.op) {
-        case "===":
-          return lv === rv;
-        case "!==":
-          return lv !== rv;
-        case "==":
-          return lv == rv;
-        default:
-          return lv != rv;
-      }
-    }
-    if (expr[0] === "!") return !resolve(vals, expr.slice(1));
-    if (expr === "true") return true;
-    if (expr === "false") return false;
-    if (expr === "null") return null;
-    if (expr === "undefined") return void 0;
-    if (NUMBER_RE.test(expr)) return Number(expr);
-    if (expr.length >= 2 && (expr[0] === '"' || expr[0] === "'") && expr[expr.length - 1] === expr[0]) {
-      return expr.slice(1, -1);
-    }
-    return resolvePath(vals, expr);
-  }
-  function parensWrapWhole(expr) {
-    let depth = 0;
-    for (let i = 0; i < expr.length - 1; i++) {
-      if (expr[i] === "(") depth++;
-      else if (expr[i] === ")") {
-        depth--;
-        if (depth === 0) return false;
-      }
-    }
-    return true;
-  }
-  function findTopLevelEquality(expr) {
-    let depth = 0;
-    for (let i = 0; i < expr.length; i++) {
-      const c = expr[i];
-      if (c === "[" || c === "(") depth++;
-      else if (c === "]" || c === ")") depth--;
-      else if (depth === 0 && (c === "=" || c === "!") && expr[i + 1] === "=") {
-        if (i > 0 && (expr[i - 1] === "=" || expr[i - 1] === "!")) continue;
-        if (!expr.slice(0, i).trim()) continue;
-        const op = expr[i + 2] === "=" ? c + "==" : c + "=";
-        return { index: i, op };
-      }
-    }
-    return null;
-  }
-  function resolvePath(vals, expr) {
-    const head = expr.match(IDENT_RE);
-    if (!head) return void 0;
-    let cur = vals == null ? void 0 : vals[head[0]];
-    let i = head[0].length;
-    while (i < expr.length) {
-      if (expr[i] === ".") {
-        const m = expr.slice(i + 1).match(IDENT_RE) || expr.slice(i + 1).match(/^\d+/);
-        if (!m) return void 0;
-        cur = cur == null ? void 0 : cur[m[0]];
-        i += 1 + m[0].length;
-      } else if (expr[i] === "[") {
-        let depth = 1;
-        let j = i + 1;
-        while (j < expr.length && depth > 0) {
-          if (expr[j] === "[") depth++;
-          else if (expr[j] === "]") {
-            depth--;
-            if (depth === 0) break;
-          }
-          j++;
-        }
-        if (depth !== 0) return void 0;
-        const key = resolve(vals, expr.slice(i + 1, j));
-        cur = cur == null ? void 0 : cur[key];
-        i = j + 1;
-      } else {
-        return void 0;
-      }
-    }
-    return cur;
-  }
-
-  // src/encode.ts
-  var CAMEL_ATTR = "sc-camel-";
-  var INLINE_TEXT_TAGS = new Set(
-    "a abbr b bdi bdo br cite code del dfn em i ins kbd mark q s samp small span strike strong sub sup u var wbr".split(
-      " "
-    )
-  );
-  var RAW_WRAP = {
-    select: "sc-raw-select",
-    table: "sc-raw-table",
-    tbody: "sc-raw-tbody",
-    thead: "sc-raw-thead",
-    tfoot: "sc-raw-tfoot",
-    tr: "sc-raw-tr",
-    td: "sc-raw-td",
-    th: "sc-raw-th",
-    caption: "sc-raw-caption"
-  };
-  var RAW_UNWRAP = Object.fromEntries(
-    Object.entries(RAW_WRAP).map(([k, v]) => [v, k])
-  );
-  var EVENT_MAP = {
-    onclick: "onClick",
-    onchange: "onChange",
-    oninput: "onInput",
-    onsubmit: "onSubmit",
-    onkeydown: "onKeyDown",
-    onkeyup: "onKeyUp",
-    onkeypress: "onKeyPress",
-    onmousedown: "onMouseDown",
-    onmouseup: "onMouseUp",
-    onmouseenter: "onMouseEnter",
-    onmouseleave: "onMouseLeave",
-    onfocus: "onFocus",
-    onblur: "onBlur",
-    ondoubleclick: "onDoubleClick",
-    oncontextmenu: "onContextMenu",
-    onmousemove: "onMouseMove",
-    onmouseover: "onMouseOver",
-    onmouseout: "onMouseOut",
-    onpointerdown: "onPointerDown",
-    onpointerup: "onPointerUp",
-    onpointermove: "onPointerMove",
-    onpointerenter: "onPointerEnter",
-    onpointerleave: "onPointerLeave",
-    onpointercancel: "onPointerCancel",
-    onpointerover: "onPointerOver",
-    onpointerout: "onPointerOut",
-    ongotpointercapture: "onGotPointerCapture",
-    onlostpointercapture: "onLostPointerCapture",
-    ontouchstart: "onTouchStart",
-    ontouchend: "onTouchEnd",
-    ontouchmove: "onTouchMove",
-    ontouchcancel: "onTouchCancel",
-    ondragstart: "onDragStart",
-    ondragend: "onDragEnd",
-    ondragenter: "onDragEnter",
-    ondragleave: "onDragLeave",
-    ondragover: "onDragOver",
-    onanimationstart: "onAnimationStart",
-    onanimationend: "onAnimationEnd",
-    onanimationiteration: "onAnimationIteration",
-    ontransitionend: "onTransitionEnd"
-  };
-  var ATTRS = `(?:[^>"']|"[^"]*"|'[^']*')*`;
-  var IMPORT_SELF_CLOSE_RE = new RegExp(
-    "<(x-import|dc-import)(" + ATTRS + ")/>",
-    "gi"
-  );
-  var CAMEL_ATTR_RE = /(\s)([a-z]+[A-Z][A-Za-z0-9]*)(\s*=)/g;
-  function encodeCamelAttrs(html) {
-    return html.replace(
-      CAMEL_ATTR_RE,
-      (_, sp, name, eq) => sp + CAMEL_ATTR + name.replace(/[A-Z]/g, (c) => "-" + c.toLowerCase()) + eq
-    );
-  }
-  function encodeCase(html) {
-    html = html.replace(
-      IMPORT_SELF_CLOSE_RE,
-      (_, t, a) => "<" + t + a + "></" + t + ">"
-    );
-    html = html.replace(/<helmet(\s|>)/gi, "<sc-helmet$1");
-    html = html.replace(/<\/helmet\s*>/gi, "</sc-helmet>");
-    html = encodeCamelAttrs(html);
-    for (const [real, alias] of Object.entries(RAW_WRAP)) {
-      html = html.replace(
-        new RegExp("(</?)" + real + "(?=[\\s>])", "gi"),
-        "$1" + alias
-      );
-    }
-    return html;
-  }
-  function kebabToCamel(s) {
-    return s.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
-  }
-  function cssToObj(css) {
-    const o = {};
-    for (const decl of css.split(";")) {
-      const i = decl.indexOf(":");
-      if (i < 0) continue;
-      const prop = decl.slice(0, i).trim();
-      o[prop.startsWith("--") ? prop : kebabToCamel(prop)] = decl.slice(i + 1).trim();
-    }
-    return o;
-  }
-  function compileAttr(raw) {
-    const whole = raw.match(/^\s*\{\{([\s\S]+?)\}\}\s*$/);
-    if (whole) {
-      const path = whole[1];
-      return (vals) => resolve(vals, path);
-    }
-    if (raw.includes("{{")) {
-      const parts = raw.split(/\{\{([\s\S]+?)\}\}/g);
-      return (vals) => parts.map((s, i) => i & 1 ? resolve(vals, s) ?? "" : s).join("");
-    }
-    return () => raw;
-  }
-
-  // src/compile.ts
-  function collectProps(node, kind, host) {
-    const propGetters = [];
-    const pseudoClasses = [];
-    let hintSize = null;
-    for (const { name, value } of [...node.attributes]) {
-      if (name === "sc-name" || name === "data-dc-tpl") continue;
-      let key = name;
-      if (key.startsWith(CAMEL_ATTR))
-        key = kebabToCamel(key.slice(CAMEL_ATTR.length));
-      if (key === "hint-size") {
-        hintSize = value;
-        continue;
-      }
-      if (key.startsWith("style-")) {
-        pseudoClasses.push(host.pseudoClass(key.slice(6), value));
-        continue;
-      }
-      if (kind !== "dom") {
-        if (key.includes("-") && !(kind === "x-import" && (key.startsWith("aria-") || key.startsWith("data-"))))
-          key = kebabToCamel(key);
-      } else {
-        if (key === "class") key = "className";
-        else if (key === "for") key = "htmlFor";
-        else if (key.startsWith("on"))
-          key = EVENT_MAP[key] || "on" + key[2].toUpperCase() + key.slice(3);
-      }
-      propGetters.push([key, compileAttr(value)]);
-    }
-    return { propGetters, pseudoClasses, hintSize };
-  }
-  var HOST_STYLE_PROPS = /* @__PURE__ */ new Set([
-    "position",
-    "left",
-    "right",
-    "top",
-    "bottom",
-    "inset",
-    "width",
-    "height",
-    "z-index",
-    "transform"
-  ]);
-  function hostPositionStyle(style) {
-    const all = typeof style === "string" ? cssToObj(style) : style != null && typeof style === "object" ? style : null;
-    if (!all) return void 0;
-    const out = {};
-    for (const [k, v] of Object.entries(all)) {
-      const kebab = k.replace(/[A-Z]/g, (c) => "-" + c.toLowerCase());
-      if (HOST_STYLE_PROPS.has(kebab)) out[k] = v;
-    }
-    return Object.keys(out).length ? out : void 0;
-  }
-  function compileTemplate(html, host) {
-    const tpl = document.createElement("template");
-    //! nosemgrep: direct-inner-html-assignment
-    tpl.innerHTML = encodeCase(html);
-    let tplN = 0;
-    (function stamp(node) {
-      if (node.nodeType === Node.ELEMENT_NODE) {
-        node.setAttribute("data-dc-tpl", String(tplN++));
-      }
-      for (const c of node.childNodes) stamp(c);
-    })(tpl.content);
-    const builders = walkChildren(tpl.content, host);
-    const render = ((vals, ctx) => builders.map((b, i) => b(vals || {}, ctx, i)));
-    render.__annotated = tpl.innerHTML;
-    return render;
-  }
-  function walkChildren(node, host) {
-    return [...node.childNodes].map((c) => walk(c, host)).filter((b) => b != null);
-  }
-  var SLIDE_ID_VALUE_RE = /^[0-9a-f]{8}$/;
-  var DECK_CONTROL_FLOW_RE = /^(sc-if|sc-for|sc-else|dc-import|x-import)$/;
-  var DECK_AUX_RE = /^(template|script|style|sc-helmet|helmet)$/;
-  function isDeckMountTag(el) {
-    if (el.localName === "deck-stage") return true;
-    return el.localName === "x-import" && (el.getAttribute("component-from-global-scope") || "") === "deck-stage";
-  }
-  function walkDeckChildren(el, host) {
-    const pairs = [...el.childNodes].map((c) => ({ c, b: walk(c, host) })).filter((p) => p.b !== null);
-    const kids = pairs.map((p) => p.b);
-    const seen = /* @__PURE__ */ new Set();
-    const wsSeen = /* @__PURE__ */ new Map();
-    const keys = [];
-    const nextSlideId = new Array(pairs.length);
-    {
-      let upcoming = null;
-      for (let j = pairs.length - 1; j >= 0; j--) {
-        const n = pairs[j].c;
-        if (n.nodeType === Node.ELEMENT_NODE) {
-          const t = n.localName;
-          upcoming = !DECK_AUX_RE.test(t) && !DECK_CONTROL_FLOW_RE.test(t) ? n.getAttribute("data-om-slide-id") : null;
-        }
-        nextSlideId[j] = upcoming;
-      }
-    }
-    for (let j = 0; j < pairs.length; j++) {
-      const { c } = pairs[j];
-      if (c.nodeType === Node.TEXT_NODE) {
-        if ((c.nodeValue ?? "").trim() === "") {
-          const base = nextSlideId[j] ? "omid-ws:" + nextSlideId[j] : "omid-ws:aux";
-          const n = wsSeen.get(base) ?? 0;
-          wsSeen.set(base, n + 1);
-          keys.push(n === 0 ? base : base + ":" + n);
-          continue;
-        }
-        return { kids, keys: null };
-      }
-      if (c.nodeType !== Node.ELEMENT_NODE) {
-        keys.push(j);
-        continue;
-      }
-      const child = c;
-      const tag = child.localName;
-      if (DECK_AUX_RE.test(tag)) {
-        keys.push(j);
-        continue;
-      }
-      if (DECK_CONTROL_FLOW_RE.test(tag)) return { kids, keys: null };
-      const v = child.getAttribute("data-om-slide-id");
-      if (!v || !SLIDE_ID_VALUE_RE.test(v) || seen.has(v)) {
-        return { kids, keys: null };
-      }
-      seen.add(v);
-      keys.push("omid:" + v);
-    }
-    return { kids, keys };
-  }
-  function renderDeckKids(kids, kidKeys, vals, ctx) {
-    return kids.map((b, j) => {
-      const k = kidKeys ? kidKeys[j] : j;
-      const out = b(vals, ctx, k);
-      return kidKeys != null && typeof out === "string" ? h(getReact().Fragment, { key: k }, out) : out;
     });
   }
-  function walk(node, host) {
-    if (node.nodeType === Node.TEXT_NODE) return walkText(node);
-    if (node.nodeType !== Node.ELEMENT_NODE) return null;
-    const el = node;
-    const tag = el.tagName.toLowerCase();
-    if (tag === "sc-for") return walkFor(el, host);
-    if (tag === "sc-if") return walkIf(el, host);
-    if (tag === "x-import") return walkXImport(el, host);
-    if (tag === "sc-helmet") return host.helmet(el);
-    if (tag === "dc-import") return walkComponent(el, host);
-    return walkElement(el, host);
-  }
-  var warnedHoles = /* @__PURE__ */ new Set();
-  function warnUnresolved(ctx, what) {
-    const key = (ctx?.__name || "?") + "\0" + what;
-    if (warnedHoles.has(key)) return;
-    warnedHoles.add(key);
-    console.warn("[dc-runtime] " + (ctx?.__name || "template") + ": " + what);
-  }
-  function walkText(node) {
-    const txt = node.nodeValue ?? "";
-    if (!txt.includes("{{")) {
-      if (!txt.trim() && !txt.includes(" ")) return null;
-      return () => txt;
-    }
-    const parts = txt.split(/\{\{([\s\S]+?)\}\}/g);
-    return (vals, ctx, key) => h(
-      getReact().Fragment,
-      { key },
-      ...parts.map((p, i) => {
-        if (!(i & 1)) return p;
-        const v = resolve(vals, p);
-        if (v === void 0) {
-          if (!ctx?.__streamingNow) {
-            if (document.body?.hasAttribute("data-dc-editor-on")) {
-              return h(
-                "span",
-                { key: i, className: "sc-interp sc-unresolved" },
-                "{{ " + p.trim() + " }}"
-              );
-            }
-            warnUnresolved(
-              ctx,
-              "{{ " + p.trim() + " }} never resolved \u2014 rendered as empty"
-            );
-            return null;
-          }
-          return h(
-            "span",
-            { key: i, className: "sc-interp sc-missing" },
-            p.trim()
-          );
-        }
-        if (getReact().isValidElement(v) || Array.isArray(v)) {
-          return h(getReact().Fragment, { key: i }, v);
-        }
-        if (v === null || typeof v === "boolean") return null;
-        return h("span", { key: i, className: "sc-interp" }, String(v));
-      })
-    );
-  }
-  function walkFor(el, host) {
-    const listGet = compileAttr(el.getAttribute("list") || "");
-    const asName = el.getAttribute("as") || "item";
-    const hintN = parseInt(el.getAttribute("hint-placeholder-count") || "0", 10);
-    const kids = walkChildren(el, host);
-    const listSrc = el.getAttribute("list") || "";
-    return (vals, ctx, key) => {
-      let list = listGet(vals);
-      if (!Array.isArray(list)) {
-        if (!ctx?.__streamingNow) {
-          if (list !== void 0 && list !== null) {
-            warnUnresolved(
-              ctx,
-              'sc-for list="' + listSrc + '" is not an array (' + typeof list + ")"
-            );
-          }
-          list = [];
-        } else {
-          list = hintN > 0 ? Array(hintN).fill(void 0) : [];
-        }
-      }
-      return h(
-        getReact().Fragment,
-        { key },
-        list.map((item, i) => {
-          const sub = { ...vals, [asName]: item, $index: i };
-          return h(
-            getReact().Fragment,
-            { key: i },
-            kids.map((b, j) => b(sub, ctx, j))
-          );
-        })
-      );
-    };
-  }
-  function walkIf(el, host) {
-    const valGet = compileAttr(el.getAttribute("value") || "");
-    const hintRaw = el.getAttribute("hint-placeholder-val");
-    const hintGet = hintRaw != null ? compileAttr(hintRaw) : null;
-    const kids = walkChildren(el, host);
-    return (vals, ctx, key) => {
-      let v = valGet(vals);
-      if (v === void 0 && hintGet && ctx?.__streamingNow) v = hintGet(vals);
-      return v ? h(
-        getReact().Fragment,
-        { key },
-        kids.map((b, j) => b(vals, ctx, j))
-      ) : null;
-    };
-  }
-  function walkComponent(el, host) {
-    const name = el.getAttribute("name") || el.getAttribute("component") || "";
-    el.removeAttribute("name");
-    el.removeAttribute("component");
-    const tplId = el.getAttribute("data-dc-tpl");
-    const styleRaw = el.getAttribute("style");
-    el.removeAttribute("style");
-    const styleGet = styleRaw != null ? compileAttr(styleRaw) : null;
-    const { propGetters, hintSize } = collectProps(el, "dc-import", host);
-    const kids = walkChildren(el, host);
-    return (vals, ctx, key) => {
-      const props = {
-        key,
-        __hintSize: hintSize,
-        __tplId: tplId,
-        __hostStyle: styleGet ? hostPositionStyle(styleGet(vals)) : void 0
-      };
-      for (const [k, g] of propGetters) {
-        const v = g(vals);
-        if (k === "dcProps") {
-          if (v && typeof v === "object") Object.assign(props, v);
-          continue;
-        }
-        props[k] = v;
-      }
-      if (kids.length) props.children = kids.map((b, j) => b(vals, ctx, j));
-      return h(host.component(name), props);
-    };
-  }
-  function walkXImport(el, host) {
-    const globalNameGet = compileAttr(
-      el.getAttribute("component-from-global-scope") || ""
-    );
-    const exportNameGet = compileAttr(
-      el.getAttribute("component") || el.getAttribute("name") || ""
-    );
-    const fromRaw = el.getAttribute("from") || (el.getAttribute("component-from-global-scope") ? "" : el.getAttribute("src") || el.getAttribute("import") || "");
-    const urls = fromRaw.trim() ? fromRaw.trim().split(/\s+/) : [];
-    const url = urls.length ? urls[urls.length - 1] : "";
-    const kindOf = (u) => /\.(jsx|tsx)(\?|#|$)/i.test(u) ? "jsx" : "js";
-    const tplId = el.getAttribute("data-dc-tpl");
-    const styleRaw = el.getAttribute("style");
-    el.removeAttribute("style");
-    const styleGet = styleRaw != null ? compileAttr(styleRaw) : null;
-    const wrap = tplId != null || styleGet != null;
-    const { propGetters, hintSize } = collectProps(el, "x-import", host);
-    const hasContent = el.children.length > 0 || !!(el.textContent || "").trim();
-    const deckKeyed = hasContent && isDeckMountTag(el) ? walkDeckChildren(el, host) : null;
-    const kids = deckKeyed ? deckKeyed.kids : hasContent ? walkChildren(el, host) : [];
-    const kidKeys = deckKeyed?.keys ?? null;
-    const urlBindable = fromRaw.includes("{{");
-    if (urls.length && !urlBindable) {
-      let prev;
-      for (const u of urls) prev = host.loadExternal(kindOf(u), u, prev);
-    }
-    const evalName = (g, vals) => {
-      const v = g(vals);
-      const s = v == null ? "" : String(v);
-      return s.includes("{{") ? "" : s;
-    };
-    return (vals, ctx, key) => {
-      const globalName = evalName(globalNameGet, vals);
-      const name = globalName || evalName(exportNameGet, vals);
-      const C = !name || urlBindable ? null : globalName ? host.resolveExternalGlobal(url, globalName) : host.resolveExternal(url, name);
-      const hostStyle = styleGet ? hostPositionStyle(styleGet(vals)) : void 0;
-      const wrapper = wrap ? {
-        key,
-        className: "sc-host-x",
-        "data-dc-tpl": tplId,
-        style: hostStyle || { display: "contents" }
-      } : null;
-      if (!C) {
-        const error = urlBindable ? "x-import `from` cannot contain {{ \u2026 }} \u2014 module URLs are resolved at parse time; use a literal URL" : host.resolveExternalError(url, name);
-        const ph = host.placeholder({
-          key: wrapper ? void 0 : key,
-          name,
-          hintSize,
-          error
-        });
-        return wrapper ? h("div", wrapper, ph) : ph;
-      }
-      const props = wrapper ? {} : { key };
-      let unresolvedHole = false;
-      for (const [k, g] of propGetters) {
-        if (k === "component" || k === "componentFromGlobalScope" || k === "from") {
-          continue;
-        }
-        const v = g(vals);
-        if (v === void 0) unresolvedHole = true;
-        if (k === "dcProps") {
-          if (v && typeof v === "object") Object.assign(props, v);
-          continue;
-        }
-        props[k] = v;
-      }
-      if (unresolvedHole && ctx?.__htmlStreamingNow) {
-        const ph = host.placeholder({
-          key: wrapper ? void 0 : key,
-          name,
-          hintSize,
-          error: null
-        });
-        return wrapper ? h("div", wrapper, ph) : ph;
-      }
-      if (kids.length) {
-        props.children = renderDeckKids(kids, kidKeys, vals, ctx);
-      }
-      return wrapper ? h("div", wrapper, h(C, props)) : h(C, props);
-    };
-  }
-  function contentKey(el) {
-    const clone = el.cloneNode(true);
-    for (const d of clone.querySelectorAll("*")) {
-      while (d.attributes.length) d.removeAttribute(d.attributes[0].name);
-    }
-    const s = clone.innerHTML;
-    let h2 = 5381;
-    for (let i = 0; i < s.length; i++) h2 = (h2 << 5) + h2 + s.charCodeAt(i) | 0;
-    return s.length + "." + (h2 >>> 0).toString(36);
-  }
-  var NEVER_CONTENT_KEYED = new Set(
-    "script style textarea option title select canvas iframe video audio".split(
-      " "
-    )
-  );
-  var NOT_INLINE_SELECTOR = ":not(" + [...INLINE_TEXT_TAGS].join(",") + ")";
-  function walkElement(el, host) {
-    const realTag = RAW_UNWRAP[el.localName] || el.localName;
-    const tplId = el.getAttribute("data-dc-tpl");
-    const inlineOnly = el.childNodes.length > 0 && !NEVER_CONTENT_KEYED.has(realTag) && el.querySelector(NOT_INLINE_SELECTOR) === null;
-    const keySuffix = inlineOnly ? "|" + contentKey(el) : "";
-    const { propGetters, pseudoClasses } = collectProps(el, "dom", host);
-    const deckKeyed = isDeckMountTag(el) ? walkDeckChildren(el, host) : null;
-    const kids = deckKeyed ? deckKeyed.kids : walkChildren(el, host);
-    const kidKeys = deckKeyed?.keys ?? null;
-    return (vals, ctx, key) => {
-      const props = {
-        key: key + keySuffix,
-        "data-dc-tpl": tplId
-      };
-      for (const [k, g] of propGetters) {
-        let v = g(vals);
-        if (k === "style" && typeof v === "string") v = cssToObj(v);
-        if ((k === "value" || k === "checked") && v === void 0) {
-          v = k === "checked" ? false : "";
-        }
-        props[k] = v;
-      }
-      if (pseudoClasses.length) {
-        props.className = [props.className, ...pseudoClasses].filter(Boolean).join(" ");
-      }
-      return h(realTag, props, ...renderDeckKids(kids, kidKeys, vals, ctx));
-    };
+
+  reveal(el) {
+    if (el.getAttribute("data-revealed")) return;
+    el.setAttribute("data-revealed", "1");
+    el.style.opacity = "1";
+    el.style.transform = "none";
   }
 
-  // src/logic.ts
-  var StreamableLogic = class {
-    constructor(props) {
-      __publicField(this, "props");
-      __publicField(this, "state", {});
-      /** Back-pointer to the wrapper component, installed after construction. */
-      __publicField(this, "__host");
-      this.props = props || {};
-    }
-    setState(update, cb) {
-      this.__host && this.__host.__setLogicState(update, cb);
-    }
-    forceUpdate() {
-      this.__host && this.__host.forceUpdate();
-    }
-    componentDidMount() {
-    }
-    componentDidUpdate(_prevProps) {
-    }
-    componentWillUnmount() {
-    }
-    /** The flat object the template renders against (merged over props). */
-    renderVals() {
-      return {};
-    }
-  };
-  function evalDcLogic(src) {
-    //! nosemgrep: eval-and-function-constructor
-    const fn = new Function(
-      "DCLogic",
-      "StreamableLogic",
-      "React",
-      src + '\n;return (typeof Component!=="undefined"&&Component)||undefined;'
-    );
-    return fn(StreamableLogic, StreamableLogic, getReact());
+  runCounter(el) {
+    if (el.getAttribute("data-counted")) return;
+    el.setAttribute("data-counted", "1");
+    const target = parseInt(el.getAttribute("data-count"), 10) || 0;
+    const dur = 1300, t0 = Date.now();
+    const id = setInterval(() => {
+      const k = Math.min(1, (Date.now() - t0) / dur);
+      el.textContent = String(Math.round(target * (1 - Math.pow(1 - k, 3))));
+      if (k >= 1) clearInterval(id);
+    }, 40);
+    setTimeout(() => { clearInterval(id); el.textContent = String(target); }, dur + 400);
   }
 
-  // src/component.ts
-  function shallowEqual(a, b) {
-    if (!b) return false;
-    const ak = Object.keys(a).filter((k) => k !== "children");
-    const bk = Object.keys(b).filter((k) => k !== "children");
-    if (ak.length !== bk.length) return false;
-    for (const k of ak) if (a[k] !== b[k]) return false;
-    return true;
-  }
-  function Placeholder({
-    name,
-    hintSize,
-    streaming,
-    error
-  }) {
-    const [w, hgt] = (hintSize || "100%,60px").split(",");
-    return h(
-      "div",
-      {
-        className: "sc-placeholder" + (streaming ? " sc-streaming" : ""),
-        style: { width: w.trim(), height: hgt && hgt.trim() },
-        title: name
-      },
-      error ? h(
-        "div",
-        { className: "sc-placeholder-error" },
-        (name ? name + ": " : "") + error
-      ) : null
-    );
-  }
-  function hintToMin(hint) {
-    if (!hint) return void 0;
-    const [w, hgt] = hint.split(",");
-    return { minWidth: w.trim(), minHeight: hgt && hgt.trim() };
-  }
-  function createComponentFactory(registry, ensureFetched) {
-    const React = getReact();
-    const AncestorContext = React.createContext([]);
-    class StreamableComponent extends React.Component {
-      constructor(props) {
-        super(props);
-        __publicField(this, "__name");
-        __publicField(this, "__sub");
-        __publicField(this, "__needsDidMount", false);
-        /** Snapshot of the registry's streaming flags taken at render time —
-         *  builders read it off the RenderCtx (this) to pick placeholder vs
-         *  render-nothing for unresolved values. */
-        __publicField(this, "__streamingNow", false);
-        __publicField(this, "__htmlStreamingNow", false);
-        /** When a construct throws, remember the (class, registry.ver, props)
-         *  triple so render-time reconcile doesn't re-attempt it on every parent
-         *  re-render. A registry bump (new class, template, external module
-         *  resolving via bumpAll) changes `ver` and breaks the memo so an
-         *  env-dependent constructor can self-heal. */
-        __publicField(this, "__failedLogic", null);
-        __publicField(this, "__failedUserProps", null);
-        __publicField(this, "__failedVer", -1);
-        /** Per-instance constructor error — kept here (not on the registry entry)
-         *  so one instance's successful construct can't hide a sibling's failure,
-         *  and a construct can never wipe an eval error `updateJs` recorded on
-         *  `r.logicError`. */
-        __publicField(this, "__ctorError", null);
-        __publicField(this, "logic");
-        this.__name = props.__name;
-        this.state = { __v: 0, __err: null };
-        this.__sub = () => {
-          if (this.state.__err) this.setState({ __err: null });
-          this.forceUpdate();
-        };
-        this.__makeLogic(registry.get(this.__name).Logic, null);
-        ensureFetched(this.__name);
-      }
-      /** Error-boundary hook: a render crash anywhere in this DC's subtree
-       *  (its own template, an x-import'd component, a child DC without its
-       *  own deeper boundary) lands here instead of unmounting the page. */
-      static getDerivedStateFromError(e) {
-        return { __err: e instanceof Error && e.message ? e.message : String(e) };
-      }
-      componentDidCatch(e, info) {
-        console.error(
-          "[dc-runtime] render error in <" + this.__name + ">:",
-          e,
-          info?.componentStack || ""
-        );
-      }
-      /** Instantiate the logic class (or the no-op base) and adopt `prevState`
-       *  over its initial state — used both at mount and on hot-swap. */
-      __makeLogic(Logic, prevState) {
-        const L = Logic || StreamableLogic;
-        try {
-          this.logic = new L(this.__userProps());
-          this.__failedLogic = null;
-          this.__failedUserProps = null;
-          this.__ctorError = null;
-        } catch (e) {
-          console.error(e);
-          this.__failedLogic = Logic;
-          this.__failedUserProps = this.__userProps();
-          this.__failedVer = registry.get(this.__name).ver;
-          this.__ctorError = this.__name + ": " + (e instanceof Error && e.message ? e.message : String(e));
-          this.logic = new StreamableLogic(
-            this.__userProps()
-          );
-        }
-        this.logic.__host = this;
-        if (prevState)
-          this.logic.state = { ...this.logic.state || {}, ...prevState };
-      }
-      /** The props the author's logic + template see — internal __-prefixed
-       *  wiring stripped. */
-      __userProps() {
-        const { __name, __hintSize, __tplId, __hostStyle, ...rest } = this.props;
-        return rest;
-      }
-      __setLogicState(update, cb) {
-        const prev = this.logic.state;
-        const patch = typeof update === "function" ? update(prev) : update;
-        this.logic.state = { ...prev, ...patch };
-        this.setState((s) => ({ __v: s.__v + 1 }), cb);
-      }
-      /** Swap the logic instance when the registry's Logic class changed
-       *  (streaming completion, hot reload). State carries over; didMount
-       *  re-fires after the swap commits so refs exist. */
-      __reconcileLogic() {
-        const r = registry.get(this.__name);
-        const Next = r.Logic;
-        const Cur = this.logic.constructor;
-        if (Next === Cur || !Next && Cur === StreamableLogic || Next === this.__failedLogic && r.ver === this.__failedVer && shallowEqual(this.__userProps(), this.__failedUserProps)) {
-          return;
-        }
-        if (!this.__needsDidMount) {
-          try {
-            this.logic.componentWillUnmount();
-          } catch (e) {
-            console.error(e);
-          }
-        }
-        this.__makeLogic(Next, this.logic.state);
-        this.__needsDidMount = true;
-      }
-      componentDidMount() {
-        registry.get(this.__name).subs.add(this.__sub);
-        try {
-          this.logic.componentDidMount();
-        } catch (e) {
-          console.error(e);
-        }
-      }
-      componentDidUpdate(prevProps) {
-        this.logic.props = this.__userProps();
-        if (this.__needsDidMount) {
-          if (this.state.__err || !registry.get(this.__name).tpl) return;
-          this.__needsDidMount = false;
-          try {
-            this.logic.componentDidMount();
-          } catch (e) {
-            console.error(e);
-          }
-        } else {
-          try {
-            this.logic.componentDidUpdate(prevProps);
-          } catch (e) {
-            console.error(e);
-          }
-        }
-      }
-      componentWillUnmount() {
-        registry.get(this.__name).subs.delete(this.__sub);
-        if (!this.__needsDidMount) {
-          try {
-            this.logic.componentWillUnmount();
-          } catch (e) {
-            console.error(e);
-          }
-        }
-      }
-      render() {
-        const r = registry.get(this.__name);
-        const cls = "sc-host" + (r.htmlStreaming ? " sc-streaming-html" : "") + (r.jsStreaming ? " sc-streaming-js" : "");
-        const hintStyle = r.htmlStreaming ? hintToMin(this.props.__hintSize) : void 0;
-        const hostStyle = this.props.__hostStyle || hintStyle ? { ...hintStyle || {}, ...this.props.__hostStyle || {} } : void 0;
-        const hostBase = {
-          className: cls,
-          style: hostStyle,
-          "data-sc-name": this.__name,
-          "data-dc-tpl": this.props.__tplId
-        };
-        const chain = Array.isArray(this.context) ? this.context : [];
-        if (chain.includes(this.__name)) {
-          const cycle = [
-            ...chain.slice(chain.indexOf(this.__name)),
-            this.__name
-          ].join(" \u2192 ");
-          return h(
-            "div",
-            { ...hostBase, className: cls + " sc-has-error" },
-            h(Placeholder, {
-              name: this.__name,
-              hintSize: this.props.__hintSize,
-              error: "circular import: " + cycle
-            })
-          );
-        }
-        if (this.state.__err) {
-          return h(
-            "div",
-            { ...hostBase, className: cls + " sc-has-error" },
-            h(
-              "div",
-              { className: "sc-logic-error", "data-omelette-chrome": "" },
-              this.__name + ": " + this.state.__err
-            ),
-            h(Placeholder, {
-              name: this.__name,
-              hintSize: this.props.__hintSize,
-              error: this.state.__err
-            })
-          );
-        }
-        this.__reconcileLogic();
-        if (!r.tpl) {
-          return h(
-            "div",
-            hostBase,
-            h(Placeholder, { name: this.__name, hintSize: this.props.__hintSize })
-          );
-        }
-        const userProps = this.__userProps();
-        this.logic.props = userProps;
-        let vals = userProps;
-        let renderErr = r.logicError || this.__ctorError;
-        try {
-          vals = { ...userProps, ...this.logic.renderVals() || {} };
-        } catch (e) {
-          console.error(e);
-          renderErr = this.__name + ".renderVals(): " + (e instanceof Error && e.message ? e.message : String(e));
-        }
-        this.__streamingNow = !!(r.htmlStreaming || r.jsStreaming);
-        this.__htmlStreamingNow = !!r.htmlStreaming;
-        return h(
-          "div",
-          { ...hostBase, className: cls + (renderErr ? " sc-has-error" : "") },
-          renderErr && h(
-            "div",
-            { className: "sc-logic-error", "data-omelette-chrome": "" },
-            renderErr
-          ),
-          h(
-            AncestorContext.Provider,
-            { value: [...chain, this.__name] },
-            r.tpl(vals, this)
-          )
-        );
-      }
-    }
-    __publicField(StreamableComponent, "contextType", AncestorContext);
-    const named = /* @__PURE__ */ new Map();
-    function getDC(name) {
-      const hit = named.get(name);
-      if (hit) return hit;
-      function Dispatcher(p) {
-        const [, setTick] = React.useState(0);
-        React.useEffect(() => {
-          const sub = () => setTick((n) => n + 1);
-          registry.get(name).subs.add(sub);
-          return () => {
-            registry.get(name).subs.delete(sub);
-          };
-        }, []);
-        ensureFetched(name);
-        return h(StreamableComponent, { ...p, __name: name });
-      }
-      Dispatcher.displayName = name;
-      named.set(name, Dispatcher);
-      return Dispatcher;
-    }
-    return {
-      getDC,
-      StreamableComponent
-    };
-  }
-
-  // src/bundled.ts
-  function bundledBlob(url) {
-    const blobs = window.__resourceBlobs;
-    const b = blobs ? blobs[url.split("#")[0]] : void 0;
-    return b instanceof Blob ? b : null;
-  }
-
-  // src/cdn.ts
-  var REACT_URL = "https://unpkg.com/react@18.3.1/umd/react.production.min.js";
-  var REACT_SRI = "sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z";
-  var REACT_DOM_URL = "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js";
-  var REACT_DOM_SRI = "sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1";
-  var BABEL_URL = "https://unpkg.com/@babel/standalone@7.29.0/babel.min.js";
-  var BABEL_SRI = "sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y";
-  function cdnScriptFor(url, sri) {
-    const res = window.__resources;
-    const v = res ? res[url] : void 0;
-    return typeof v === "string" && v ? { src: v } : { src: url, integrity: sri };
-  }
-
-  // src/external.ts
-  var isCustomElementName = (n) => !n.includes(".") && n.includes("-");
-  function isRenderableType(g) {
-    if (typeof g === "function") return !isElementClass(g);
-    return typeof g === "object" && g !== null && typeof g.$$typeof === "symbol";
-  }
-  function resolveDottedPath(root, name) {
-    let cur = root;
-    for (const seg of name.split(".")) {
-      if (cur == null) return void 0;
-      cur = cur[seg];
-    }
-    return cur;
-  }
-  var GLOBAL_POLL_INTERVAL_MS = 50;
-  var GLOBAL_POLL_TIMEOUT_MS = 3e4;
-  function createExternalModules(onResolved) {
-    const cache = /* @__PURE__ */ new Map();
-    let babelLoading = null;
-    const reportedMissing = /* @__PURE__ */ new Map();
-    const polling = /* @__PURE__ */ new Set();
-    function ensureBabel() {
-      if (window.Babel) return Promise.resolve();
-      if (babelLoading) return babelLoading;
-      const babel = cdnScriptFor(BABEL_URL, BABEL_SRI);
-      babelLoading = new Promise((res, rej) => {
-        const s = document.createElement("script");
-        s.src = babel.src;
-        if (babel.integrity) {
-          s.integrity = babel.integrity;
-          s.crossOrigin = "anonymous";
-        }
-        s.onload = () => res();
-        s.onerror = rej;
-        document.head.appendChild(s);
-      });
-      return babelLoading;
-    }
-    const pending = /* @__PURE__ */ new Map();
-    function load(kind, url, after) {
-      const existing = pending.get(url);
-      if (existing) return existing;
-      cache.set(url, null);
-      console.info("[dc-runtime] x-import: loading", url, "(" + kind + ")");
-      const ready = Promise.all([
-        kind === "jsx" ? ensureBabel() : Promise.resolve(),
-        after ?? Promise.resolve()
-      ]);
-      const p = ready.then(() => {
-        const pre = bundledBlob(url);
-        if (pre) return pre.text();
-        return fetch(url).then((r) => {
-          if (!r.ok) throw new Error("HTTP " + r.status);
-          return r.text();
-        });
-      }).then((src) => {
-        const code = kind === "jsx" ? window.Babel.transform(src, {
-          filename: url,
-          presets: ["react", "typescript"]
-        }).code : src;
-        const module = { exports: {} };
-        const before = new Set(Object.keys(window));
-        //! nosemgrep: eval-and-function-constructor
-        new Function("React", "module", "exports", "require", code)(
-          getReact(),
-          module,
-          module.exports,
-          () => ({})
-        );
-        const globals = {};
-        for (const k of Object.keys(window)) {
-          if (!before.has(k) && typeof window[k] === "function") {
-            globals[k] = window[k];
-          }
-        }
-        cache.set(url, { mod: module.exports, globals });
-        console.info(
-          "[dc-runtime] x-import: loaded",
-          url,
-          "\u2014 exports:",
-          Object.keys(module.exports),
-          "window globals:",
-          Object.keys(globals)
-        );
-        onResolved();
-      }).catch((e) => {
-        cache.set(url, {
-          mod: {},
-          globals: {},
-          error: "failed to load: " + (e instanceof Error && e.message ? e.message : String(e))
-        });
-        console.error(
-          "[dc-runtime] x-import: FAILED to load",
-          url,
-          "(" + kind + ")",
-          e
-        );
-        onResolved();
-      });
-      pending.set(url, p);
-      return p;
-    }
-    function resolve2(url, name) {
-      const entry = cache.get(url);
-      if (!entry) return null;
-      const { mod, globals } = entry;
-      const C = mod && mod[name] || globals && globals[name] || typeof window !== "undefined" && window[name] || mod && mod.default;
-      if (typeof C === "function") return C;
-      const key = url + "\0" + name;
-      if (!reportedMissing.has(key)) {
-        reportedMissing.set(
-          key,
-          entry.error || 'no export named "' + name + '" (has: ' + Object.keys(mod).join(", ") + ")"
-        );
-        console.error(
-          "[dc-runtime] x-import: module",
-          url,
-          "loaded but has no component named",
-          JSON.stringify(name),
-          "\u2014 available exports:",
-          Object.keys(mod),
-          "window globals:",
-          Object.keys(globals),
-          ". The module must `module.exports = {" + name + "}` or set `window." + name + "`."
-        );
-      }
-      return null;
-    }
-    function waitForGlobal(name) {
-      if (polling.has(name)) return;
-      polling.add(name);
-      const started = Date.now();
-      const isCE = isCustomElementName(name);
-      const tick = () => {
-        const found = isCE ? customElements.get(name) : isRenderableType(resolveDottedPath(window, name));
-        if (found) {
-          polling.delete(name);
-          onResolved();
-          return;
-        }
-        if (Date.now() - started >= GLOBAL_POLL_TIMEOUT_MS) {
-          console.warn(
-            "[dc-runtime] x-import: global",
-            JSON.stringify(name),
-            "never appeared on window after " + GLOBAL_POLL_TIMEOUT_MS + "ms"
-          );
-          return;
-        }
-        setTimeout(tick, GLOBAL_POLL_INTERVAL_MS);
-      };
-      setTimeout(tick, GLOBAL_POLL_INTERVAL_MS);
-    }
-    function resolveGlobal(url, name) {
-      const isCE = isCustomElementName(name);
-      if (!url) {
-        if (isCE) {
-          if (customElements.get(name)) return name;
-          waitForGlobal(name);
-          return null;
-        }
-        const g2 = resolveDottedPath(window, name);
-        if (isRenderableType(g2)) return g2;
-        waitForGlobal(name);
-        return null;
-      }
-      const entry = cache.get(url);
-      if (!entry) return null;
-      if (isCE && customElements.get(name)) return name;
-      const g = entry.globals[name] ?? resolveDottedPath(window, name);
-      if (isRenderableType(g)) return g;
-      if (name.includes(".")) return null;
-      const key = url + "\0global\0" + name;
-      if (!reportedMissing.has(key)) {
-        reportedMissing.set(key, null);
-        if (isCE && !customElements.get(name)) {
-          console.warn(
-            "[dc-runtime] x-import:",
-            url,
-            "loaded but no custom element",
-            JSON.stringify(name),
-            "is registered and window." + name + " is not a function \u2014 rendering <" + name + "> as an unknown element."
-          );
-        }
-      }
-      return name;
-    }
-    function getError(url, name) {
-      const entry = cache.get(url);
-      if (entry?.error) return entry.error;
-      return reportedMissing.get(url + "\0" + name) || null;
-    }
-    return { load, resolve: resolve2, resolveGlobal, getError };
-  }
-  function isElementClass(g) {
-    try {
-      return typeof g === "function" && typeof HTMLElement !== "undefined" && g.prototype instanceof HTMLElement;
-    } catch {
-      return false;
-    }
-  }
-
-  // src/atomics.ts
-  var ATOMIC_CSS = (
-    // layout
-    ".fx{display:flex}.col{display:flex;flex-direction:column}.grid{display:grid}.ac{align-items:center}.jc{justify-content:center}.jb{justify-content:space-between}.f1{flex:1}.noshrink{flex-shrink:0}.wrap{flex-wrap:wrap}.fw5{font-weight:500}.fw6{font-weight:600}.fw7{font-weight:700}.fw8{font-weight:800}.fs11{font-size:11px}.fs12{font-size:12px}.fs13{font-size:13px}.fs14{font-size:14px}.fs15{font-size:15px}.fs16{font-size:16px}.fs20{font-size:20px}.fs22{font-size:22px}.upper{text-transform:uppercase}.tc{text-align:center}.nowrap{white-space:nowrap}.gap8{gap:8px}.gap10{gap:10px}.gap12{gap:12px}.gap16{gap:16px}.gap24{gap:24px}.m0{margin:0}.mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mb8{margin-bottom:8px}.mb12{margin-bottom:12px}.mb16{margin-bottom:16px}.posrel{position:relative}.posabs{position:absolute}.round{border-radius:50%}.ohide{overflow:hidden}.bbox{box-sizing:border-box}.pointer{cursor:pointer}.w100{width:100%}.b0{border:none}"
-  );
-
-  // src/helmet.ts
-  var DESIGN_DOC_MODE_RE = /<meta\b[^>]*\bname\s*=\s*["']design_doc_mode["'][^>]*\b(?:content|value)\s*=\s*["'](\w+)["']/i;
-  var CANVAS_BG_LIGHT = "#f0eee6";
-  var CANVAS_BG_DARK = "#2e2c26";
-  function createHelmetManager(doc, isStreaming) {
-    const mounted = /* @__PURE__ */ new Set();
-    const live = /* @__PURE__ */ new Map();
-    let designDocMode = null;
-    let canvasStyleEl = null;
-    let appTheme = "light";
-    try {
-      const ds = doc.documentElement.dataset.theme;
-      appTheme = ds === "dark" || ds === "light" ? ds : new URLSearchParams(doc.defaultView?.location.search ?? "").get(
-        "theme"
-      ) === "dark" ? "dark" : "light";
-    } catch {
-    }
-    function applyCanvasBg() {
-      if (!canvasStyleEl) return;
-      const bg = appTheme === "dark" ? CANVAS_BG_DARK : CANVAS_BG_LIGHT;
-      canvasStyleEl.textContent = `html,body{background:${bg}}#dc-root>.sc-host{position:relative}`;
-    }
-    function postDesignMode(mode) {
-      if (window.parent === window) return;
-      try {
-        window.parent.postMessage({ type: "__dc_design_mode", mode }, "*");
-      } catch {
-      }
-    }
-    function setDesignDocMode(mode) {
-      if (mode === designDocMode) return;
-      designDocMode = mode;
-      postDesignMode(mode);
-      if (mode === "canvas") {
-        doc.documentElement.setAttribute("data-dc-canvas", "");
-        canvasStyleEl = doc.createElement("style");
-        canvasStyleEl.setAttribute("data-dc-canvas", "");
-        applyCanvasBg();
-        doc.head.appendChild(canvasStyleEl);
-      } else {
-        doc.documentElement.removeAttribute("data-dc-canvas");
-        canvasStyleEl?.remove();
-        canvasStyleEl = null;
-      }
-    }
-    window.addEventListener("message", (e) => {
-      const type = e.data && e.data.type;
-      if (type === "__dc_theme") {
-        const t = e.data.theme;
-        if (t === "light" || t === "dark") {
-          appTheme = t;
-          applyCanvasBg();
-        }
-        return;
-      }
-      if (!designDocMode || type !== "__dc_probe") return;
-      postDesignMode(designDocMode);
+  observeReveals(root) {
+    root.querySelectorAll('[data-reveal]:not([data-reveal-init])').forEach((el) => {
+      el.setAttribute("data-reveal-init", "1");
+      el.style.opacity = "0";
+      el.style.transform = "translateY(26px)";
+      el.style.transition = "opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)";
     });
-    function compile(node) {
-      const raw = [...node.children];
-      const helmetClosed = node.nextSibling != null || node.parentNode?.nextSibling != null;
-      if (node.hasAttribute("data-dc-atomics") && !mounted.has("__dc-atomics")) {
-        mounted.add("__dc-atomics");
-        const el = doc.createElement("style");
-        el.id = "__dc-atomics";
-        el.textContent = ATOMIC_CSS;
-        doc.head.appendChild(el);
-      }
-      return (_vals, ctx) => {
-        const name = ctx && ctx.__name || "";
-        const streaming = !!(name && isStreaming(name));
-        for (let i = 0; i < raw.length; i++) {
-          const child = raw[i];
-          const tag = child.tagName;
-          const mayBePartial = streaming && !helmetClosed && i === raw.length - 1;
-          if (tag === "SCRIPT") {
-            if (mayBePartial) continue;
-            const key = "SCRIPT|" + (child.getAttribute("src") || child.textContent || "");
-            if (mounted.has(key)) continue;
-            mounted.add(key);
-            const el = doc.createElement("script");
-            for (const { name: an, value } of [...child.attributes])
-              el.setAttribute(an, value);
-            if (child.textContent) el.textContent = child.textContent;
-            doc.head.appendChild(el);
-          } else if (tag === "LINK" || tag === "META") {
-            if (mayBePartial) continue;
-            const key = tag + "|" + (child.getAttribute("href") || child.getAttribute("src") || child.outerHTML);
-            if (mounted.has(key)) continue;
-            mounted.add(key);
-            if (tag === "LINK") {
-              const rel = (child.getAttribute("rel") || "").toLowerCase().split(/\s+/);
-              const href = (child.getAttribute("href") || "").trim();
-              const res = window.__resources;
-              const pre = res && rel.includes("stylesheet") && !rel.includes("alternate") ? res[href] : void 0;
-              const blob = typeof pre === "string" && pre ? bundledBlob(pre) : null;
-              if (blob) {
-                const el = doc.createElement("style");
-                if (child.hasAttribute("disabled")) {
-                  el.setAttribute("media", "not all");
-                } else if (child.getAttribute("media")) {
-                  el.setAttribute("media", child.getAttribute("media"));
-                }
-                if (child.getAttribute("title"))
-                  el.setAttribute("title", child.getAttribute("title"));
-                void blob.text().then((css) => {
-                  el.textContent = css;
-                });
-                doc.head.appendChild(el);
-                continue;
-              }
-            }
-            doc.head.appendChild(child.cloneNode(true));
-          } else {
-            const key = name + "|" + i;
-            let el = live.get(key);
-            if (!el || el.tagName !== tag) {
-              if (el) el.remove();
-              el = doc.createElement(tag.toLowerCase());
-              live.set(key, el);
-              doc.head.appendChild(el);
-            }
-            for (const { name: an, value } of [...child.attributes]) {
-              if (el.getAttribute(an) !== value) el.setAttribute(an, value);
-            }
-            if (el.textContent !== child.textContent)
-              el.textContent = child.textContent;
-          }
-        }
-        return null;
-      };
-    }
-    return { compile, setDesignDocMode };
-  }
-
-  // src/pseudo.ts
-  function scanUnquotedUrl(css, i) {
-    if (css[i] !== "u" && css[i] !== "U" || css.slice(i, i + 4).toLowerCase() !== "url(" || /[a-z0-9_-]/i.test(css[i - 1] ?? "")) {
-      return -1;
-    }
-    let j = i + 4;
-    while (j < css.length && /\s/.test(css[j])) j++;
-    if (css[j] === '"' || css[j] === "'") return -1;
-    while (j < css.length && css[j] !== ")") {
-      if (css[j] === "\\") j++;
-      j++;
-    }
-    return j < css.length ? j + 1 : css.length;
-  }
-  function stripComments(css) {
-    let out = "";
-    let quote = "";
-    for (let i = 0; i < css.length; i++) {
-      const c = css[i];
-      if (quote) {
-        if (c === "\\") {
-          out += c + (css[i + 1] ?? "");
-          i++;
-          continue;
-        }
-        if (c === quote) quote = "";
-        out += c;
-      } else if (c === "'" || c === '"') {
-        quote = c;
-        out += c;
-      } else if (c === "/" && css[i + 1] === "*") {
-        const end = css.indexOf("*/", i + 2);
-        i = end === -1 ? css.length : end + 1;
-        out += " ";
-      } else {
-        const end = scanUnquotedUrl(css, i);
-        if (end === -1) out += c;
-        else {
-          out += css.slice(i, end);
-          i = end - 1;
-        }
-      }
-    }
-    return out;
-  }
-  function importantify(css) {
-    css = stripComments(css);
-    const decls = [];
-    let start = 0;
-    let depth = 0;
-    let quote = "";
-    for (let i = 0; i < css.length; i++) {
-      const c = css[i];
-      if (quote) {
-        if (c === "\\") i++;
-        else if (c === quote) quote = "";
-      } else if (c === "'" || c === '"') quote = c;
-      else if (c === "(") depth++;
-      else if (c === ")") depth = Math.max(0, depth - 1);
-      else if (c === ";" && depth === 0) {
-        decls.push(css.slice(start, i));
-        start = i + 1;
-      } else {
-        const end = scanUnquotedUrl(css, i);
-        if (end !== -1) i = end - 1;
-      }
-    }
-    decls.push(css.slice(start));
-    return decls.map((d) => d.trim()).filter(Boolean).map((d) => /!\s*important$/i.test(d) ? d : d + " !important").join(";");
-  }
-  function createPseudoSheet(doc) {
-    let el = null;
-    const cache = /* @__PURE__ */ new Map();
-    let n = 0;
-    return (pseudo, css) => {
-      const k = pseudo + "|" + css;
-      const hit = cache.get(k);
-      if (hit) return hit;
-      if (!el) {
-        el = doc.createElement("style");
-        doc.head.appendChild(el);
-      }
-      const cls = "scp" + (n++).toString(36);
-      const isPseudoElement = pseudo === "before" || pseudo === "after";
-      const sel = isPseudoElement ? "." + cls + "::" + pseudo : "." + cls + ":" + pseudo;
-      el.sheet.insertRule(
-        sel + "{" + (isPseudoElement ? css : importantify(css)) + "}",
-        el.sheet.cssRules.length
-      );
-      cache.set(k, cls);
-      return cls;
-    };
-  }
-
-  // src/registry.ts
-  function createRegistry() {
-    const entries = /* @__PURE__ */ Object.create(null);
-    function get(name) {
-      return entries[name] || (entries[name] = {
-        html: "",
-        tpl: null,
-        Logic: null,
-        jsStreaming: false,
-        htmlStreaming: false,
-        ver: 0,
-        subs: /* @__PURE__ */ new Set(),
-        fetched: false
+    root.querySelectorAll('[data-kenburns]:not([data-kb-init])').forEach((el) => {
+      el.setAttribute("data-kb-init", "1");
+      setTimeout(() => { el.style.transform = "scale(1)"; }, 60);
+    });
+    const check = () => {
+      const h = window.innerHeight || 800;
+      document.querySelectorAll('[data-reveal]:not([data-revealed])').forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.top < h * 0.92 && r.bottom > -80) this.reveal(el);
       });
-    }
-    function bump(name) {
-      const r = get(name);
-      r.ver++;
-      for (const fn of r.subs) fn();
-    }
-    return {
-      entries,
-      get,
-      bump,
-      bumpAll() {
-        for (const n in entries) bump(n);
-      }
+      document.querySelectorAll('[data-count]:not([data-counted])').forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.top < h * 0.9 && r.bottom > 0) this.runCounter(el);
+      });
     };
+    this._check = check;
+    if (!this._scrollWired) {
+      this._scrollWired = true;
+      window.addEventListener("scroll", check, { passive: true });
+      window.addEventListener("resize", check);
+    }
+    [0, 200, 700, 1400].forEach((d) => setTimeout(check, d));
+    setTimeout(() => {
+      document.querySelectorAll('[data-reveal]:not([data-revealed])').forEach((el) => this.reveal(el));
+      document.querySelectorAll('[data-count]:not([data-counted])').forEach((el) => this.runCounter(el));
+    }, 2600);
   }
 
-  // src/runtime.ts
-  var COMPONENT_DIR = ".";
-  function createRuntime(doc = document) {
-    const registry = createRegistry();
-    const pseudoClass = createPseudoSheet(doc);
-    const helmet = createHelmetManager(
-      doc,
-      (name) => registry.get(name).htmlStreaming
-    );
-    const external = createExternalModules(() => registry.bumpAll());
-    const factory = createComponentFactory(registry, ensureFetched);
-    const host = {
-      component: (name) => factory.getDC(name),
-      placeholder: (props) => h(Placeholder, props),
-      helmet: (node) => helmet.compile(node),
-      loadExternal: (kind, url, after) => external.load(kind, url, after),
-      resolveExternal: (url, name) => external.resolve(url, name),
-      resolveExternalGlobal: (url, name) => external.resolveGlobal(url, name),
-      resolveExternalError: (url, name) => external.getError(url, name),
-      pseudoClass
-    };
-    function ensureFetched(name) {
-      const r = registry.get(name);
-      if (r.fetched) return;
-      r.fetched = true;
-      const url = COMPONENT_DIR + "/" + encodeURIComponent(name) + ".dc.html";
-      const res = window.__resources;
-      const pre = res ? res[url] : void 0;
-      const target = typeof pre === "string" && pre ? pre : url;
-      const blob = bundledBlob(target);
-      (blob ? blob.text() : fetch(target).then((res2) => {
-        if (!res2.ok) {
-          console.error(
-            '[dc-runtime] sibling fetch for "' + name + '" failed:',
-            url,
-            "returned",
-            res2.status,
-            "\u2014 the reference renders as an empty placeholder."
-          );
-          return "";
-        }
-        return res2.text();
-      })).then((t) => {
-        if (!t) return;
-        const parsed = parseDcText(t);
-        if (!parsed) {
-          console.error(
-            '[dc-runtime] sibling fetch for "' + name + '":',
-            url,
-            "has no <x-dc> block \u2014 not a Design Component."
-          );
-          return;
-        }
-        if (parsed.props) r.propsMeta = parsed.props;
-        if (parsed.preview) r.preview = parsed.preview;
-        if (parsed.template && !r.html) updateHtml(name, parsed.template);
-        if (parsed.js && !r.Logic) updateJs(name, parsed.js);
-      }).catch(
-        (e) => console.error(
-          '[dc-runtime] sibling fetch for "' + name + '" threw:',
-          url,
-          e
-        )
-      );
-    }
-    let rootName = null;
-    function updateHtml(name, html) {
-      const r = registry.get(name);
-      r.html = html;
-      if (name === rootName) {
-        const mode = DESIGN_DOC_MODE_RE.exec(html)?.[1] ?? null;
-        if (mode || !r.htmlStreaming) helmet.setDesignDocMode(mode);
-      }
-      try {
-        r.tpl = compileTemplate(html, host);
-      } catch (e) {
-        console.error("[dc-runtime] template compile FAILED for", name, e);
-      }
-      registry.bump(name);
-    }
-    function updateJs(name, src) {
-      const r = registry.get(name);
-      const seq = r.jsSeq = (r.jsSeq || 0) + 1;
-      try {
-        const Cls = evalDcLogic(src);
-        if (r.jsSeq !== seq) return;
-        if (typeof Cls !== "function") {
-          r.logicError = name + ".dc.html: <script data-dc-script> must define `class Component extends DCLogic`";
-        } else {
-          r.logicError = null;
-          r.Logic = Cls;
-        }
-      } catch (e) {
-        if (r.jsSeq !== seq) return;
-        console.error(
-          "[dc-runtime] logic class eval FAILED for",
-          name,
-          "\u2014 the template renders with props only.",
-          e
-        );
-        r.logicError = name + ": " + (e instanceof Error && e.message ? e.message : String(e));
-      }
-      registry.bump(name);
-    }
-    function setStreaming(name, kind, on) {
-      const r = registry.get(name);
-      if (kind === "html") r.htmlStreaming = !!on;
-      else r.jsStreaming = !!on;
-      let any = false;
-      for (const n in registry.entries) {
-        const e = registry.entries[n];
-        if (e && (e.htmlStreaming || e.jsStreaming)) {
-          any = true;
-          break;
-        }
-      }
-      doc.documentElement.classList.toggle("sc-dc-streaming", any);
-      registry.bump(name);
-    }
-    function dcUpdate(name, kind, content, streaming) {
-      if (streaming) registry.get(name).fetched = true;
-      if (kind === "html") {
-        setStreaming(name, "html", !!streaming);
-        updateHtml(name, content);
-      } else if (kind === "js") {
-        setStreaming(name, "js", !!streaming);
-        if (!streaming) updateJs(name, content);
-      } else if (kind === "props") {
-        const { props, preview } = parseDataProps(content);
-        const r = registry.get(name);
-        r.propsMeta = props ?? void 0;
-        r.preview = preview;
-        registry.bump(name);
-      }
-    }
-    function setProps(name, overrides) {
-      registry.get(name).propOverrides = overrides && typeof overrides === "object" ? { ...overrides } : null;
-      registry.bump(name);
-    }
-    function adoptParsed(name, parsed) {
-      if (!parsed) return;
-      const r = registry.get(name);
-      if (parsed.props) r.propsMeta = parsed.props;
-      if (parsed.preview) r.preview = parsed.preview;
-      if (parsed.template) updateHtml(name, parsed.template);
-      if (parsed.js) updateJs(name, parsed.js);
-    }
-    return {
-      registry,
-      getDC: factory.getDC,
-      updateHtml,
-      updateJs,
-      dcUpdate,
-      setProps,
-      adoptParsed,
-      setRootName: (name) => {
-        rootName = name;
-      },
-      markFetched: (name) => {
-        registry.get(name).fetched = true;
-      },
-      annotatedTemplate: (name) => {
-        const r = registry.get(name);
-        return r.tpl && r.tpl.__annotated || null;
-      },
-      templateSource: (name) => registry.get(name).html || null,
-      StreamableLogic
-    };
-  }
-
-  // src/stream-state.ts
-  function createStreamTracker(staleMs = 6e4, now = Date.now) {
-    const since = /* @__PURE__ */ new Map();
-    const liveOne = (n) => {
-      const t = since.get(n);
-      if (t === void 0) return false;
-      if (now() - t > staleMs) {
-        since.delete(n);
-        return false;
-      }
-      return true;
-    };
-    return {
-      push(name, streaming, viewportKey) {
-        if (viewportKey === "dc-model") return;
-        if (streaming) since.set(name, now());
-        else since.delete(name);
-      },
-      live(name) {
-        if (name !== void 0) return liveOne(name);
-        for (const n of [...since.keys()]) if (liveOne(n)) return true;
-        return false;
-      }
-    };
-  }
-
-  // src/index.ts
-  function hideRawTemplate() {
-    const s = document.createElement("style");
-    s.textContent = "x-dc{display:none!important}";
-    document.head.appendChild(s);
-  }
-  function loadScript(src, integrity) {
-    return new Promise((resolve2, reject) => {
-      //! nosemgrep: create-script-element
-      const s = document.createElement("script");
-      s.src = src;
-      if (integrity) {
-        s.integrity = integrity;
-        s.crossOrigin = "anonymous";
-      }
-      s.async = false;
-      s.onload = () => resolve2();
-      s.onerror = () => reject(new Error(`failed to load ${src}`));
-      document.head.appendChild(s);
+  wireTilt(root) {
+    root.querySelectorAll('[data-tilt]:not([data-tilt-init])').forEach((el) => {
+      el.setAttribute("data-tilt-init", "1");
+      const img = el.querySelector("img");
+      el.addEventListener("mousemove", (e) => {
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        el.style.transform = `perspective(900px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg) translateY(-6px)`;
+        el.style.boxShadow = "0 26px 48px rgba(26,26,22,.16)";
+        if (img) img.style.transform = "scale(1.05)";
+      });
+      el.addEventListener("mouseleave", () => {
+        el.style.transform = "none";
+        el.style.boxShadow = "none";
+        if (img) img.style.transform = "scale(1)";
+      });
     });
   }
-  function loadReactUmd() {
-    const w = window;
-    if (w.React && w.ReactDOM) return Promise.resolve();
-    const react = cdnScriptFor(REACT_URL, REACT_SRI);
-    const reactDom = cdnScriptFor(REACT_DOM_URL, REACT_DOM_SRI);
-    return Promise.all([
-      loadScript(react.src, react.integrity),
-      loadScript(reactDom.src, reactDom.integrity)
-    ]).then(() => void 0);
+
+  wireRail(root) {
+    const rail = root.querySelector('[data-rail]');
+    if (!rail || rail.getAttribute("data-rail-init")) return;
+    rail.setAttribute("data-rail-init", "1");
+    const step = () => Math.max(260, rail.clientWidth * 0.62);
+    root.querySelectorAll('[data-scroll]').forEach((btn) => {
+      btn.addEventListener("click", () => {
+        rail.scrollBy({ left: btn.getAttribute("data-scroll") === "next" ? step() : -step(), behavior: "smooth" });
+      });
+    });
   }
-  function init() {
-    const runtime = createRuntime(document);
-    let rootName = "Root";
-    const baseCss = document.createElement("style");
-    baseCss.textContent = BASE_CSS;
-    document.head.prepend(baseCss);
-    const notifyHost = () => {
-      if (window.parent === window) return;
-      const r = runtime.registry.entries[rootName];
-      try {
-        window.parent.postMessage(
-          {
-            type: "__dc_booted",
-            rootName,
-            propsMeta: r && r.propsMeta || null,
-            preview: r && r.preview || null
-          },
-          "*"
-        );
-      } catch {
+
+  mountChrome() {
+    if (this._chrome) return;
+    this._chrome = true;
+
+    const grain = document.createElement("div");
+    grain.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:150;opacity:.045;mix-blend-mode:multiply;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\");background-size:180px 180px";
+    document.body.appendChild(grain);
+
+    this.teardown = () => grain.remove();
+  }
+
+  renderVals() {
+    const all = this.products();
+    const withUrl = all.map((p) => ({
+      ...p,
+      url: "#/product/" + p.slug,
+      upper: p.name.toUpperCase(),
+      groupUpper: p.group.toUpperCase(),
+      groupHref: p.group === "Apricots" ? "#/group/apricots" : p.group === "Olive Oil" ? "#/group/olive-oil" : "#/group/preserves",
+      fit: p.group === "Apricots" ? "cover" : "contain",
+      pad: p.group === "Apricots" ? "0" : "14px",
+      ask: (e) => {
+        if (e && e.preventDefault) e.preventDefault();
+        this.setState({ inquiry: p.group === "Preserves" ? p.name + " preserves" : p.name });
+        this.scrollToRfq();
       }
+    }));
+    const cur = withUrl.find((p) => p.slug === this.state.route) || null;
+    const groupDefs = [
+      { key: "apricots", group: "Apricots", eyebrow: "PRODUCT GROUP 01", title: "Apricots", short: "Whole sulphured and sun-dried, diced, natural diced, and kernel.",
+        countLabel: "Five apricot products", cta: "OPEN APRICOTS →", img: "assets/apricots-drying.jpg",
+        lead: "Grown in fertile Anatolian soil in Malatya, where most of the world's dried apricots are produced. Offered sulphured, with the bright orange colour, or naturally sun-dried, with the deep brown colour.",
+        detail: "Five products in the group: whole dried apricot, whole sundried apricot, diced apricot, natural diced apricot, and apricot kernel. An organic line is available.",
+        noteTitle: "Need a specific form?", note: "Sulphured or naturally dried, whole, diced or kernel — tell us the form and the quantity you need and the desk quotes it." },
+      { key: "preserves", group: "Preserves", eyebrow: "PRODUCT GROUP 02", title: "Organic Fruit Preserves", short: "Wild-harvested fruit in four recipe styles, 40 g jars to 20 kg pails.",
+        countLabel: "Three fruits, four recipe styles", cta: "OPEN PRESERVES →", img: "assets/preserves-table.jpg",
+        lead: "Wild-harvested Anatolian fruit, small batch crafted in traditional cauldrons — a marmalade heritage that began in 1975 in the Merzifon district of Amasya.",
+        detail: "Each fruit is available in all four recipe styles — organic marmalade, sugar-free organic purée, traditional and natural marmalade — in 40–400 g retail jars and 2.5–20 kg food-service pails.",
+        noteTitle: "Fresh production after order", note: "Small batch crafted under the supervision of food engineers: 60% fruit in the marmalades, 100% fruit in the purée, non-GMO, no preservatives, colourants or fructose syrup. Production starts after the order is confirmed." },
+      { key: "olive-oil", group: "Olive Oil", eyebrow: "PRODUCT GROUP 03", title: "Extra Virgin Olive Oil", short: "Extra virgin, cold-pressed from hand-selected Aegean olives.",
+        countLabel: "One product", cta: "OPEN OLIVE OIL →", img: "assets/olive-oil-bread.jpg",
+        lead: "Produced from hand-selected Aegean olives through first cold-pressing and purely mechanical extraction — no heat, no additives.",
+        detail: "The olives come from Turkey's Aegean coast, a stretch of land that gives its fruit an unmistakable aroma and a deep, earthy character. They are picked by hand, blended, and pressed cold on the first press — extracted by mechanical means alone, with no heat and no chemical additives, so the oil is simply what the olive already carries. What reaches the bottle is an olive harvest inherited from nature and passed down through generations, and it tastes that way. An organic option is available.",
+        noteTitle: "Quoted to your requirement", note: "Tell us the volume you need and the desk quotes it." }
+    ];
+    const isCats = !cur && this.state.groupRoute === "__all";
+    const isAll = !cur && this.state.groupRoute === "__products";
+    const gCur = !cur && !isCats && !isAll ? groupDefs.find((g) => g.key === this.state.groupRoute) || null : null;
+    const groups = groupDefs.map((g) => ({
+      ...g, href: "#/group/" + g.key, upper: g.title.toUpperCase(),
+      items: withUrl.filter((p) => p.group === g.group)
+    }));
+    return {
+      isHome: !cur && !gCur && !isCats && !isAll,
+      isCategories: isCats,
+      isAllProducts: isAll,
+      isGroup: !!gCur,
+      groupInfo: gCur ? { ...gCur, upper: gCur.title.toUpperCase() } : {},
+      groupProducts: gCur ? withUrl.filter((p) => p.group === gCur.group) : [],
+      otherGroups: gCur ? groups.filter((g) => g.key !== gCur.key) : [],
+      groups: groups,
+      isProduct: !!cur,
+      product: cur || {},
+      productSpecs: cur ? cur.specs.map(([k, v]) => ({ k, v })) : [],
+      productBenefits: (cur && cur.benefits) || [],
+      productCalWhole: !!(cur && cur.cal === "whole"),
+      productCalDiced: !!(cur && cur.cal === "diced"),
+      calWhole: [
+        { size: "Jumbo", count: "60 – 80 pieces" }, { size: "1", count: "81 – 100 pieces" },
+        { size: "2", count: "101 – 120 pieces" }, { size: "3", count: "121 – 140 pieces" },
+        { size: "4", count: "141 – 160 pieces" }, { size: "5", count: "161 – 180 pieces" },
+        { size: "6", count: "181 – 200 pieces" }, { size: "7", count: "201 – 220 pieces" },
+        { size: "8", count: "221 pieces and above" }
+      ],
+      calDiced: [{ size: "3–5" }, { size: "5–5" }, { size: "5–8" }, { size: "8–8" }, { size: "8–10" }, { size: "10–10" }],
+      productHasImg: !!(cur && cur.img),
+      productNoImg: !!(cur && !cur.img),
+      productIsFruit: !!(cur && cur.isFruit),
+      others: cur ? withUrl.filter((p) => p.slug !== cur.slug).map((p) => ({ ...p, fit: "cover", pad: "0" })) : [],
+      apricots: withUrl.filter((p) => p.group === "Apricots"),
+      oil: withUrl.filter((p) => p.group === "Olive Oil"),
+      fruits: withUrl.filter((p) => p.group === "Preserves"),
+      allNames: [...all.filter((p) => p.group !== "Preserves").map((p) => p.name), ...all.filter((p) => p.group === "Preserves").map((p) => p.name + " preserves")],
+      marquee: ["DRIED APRICOT","SUNDRIED APRICOT","DICED APRICOT","NATURAL DICED APRICOT","APRICOT KERNEL","EXTRA VIRGIN OLIVE OIL","ORGANIC PRESERVES","ISO 9001","ISO 22000:2018","FSSC 22000"],
+      freeFrom: ["NO PRESERVATIVES","NO COLORANTS","NO ADDITIVES","NO EMULSIFIERS","NO PECTIN-PRESERVERS","NO FRUCTOSE SYRUP","NON-GMO","VEGAN","NOT FROM CONCENTRATE"],
+      recipes: [
+        { name: "Organic Marmalade", comp: "60% organic fruit · organic apple concentrate", jars: "40 · 260 · 350 g", fs: "2.5 · 5 · 10 · 20 kg" },
+        { name: "Organic Purée", comp: "100% organic fruit · sugar-free", jars: "40 · 260 · 350 g", fs: "2.5 · 5 · 10 · 20 kg" },
+        { name: "Traditional Marmalade", comp: "60% fruit · sweetened with beet sugar", jars: "40 · 280 · 400 g", fs: "2.5 · 5 · 10 · 20 kg" },
+        { name: "Natural Marmalade", comp: "60% fruit · sweetened with apple concentrate", jars: "40 · 260 · 350 g", fs: "2.5 · 5 · 10 · 20 kg" }
+      ],
+      certs: [
+        { name: "ISO 9001", title: "Quality Management System", scope: "Consistent, documented processes across sourcing, production and dispatch. Issued to the producer; dated 2025." },
+        { name: "ISO 22000:2018", title: "Food Safety Management", scope: "Hazard control and traceability from farm inputs through finished product. Issued to the producer." },
+        { name: "FSSC 22000", title: "Food Safety System Certification", scope: "GFSI-recognized scheme for manufacturing and hygiene controls. Issued to the producer." }
+      ],
+      timeline: [
+        { year: "1975", text: "Rosehip marmalade is first cooked in traditional cauldrons over wood fire in the Merzifon district of Amasya — the heritage behind the preserve line." },
+        { year: "1982", text: "The family business begins trading dried apricots in Darende, Malatya, and becomes a reference name in the Turkish market." },
+        { year: "1992", text: "The business passes to the next generation, which continues to develop it and begins exporting under its own name." },
+        { year: "2010", text: "The company is established in the dried food and kernels sector, built on decades of accumulated experience in the trade." },
+        { year: "Today", text: "AdaViano brings the brand to the United States — same orchards, same packing house, now sold and delivered domestically." }
+      ],
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      inquiryProduct: this.state.inquiry,
+      goRfq: (e) => { if (e && e.preventDefault) e.preventDefault(); this.scrollToRfq(); },
+      setInquiry: (e) => this.setState({ inquiry: e.target.value }),
+      send: () => this.setState({ sent: true })
     };
-    const streams = createStreamTracker();
-    const api = {
-      __dcUpdate: (name, kind, content, streaming, viewportKey) => {
-        streams.push(name, streaming, viewportKey);
-        runtime.dcUpdate(name, kind, content, streaming);
-        if (name === rootName && !streaming && kind === "props") notifyHost();
-      },
-      __dcStreaming: (name) => streams.live(name),
-      __dcSetProps: (name, overrides) => runtime.setProps(name, overrides),
-      /** Name of the component currently mounted as the page root — DC tools
-       *  push their template-stream here when targeting "the open page". */
-      __dcRootName: () => rootName,
-      /** Editor bridge — the encoded, `data-dc-tpl`-annotated template source.
-       *  The host editor parses this into its own template DOM so it can map a
-       *  rendered node (carrying the same `data-dc-tpl`) back to the source
-       *  node that emitted it. Returns the encoded form (`sc-camel-*` attrs,
-       *  `<sc-raw-*>`/`<sc-helmet>` tags); the editor decodes on serialize. */
-      __dcAnnotatedTemplate: (name) => runtime.annotatedTemplate(name),
-      /** Editor bridge — the *original* (decoded) template source. */
-      __dcTemplateSource: (name) => runtime.templateSource(name),
-      __dcBoot: () => {
-        rootName = boot(runtime, document) ?? rootName;
-        notifyHost();
-      },
-      __dcRegistry: runtime.registry.entries,
-      getDC: (name) => runtime.getDC(name),
-      // `DCLogic` is the documented base class name; `StreamableLogic` is the
-      // implementation alias kept for any project that already references it.
-      DCLogic: runtime.StreamableLogic,
-      StreamableLogic: runtime.StreamableLogic
-    };
-    Object.assign(window, api);
-    window.__dcContentKeyed = true;
-    if (document.readyState !== "loading") api.__dcBoot();
-    else document.addEventListener("DOMContentLoaded", () => api.__dcBoot());
   }
-  hideRawTemplate();
-  loadReactUmd().then(init).catch((err) => {
-    console.error("[dc] failed to load React or boot:", err);
-    throw err;
-  });
-})();
+}
+</script>
+</body>
+</html>
