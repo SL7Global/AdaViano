@@ -825,9 +825,9 @@ class Component extends DCLogic {
         specs: [["Origin","Anatolia, Turkey"],["Form","Whole kernel"],["Processing","Shelled and dried"],["Use","Smoothies · salads · snacking"],["Certificates",C]] },
       { slug: "extra-virgin-olive-oil", img: "assets/olive-oil.png", group: "Olive Oil", cal: null,
         organic: true, tag: "OLIVE OIL · COLD-PRESSED", name: "Cold-Pressed Extra Virgin Olive Oil", tr: "Extra virgin · first press",
-        blurb: "Extra virgin olive oil from Aegean olives, cold-pressed without heat or additives, also available as an organic option.",
-        detail: "Produced from hand-selected olives by first cold-pressing and purely mechanical extraction, giving a rich, distinct, earthy flavour. Used for drizzling, salads, mezze and everyday cooking.",
-        specs: [["Origin","Aegean region, Turkey"],["Form","Extra virgin olive oil"],["Processing","Cold-pressed, first press · no additives"],["Use","Drizzling · salads · mezze · cooking"],["Certificates",C],["Olives","Hand-selected"],["Organic","Organic option available"]] },
+        blurb: "A single extra virgin oil from hand-selected Aegean olives — first cold-pressed, mechanically extracted, nothing added.",
+        detail: "Aegean olives carry an enticing aroma and a very rich, distinct, earthy flavour. Available as an organic option.",
+        specs: [["Origin","Aegean region, Turkey"],["Form","Extra virgin olive oil"],["Processing","Cold-pressed, first press · no additives"],["Extraction","Mechanical means only"],["Certificates",C],["Olives","Hand-selected"],["Organic","Organic option available"]] },
       { slug: "rosehip-preserves", img: "assets/rosehip.png", texture: "assets/rosehip-texture.png", group: "Preserves", cal: null, isFruit: true,
         tag: "Rosa canina", name: "Rosehip", tr: "Wild-harvested preserve",
         blurb: "The fruit of the wild rose, wild-harvested from the mountains of Anatolia and small batch crafted into preserves.",
@@ -1103,8 +1103,8 @@ class Component extends DCLogic {
       { key: "olive-oil", group: "Olive Oil", eyebrow: "PRODUCT GROUP 03", title: "Extra Virgin Olive Oil", short: "Extra virgin, cold-pressed from hand-selected Aegean olives.",
         countLabel: "One product", cta: "OPEN OLIVE OIL →", img: "assets/olive-oil-bread.jpg",
         lead: "Produced from hand-selected Aegean olives through first cold-pressing and purely mechanical extraction — no heat, no additives.",
-        detail: "A very rich, distinct, earthy flavour: for drizzling, salads, mezze and everyday cooking. Available as an organic line.",
-        noteTitle: "Quoted to your requirement", note: "Tell us the volume and the packing you need and the desk quotes it." }
+        detail: "The olives come from Turkey's Aegean coast, a stretch of land that gives its fruit an unmistakable aroma and a deep, earthy character. They are picked by hand, blended, and pressed cold on the first press — extracted by mechanical means alone, with no heat and no chemical additives, so the oil is simply what the olive already carries. What reaches the bottle is an olive harvest inherited from nature and passed down through generations, and it tastes that way. An organic option is available.",
+        noteTitle: "Quoted to your requirement", note: "Tell us the volume you need and the desk quotes it." }
     ];
     const isCats = !cur && this.state.groupRoute === "__all";
     const isAll = !cur && this.state.groupRoute === "__products";
