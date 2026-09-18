@@ -65,6 +65,7 @@
     </a>
     <nav aria-label="Primary" style="display:flex;gap:14px 20px;flex-wrap:wrap;margin-left:auto;font:600 11px/1 Karla,sans-serif;letter-spacing:.16em">
       <a href="#producer" style="color:#1A1A16">ABOUT</a>
+      <a href="#/all" style="color:#1A1A16">ALL PRODUCTS</a>
       <a href="#/categories" style="color:#1A1A16">CATEGORIES</a>
       <a href="#/group/apricots" style="color:#1A1A16">APRICOTS</a>
       <a href="#/group/preserves" style="color:#1A1A16">PRESERVES</a>
@@ -99,20 +100,47 @@
 </section>
 
 
-<div style="margin-top:72px;background:#1A1A16;color:#F7F2E8;padding:20px 0;overflow:hidden">
-  <div style="display:flex;width:max-content;animation:wf-marquee 38s linear infinite">
-    <div style="display:flex;gap:44px;padding-right:44px;font:600 13px/1 Karla,sans-serif;letter-spacing:.2em;align-items:center">
-      <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="12">
-        <span style="white-space:nowrap;color:#F7F2E8">{{ m }}</span>
-      </sc-for>
-    </div>
-    <div style="display:flex;gap:44px;padding-right:44px;font:600 13px/1 Karla,sans-serif;letter-spacing:.2em;align-items:center" aria-hidden="true">
-      <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="12">
-        <span style="white-space:nowrap;color:#F7F2E8">{{ m }}</span>
-      </sc-for>
-    </div>
+<section id="products" data-reveal="1" data-screen-label="Products index" style="max-width:1440px;margin:96px auto 0;padding:0 40px">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;border-bottom:2px solid #1A1A16;padding-bottom:22px">
+    <p style="margin:0;font:600 18px/1 Karla,sans-serif;letter-spacing:.24em;color:#C2601F">PRODUCTS</p>
+    <a href="#/all" style="font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#1A1A16" style-hover="color:#C2601F">SEE ALL PRODUCTS →</a>
   </div>
-</div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#D8CDB6;margin-top:1px">
+    <a href="#/group/apricots" style="background:#F7F2E8;padding:30px 26px 26px;display:flex;flex-direction:column;color:#1A1A16" style-hover="background:#EFE6D4">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+        <div style="display:flex;align-items:center;gap:14px">
+          <span style="display:flex;width:54px;height:54px;border:1px solid #1A1A16;align-items:center;justify-content:center;flex:none;background:#FFF6E6"><svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true"><path d="M16 8.4c1.4-1 4.8-1.2 6.6.9 2.3 2.7 1.7 8-1.6 11.4-1.9 2-3.5 2.6-5 2.6s-3.1-.6-5-2.6C7.7 17.3 7.1 12 9.4 9.3c1.8-2.1 5.2-1.9 6.6-.9Z" fill="#E98C2E"/><path d="M16 8.6c-1.3 3.9-1.3 10.2 0 14.7" stroke="#C2601F" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M16.3 8.2c-.4-2.4.9-4.3 3.6-4.9.5 2.7-1 4.5-3.6 4.9Z" fill="#4E6B36"/><path d="M15.9 8.2c.1-1.4-.4-2.6-1.6-3.4" stroke="#4E6B36" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg></span>
+          <h3 style="margin:0;font-family:Newsreader,serif;font-weight:200;font-size:34px;line-height:1;letter-spacing:-.02em">Apricots</h3>
+        </div>
+        <span style="font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">5 PRODUCTS</span>
+      </div>
+      <span style="margin-top:auto;padding-top:34px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#C2601F">ALL APRICOTS →</span>
+    </a>
+
+    <a href="#/group/preserves" style="background:#F7F2E8;padding:30px 26px 26px;display:flex;flex-direction:column;color:#1A1A16" style-hover="background:#EFE6D4">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+        <div style="display:flex;align-items:center;gap:14px">
+          <span style="display:flex;width:54px;height:54px;border:1px solid #1A1A16;align-items:center;justify-content:center;flex:none;background:#FDF0EC"><svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true"><rect x="10.2" y="4.6" width="11.6" height="3" rx="1" fill="#C2601F"/><path d="M10 10.2c0-1.4 1.1-2.5 2.5-2.5h7c1.4 0 2.5 1.1 2.5 2.5v13.3c0 1.5-1.2 2.7-2.7 2.7h-6.6c-1.5 0-2.7-1.2-2.7-2.7z" fill="#EFE6D4" stroke="#1A1A16" stroke-width="1.2"/><path d="M10.6 15.6c1.9-1.7 3.7-1.7 5.5 0 1.8 1.6 3.6 1.6 5.3-.1v7.9c0 1.3-1 2.3-2.3 2.3h-6.4c-1.2 0-2.1-1-2.1-2.2z" fill="#A83B22"/></svg></span>
+          <h3 style="margin:0;font-family:Newsreader,serif;font-weight:200;font-size:34px;line-height:1;letter-spacing:-.02em">Preserves</h3>
+        </div>
+        <span style="font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">3 PRODUCTS</span>
+      </div>
+      <span style="margin-top:auto;padding-top:34px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#C2601F">ALL PRESERVES →</span>
+    </a>
+
+    <a href="#/group/olive-oil" style="background:#F7F2E8;padding:30px 26px 26px;display:flex;flex-direction:column;color:#1A1A16" style-hover="background:#EFE6D4">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+        <div style="display:flex;align-items:center;gap:14px">
+          <span style="display:flex;width:54px;height:54px;border:1px solid #1A1A16;align-items:center;justify-content:center;flex:none;background:#F2F4EA"><svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true"><rect x="14.2" y="4" width="3.6" height="3.4" rx=".8" fill="#1A1A16"/><path d="M14.4 7.4c0 1.9-3.6 3.4-3.6 7v9.3c0 1.4 1.1 2.5 2.5 2.5h5.4c1.4 0 2.5-1.1 2.5-2.5v-9.3c0-3.6-3.6-5.1-3.6-7z" fill="#E9B877" stroke="#3F5233" stroke-width="1.3"/><path d="M11 18.6h10v5.2c0 1.3-1 2.3-2.3 2.3h-5.4c-1.3 0-2.3-1-2.3-2.3z" fill="#7E9142"/><path d="M16 12.4c1.7 1.9 2.6 3.3 2.6 4.3a2.6 2.6 0 0 1-5.2 0c0-1 .9-2.4 2.6-4.3Z" fill="#FFF6E6" stroke="#3F5233" stroke-width="1"/></svg></span>
+          <h3 style="margin:0;font-family:Newsreader,serif;font-weight:200;font-size:34px;line-height:1;letter-spacing:-.02em">Olive Oil</h3>
+        </div>
+        <span style="font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">1 PRODUCT</span>
+      </div>
+      <span style="margin-top:auto;padding-top:34px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#C2601F">OLIVE OIL PAGE →</span>
+    </a>
+  </div>
+</section>
 
 <section id="portfolio" data-reveal="1" style="max-width:1440px;margin:80px auto 0;padding:0 40px">
   <div style="display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:end;border-bottom:2px solid #1A1A16;padding-bottom:26px">
@@ -335,6 +363,21 @@
   </div>
 </section>
 
+<div style="margin-top:72px;background:#1A1A16;color:#F7F2E8;padding:20px 0;overflow:hidden">
+  <div style="display:flex;width:max-content;animation:wf-marquee 38s linear infinite">
+    <div style="display:flex;gap:44px;padding-right:44px;font:600 13px/1 Karla,sans-serif;letter-spacing:.2em;align-items:center">
+      <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="12">
+        <span style="white-space:nowrap;color:#F7F2E8">{{ m }}</span>
+      </sc-for>
+    </div>
+    <div style="display:flex;gap:44px;padding-right:44px;font:600 13px/1 Karla,sans-serif;letter-spacing:.2em;align-items:center" aria-hidden="true">
+      <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="12">
+        <span style="white-space:nowrap;color:#F7F2E8">{{ m }}</span>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
 <section id="story" data-reveal="1" style="max-width:1440px;margin:96px auto 0;padding:0 40px">
   <p style="margin:0 0 12px;font:600 11px/1 Karla,sans-serif;letter-spacing:.24em;color:#C2601F">THE PRODUCER WE REPRESENT</p>
   <h2 data-split="1" style="margin:0 0 44px;font-family:Newsreader,serif;font-weight:200;font-size:clamp(36px,5vw,72px);line-height:1;letter-spacing:-.02em">From a shop in Darende to American shelves</h2>
@@ -348,6 +391,61 @@
   </div>
 </section>
 
+</sc-if>
+
+<sc-if value="{{ isAllProducts }}" hint-placeholder-val="{{ false }}">
+<section style="max-width:1440px;margin:0 auto;padding:40px 40px 0">
+  <div style="display:flex;gap:10px;align-items:center;font:600 10.5px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">
+    <a href="#/" style="color:#8A8272">HOME</a><span>/</span>
+    <span style="color:#1A1A16">ALL PRODUCTS</span>
+  </div>
+  <div style="display:flex;align-items:baseline;justify-content:space-between;gap:40px;flex-wrap:wrap;border-bottom:2px solid #1A1A16;padding-bottom:22px;margin-top:32px">
+    <h1 style="margin:0;font:600 18px/1 Karla,sans-serif;letter-spacing:.24em;color:#C2601F">ALL PRODUCTS</h1>
+    <div style="display:flex;gap:18px;flex-wrap:wrap;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em">
+      <a href="#/group/apricots" style="color:#1A1A16" style-hover="color:#C2601F">APRICOTS</a>
+      <a href="#/group/preserves" style="color:#1A1A16" style-hover="color:#C2601F">PRESERVES</a>
+      <a href="#/group/olive-oil" style="color:#1A1A16" style-hover="color:#C2601F">OLIVE OIL</a>
+    </div>
+  </div>
+</section>
+
+<sc-for list="{{ groups }}" as="g" hint-placeholder-count="3">
+<section style="max-width:1440px;margin:64px auto 0;padding:0 40px">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;border-bottom:1px solid #1A1A16;padding-bottom:16px">
+    <div>
+      <div style="font:600 10.5px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F">{{ g.eyebrow }}</div>
+      <h2 style="margin:12px 0 0;font-family:Newsreader,serif;font-weight:200;font-size:clamp(28px,3.4vw,48px);line-height:1;letter-spacing:-.02em">{{ g.title }}</h2>
+    </div>
+    <a href="{{ g.href }}" style="font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#1A1A16" style-hover="color:#C2601F">{{ g.cta }}</a>
+  </div>
+  <p style="margin:18px 0 0;max-width:52em;font-size:15.5px;line-height:1.7;color:#4A4A40;text-wrap:pretty">{{ g.lead }}</p>
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:28px">
+    <sc-for list="{{ g.items }}" as="p" hint-placeholder-count="3">
+      <a data-tilt="1" href="{{ p.url }}" style="background:#FFFCF5;border:1px solid #1A1A16;color:#1A1A16;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s">
+        <div style="aspect-ratio:4/3;overflow:hidden;background:#F9F4E9;display:grid;place-items:center;padding:{{ p.pad }}">
+          <img loading="lazy" decoding="async" src="assets/dried-apricot.jpeg" data-src="{{ p.img }}" alt="{{ p.name }}" style="width:100%;height:100%;object-fit:{{ p.fit }};display:block">
+        </div>
+        <div style="padding:24px;display:flex;flex-direction:column;flex:1">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div style="font:600 10px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F">{{ p.tag }}</div>
+            <sc-if value="{{ p.organic }}" hint-placeholder-val="{{ false }}"><span style="border:1px solid #2F3D2A;color:#2F3D2A;padding:4px 8px;font:600 9px/1 Karla,sans-serif;letter-spacing:.14em">ORGANIC OPTION</span></sc-if>
+          </div>
+          <h3 style="margin:12px 0 8px;font-family:Newsreader,serif;font-weight:200;font-size:30px;line-height:1.05;letter-spacing:-.02em">{{ p.name }}</h3>
+          <p style="margin:0 0 18px;font-size:14.5px;line-height:1.6;color:#4A4A40;text-wrap:pretty">{{ p.blurb }}</p>
+          <span style="margin-top:auto;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;color:#C2601F">OPEN PRODUCT →</span>
+        </div>
+      </a>
+    </sc-for>
+  </div>
+</section>
+</sc-for>
+
+<section style="max-width:1440px;margin:80px auto 0;padding:0 40px">
+  <div style="border:1px solid #1A1A16;background:#EFE6D4;padding:36px 32px;display:flex;gap:28px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+    <p style="margin:0;max-width:40em;font-family:Newsreader,serif;font-weight:200;font-size:clamp(24px,2.6vw,36px);line-height:1.1;letter-spacing:-.02em">Tell us the products and volumes you need.</p>
+    <a href="#rfq" style="background:#C2601F;color:#F7F2E8;padding:16px 26px;font:600 11px/1 Karla,sans-serif;letter-spacing:.14em;white-space:nowrap" style-hover="background:#1A1A16">REQUEST PRICING</a>
+  </div>
+</section>
 </sc-if>
 
 <sc-if value="{{ isCategories }}" hint-placeholder-val="{{ false }}">
@@ -768,8 +866,8 @@ class Component extends DCLogic {
     const m = h.match(/^#\/product\/([a-z0-9-]+)/i);
     const route = m ? m[1] : "";
     const gm = h.match(/^#\/group\/([a-z0-9-]+)/i);
-    const groupRoute = gm ? gm[1] : (/^#\/categories/i.test(h) ? "__all" : "");
-    const isRouteHash = /^#\/(product|group)\//i.test(h) || /^#\/categories/i.test(h);
+    const groupRoute = gm ? gm[1] : (/^#\/categories/i.test(h) ? "__all" : (/^#\/all/i.test(h) ? "__products" : ""));
+    const isRouteHash = /^#\/(product|group)\//i.test(h) || /^#\/categories/i.test(h) || /^#\/all/i.test(h);
     const anchorId = !isRouteHash && /^#[a-z][a-z0-9-]*$/i.test(h) ? h.slice(1) : "";
     if (route !== this.state.route || groupRoute !== this.state.groupRoute) {
       this.setState({ route: route, groupRoute: groupRoute, inquiry: route ? this.state.inquiry : "" });
@@ -808,6 +906,9 @@ class Component extends DCLogic {
         brand: { "@type": "Brand", name: "WishneFood" }, category: cur.group,
         countryOfOrigin: "TR", image: cur.img,
         offers: { "@type": "Offer", availability: "https://schema.org/InStock", areaServed: "US", seller: { "@type": "Organization", name: "AdaViano" } } };
+    } else if (gKey === "__products") {
+      title = "All Products — WishneFood | AdaViano";
+      desc = "Every WishneFood product AdaViano sells in the United States: five apricot products, three organic fruit preserves and cold-pressed extra virgin olive oil.";
     } else if (gKey === "__all") {
       title = "Product Categories — WishneFood | AdaViano";
       desc = "Three product groups, nine WishneFood products: apricots, organic fruit preserves and extra virgin olive oil.";
@@ -994,14 +1095,16 @@ class Component extends DCLogic {
         noteTitle: "Quoted to your requirement", note: "Tell us the volume and the packing you need and the desk quotes it." }
     ];
     const isCats = !cur && this.state.groupRoute === "__all";
-    const gCur = !cur && !isCats ? groupDefs.find((g) => g.key === this.state.groupRoute) || null : null;
+    const isAll = !cur && this.state.groupRoute === "__products";
+    const gCur = !cur && !isCats && !isAll ? groupDefs.find((g) => g.key === this.state.groupRoute) || null : null;
     const groups = groupDefs.map((g) => ({
       ...g, href: "#/group/" + g.key, upper: g.title.toUpperCase(),
       items: withUrl.filter((p) => p.group === g.group)
     }));
     return {
-      isHome: !cur && !gCur && !isCats,
+      isHome: !cur && !gCur && !isCats && !isAll,
       isCategories: isCats,
+      isAllProducts: isAll,
       isGroup: !!gCur,
       groupInfo: gCur ? { ...gCur, upper: gCur.title.toUpperCase() } : {},
       groupProducts: gCur ? withUrl.filter((p) => p.group === gCur.group) : [],
