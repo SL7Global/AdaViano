@@ -713,6 +713,9 @@
             <label style="display:grid;gap:8px;font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">EMAIL
               <input placeholder="you@company.com" style="border:1px solid #C9BEA6;background:#FFFDF9;padding:13px;font:400 14.5px Karla,sans-serif;letter-spacing:0" style-focus="border-color:#C2601F;outline:none">
             </label>
+            <label style="display:grid;gap:8px;font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">PHONE
+              <input type="tel" placeholder="+1 (555) 123-4567" style="border:1px solid #C9BEA6;background:#FFFDF9;padding:13px;font:400 14.5px Karla,sans-serif;letter-spacing:0" style-focus="border-color:#C2601F;outline:none">
+            </label>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
             <label style="display:grid;gap:8px;font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">STATE
@@ -724,6 +727,10 @@
           </div>
           <label style="display:grid;gap:8px;font:600 10px/1 Karla,sans-serif;letter-spacing:.18em;color:#8A8272">NOTES
             <textarea rows="3" value="{{ inquiryProduct }}" onChange="{{ setInquiry }}" placeholder="Which products, volumes, packing format and any organic requirement…" style="border:1px solid #C9BEA6;background:#FFFDF9;padding:13px;font:400 14.5px/1.55 Karla,sans-serif;letter-spacing:0;resize:vertical" style-focus="border-color:#C2601F;outline:none"></textarea>
+          </label>
+          <label style="display:flex;gap:12px;align-items:flex-start;margin-top:4px;cursor:pointer">
+            <input type="checkbox" style="margin-top:3px;width:17px;height:17px;flex:none;accent-color:#C2601F;cursor:pointer">
+            <span style="font-size:12.5px;line-height:1.6;color:#5A5A4E;text-wrap:pretty">By submitting, you authorize Adashire LLC to text/call the number above for promotional messages, possibly using automated means. Msg/data rates apply, msg frequency varies. Consent is not a condition of purchase. See <a href="terms.html" style="color:#C2601F">terms</a> and <a href="privacy.html" style="color:#C2601F">privacy policy</a>. Text HELP for help and STOP to unsubscribe.</span>
           </label>
           <button onClick="{{ send }}" style="margin-top:4px;background:#C2601F;color:#F7F2E8;border:none;padding:16px;font:600 11.5px Karla,sans-serif;letter-spacing:.16em;cursor:pointer" style-hover="background:#1A1A16">SEND REQUEST</button>
           <p style="margin:0;font-size:12px;line-height:1.5;color:#8A8272">We quote trade volumes; samples are arranged for confirmed commercial inquiries.</p>
