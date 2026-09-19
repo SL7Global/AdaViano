@@ -47,8 +47,9 @@
   @keyframes wf-curtain{0%{transform:scaleY(1)}100%{transform:scaleY(0)}}
   @keyframes wf-rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  chat-widget{display:block;max-width:560px;margin:0 auto;padding:0 20px}
 </style>
-<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6aac9fe5aaad87c6c4584698" data-source="WEB_USER"></script>
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6aacadac136b4b0826f5fd6d"></script>
 </helmet>
 
 <div style="max-width:100%;overflow-x:hidden">
@@ -688,6 +689,7 @@
       <div style="display:grid;gap:18px;font-size:15px;color:#33332B">
         <div><span style="display:block;font:600 10px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F;margin-bottom:6px">EMAIL</span><a href="mailto:info@adaviano.com" style="color:#33332B">info@adaviano.com</a></div>
         <div><span style="display:block;font:600 10px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F;margin-bottom:6px">ADDRESS</span>125 Town Park Drive, Suite 300<br>Kennesaw, GA 30144</div>
+        <div><span style="display:block;font:600 10px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F;margin-bottom:6px">CHAT</span><a href="#chat" onClick="{{ openChat }}" style="color:#33332B">Chat with us</a></div>
       </div>
     </div>
     <div style="background:#FFFCF5;border:1px solid #1A1A16;padding:36px">
@@ -768,6 +770,7 @@
     <div style="display:grid;gap:9px;font-size:13.5px;align-content:start">
       <div style="font:600 10px/1 Karla,sans-serif;letter-spacing:.2em;color:#E9B877;margin-bottom:6px">GET IN TOUCH</div>
       <a href="mailto:info@adaviano.com" style="color:#C8C2B2">info@adaviano.com</a>
+      <a href="#chat" onClick="{{ openChat }}" style="color:#C8C2B2">Chat with us</a>
       <span style="color:#C8C2B2;line-height:1.6">125 Town Park Drive, Suite 300<br>Kennesaw, GA 30144</span>
     </div>
   </div>
@@ -778,6 +781,15 @@
     <span style="margin-left:auto">Product of Turkey</span>
   </div>
 </footer>
+
+<section id="chat" data-screen-label="Chat" style="background:#EFE6D4;border-top:1px solid #1A1A16;padding:64px 0 8px">
+  <div style="max-width:560px;margin:0 auto;padding:0 20px">
+    <p style="margin:0 0 12px;font:600 11px/1 Karla,sans-serif;letter-spacing:.24em;color:#C2601F">CHAT WITH US</p>
+    <h2 style="margin:0;font-family:Newsreader,serif;font-weight:200;font-size:clamp(26px,3vw,40px);line-height:1.05;letter-spacing:-.02em;color:#1A1A16">Quicker than a form</h2>
+    <p style="margin:14px 0 0;font-size:15.5px;line-height:1.7;color:#4A4A40;text-wrap:pretty">Send us a message and we will pick it up during US business hours.</p>
+  </div>
+</section>
+<div style="background:#EFE6D4;padding:20px 0 64px"></div>
 
 </div>
 </x-dc>
@@ -1182,6 +1194,11 @@ class Component extends DCLogic {
       notSent: !this.state.sent,
       inquiryProduct: this.state.inquiry,
       goRfq: (e) => { if (e && e.preventDefault) e.preventDefault(); this.scrollToRfq(); },
+      openChat: (e) => {
+        if (e && e.preventDefault) e.preventDefault();
+        const target = document.getElementById("chat");
+        if (target) window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 70, behavior: "smooth" });
+      },
       setInquiry: (e) => this.setState({ inquiry: e.target.value }),
       send: () => this.setState({ sent: true })
     };
