@@ -194,7 +194,7 @@
           <p style="margin:12px 0 0;font-size:14.5px;line-height:1.6;color:#4A4A40;text-wrap:pretty">Whole sundried and diced apricots alike are described as packed with vitamins — the reason they read as a wellness snack, not a confection.</p>
         </div>
         <div style="background:#F7F2E8;padding:26px 24px">
-          <div style="font-family:Newsreader,serif;font-weight:200;font-size:34px;line-height:1;color:#C2601F">Fibre</div>
+          <div style="font-family:Newsreader,serif;font-weight:200;font-size:34px;line-height:1;color:#C2601F">Fiber</div>
           <p style="margin:12px 0 0;font-size:14.5px;line-height:1.6;color:#4A4A40;text-wrap:pretty">Naturally high in fiber, which is what makes dried apricot a staple of breakfast cereals, bars and trail mixes.</p>
         </div>
         <div style="background:#F7F2E8;padding:26px 24px">
@@ -290,7 +290,7 @@
     <div style="border-top:2px solid #1A1A16;padding-top:16px">
       <div style="font-family:Newsreader,serif;font-weight:200;font-size:64px;line-height:1;color:#C2601F"><span data-count="85">0</span>%</div>
       <div style="margin-top:8px;font-size:15px;line-height:1.35;color:#1A1A16;font-weight:600">of the world’s dried apricots come from Malatya</div>
-      <p style="margin:10px 0 0;font-size:13.5px;line-height:1.6;color:#4A4A40;text-wrap:pretty">Dried apricots are grown mainly in Malatya, which accounts for 85% of world production. Treated with sulphur they keep their bright orange color; dried naturally they turn brown and take on a different texture.</p>
+      <p style="margin:10px 0 0;font-size:13.5px;line-height:1.6;color:#4A4A40;text-wrap:pretty">Dried apricots are grown mainly in Malatya, which accounts for 85% of world production. Treated with sulfur they keep their bright orange color; dried naturally they turn brown and take on a different texture.</p>
     </div>
     <div style="border-top:2px solid #1A1A16;padding-top:16px">
       <div style="font-family:Newsreader,serif;font-weight:200;font-size:64px;line-height:1;color:#C2601F"><span data-count="1975">0</span></div>
@@ -651,13 +651,74 @@
 </section>
 
 <section style="max-width:1440px;margin:64px auto 0;padding:0 40px">
-  <div style="border:1px solid #1A1A16;background:#F3E7D7;padding:34px 32px;display:grid;grid-template-columns:minmax(0,430px) minmax(0,1fr);gap:44px;align-items:center">
-    <img loading="lazy" decoding="async" src="{{ productBadges }}" alt="{{ productBadgeAlt }}" style="width:100%;max-width:410px;height:auto;display:block;justify-self:start">
+  <div style="border:1px solid #1A1A16;background:#FFFCF5;padding:34px 32px;display:grid;grid-template-columns:minmax(0,1fr);gap:34px">
+    <div>
+    <sc-if value="{{ typeOrganic }}" hint-placeholder-val="{{ false }}">
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center">
+        <span style="display:grid;place-items:center;width:58px;height:58px;border:1px solid #C9BEA6;border-radius:50%;background:#FFFCF5"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#C2601F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 17.5c0-1.2 1-2.2 2.2-2.2 1.2 0 2.2 1 2.2 2.2v3.1c0 3.2 3 5.4 7.1 5.4s7.1-2.2 7.1-5.4v-3.1c0-1.2 1-2.2 2.2-2.2 1.2 0 2.2 1 2.2 2.2v3.6c0 4.9-4.9 8.3-11.5 8.3S4.5 26 4.5 21.1Z"/><path d="M16 14.6c-.3-3 1.6-5.3 5.3-5.8.5 3.4-1.7 5.6-5.3 5.8Z"/><path d="M15.7 14.6c.2-2.2-.8-3.9-2.9-4.9" /><path d="M16 14.6V4.2"/></svg></span>
+        <span style="font-size:12.5px;line-height:1.35;color:#3E3E34">Organic<br>Certified</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center">
+        <span style="display:grid;place-items:center;width:58px;height:58px;border:1px solid #C9BEA6;border-radius:50%;background:#FFFCF5"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#C2601F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.6 4.4h8.8v2.6h-8.8z"/><path d="M10.6 9.6c0-1.4 1.2-2.6 2.6-2.6h5.6c1.4 0 2.6 1.2 2.6 2.6v13.2c0 1.6-1.3 2.9-2.9 2.9h-5c-1.6 0-2.9-1.3-2.9-2.9z"/><path d="M10.8 15.4c1.8-1.6 3.6-1.6 5.3 0 1.8 1.6 3.5 1.6 5.3 0"/></svg></span>
+        <span style="font-size:12.5px;line-height:1.35;color:#3E3E34">Small Batch<br>Crafted</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center">
+        <span style="display:grid;place-items:center;width:58px;height:58px;border:1px solid #C9BEA6;border-radius:50%;background:#FFFCF5"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#C2601F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12.4" cy="19.6" r="4.4"/><circle cx="20.4" cy="17.4" r="3.6"/><path d="M12.4 15.2c-.4-3.2-2.4-5-6-5.3"/><path d="M20.4 13.8c.3-2.6 2-4.2 5-4.6"/><path d="M12.6 15.1c1.6-1.6 3.6-2 6-1.3"/></svg></span>
+        <span style="font-size:12.5px;line-height:1.35;color:#3E3E34">Rich Fruit<br>Flavor</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center">
+        <span style="display:grid;place-items:center;width:58px;height:58px;border:1px solid #C9BEA6;border-radius:50%;background:#FFFCF5"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#C2601F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.4 12.9c0-2.7 3.8-4.9 8.6-4.9s8.6 2.2 8.6 4.9c0 1.5-1.2 2.6-2.7 2.6h-.6v8.6c0 .9-.8 1.7-1.7 1.7h-6.2c-.9 0-1.7-.8-1.7-1.7v-8.6h-.6c-1.5 0-2.7-1.1-2.7-2.6Z"/></svg></span>
+        <span style="font-size:12.5px;line-height:1.35;color:#3E3E34">Perfect for<br>Breakfast</span>
+      </div>
+    </div>
+    </sc-if>
+    <sc-if value="{{ typeTraditional }}" hint-placeholder-val="{{ false }}">
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center">
+        <span style="display:grid;place-items:center;width:58px;height:58px;border:1px solid #C9BEA6;border-radius:50%;background:#FFFCF5"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#C2601F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 17.5c0-1.2 1-2.2 2.2-2.2 1.2 0 2.2 1 2.2 2.2v3.1c0 3.2 3 5.4 7.1 5.4s7.1-2.2 7.1-5.4v-3.1c0-1.2 1-2.2 2.2-2.2 1.2 0 2.2 1 2.2 2.2v3.6c0 4.9-4.9 8.3-11.5 8.3S4.5 26 4.5 21.1Z"/><path d="M16 14.6c-.3-3 1.6-5.3 5.3-5.8.5 3.4-1.7 5.6-5.3 5.8Z"/><path d="M15.7 14.6c.2-2.2-.8-3.9-2.9-4.9" /><path d="M16 14.6V4.2"/></svg></span>
+        <span style="font-size:12.5px;line-height:1.35;color:#3E3E34">Traditional<br>Craft</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center">
+        <span style="display:grid;place-items:center;width:58px;height:58px;border:1px solid #C9BEA6;border-radius:50%;background:#FFFCF5"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#C2601F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.6 4.4h8.8v2.6h-8.8z"/><path d="M10.6 9.6c0-1.4 1.2-2.6 2.6-2.6h5.6c1.4 0 2.6 1.2 2.6 2.6v13.2c0 1.6-1.3 2.9-2.9 2.9h-5c-1.6 0-2.9-1.3-2.9-2.9z"/><path d="M10.8 15.4c1.8-1.6 3.6-1.6 5.3 0 1.8 1.6 3.5 1.6 5.3 0"/></svg></span>
+        <span style="font-size:12.5px;line-height:1.35;color:#3E3E34">Small Batch<br>Crafted</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center">
+        <span style="display:grid;place-items:center;width:58px;height:58px;border:1px solid #C9BEA6;border-radius:50%;background:#FFFCF5"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#C2601F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12.4" cy="19.6" r="4.4"/><circle cx="20.4" cy="17.4" r="3.6"/><path d="M12.4 15.2c-.4-3.2-2.4-5-6-5.3"/><path d="M20.4 13.8c.3-2.6 2-4.2 5-4.6"/><path d="M12.6 15.1c1.6-1.6 3.6-2 6-1.3"/></svg></span>
+        <span style="font-size:12.5px;line-height:1.35;color:#3E3E34">Rich Fruit<br>Flavor</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center">
+        <span style="display:grid;place-items:center;width:58px;height:58px;border:1px solid #C9BEA6;border-radius:50%;background:#FFFCF5"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#C2601F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.4 12.9c0-2.7 3.8-4.9 8.6-4.9s8.6 2.2 8.6 4.9c0 1.5-1.2 2.6-2.7 2.6h-.6v8.6c0 .9-.8 1.7-1.7 1.7h-6.2c-.9 0-1.7-.8-1.7-1.7v-8.6h-.6c-1.5 0-2.7-1.1-2.7-2.6Z"/></svg></span>
+        <span style="font-size:12.5px;line-height:1.35;color:#3E3E34">Perfect for<br>Breakfast</span>
+      </div>
+    </div>
+    </sc-if>
+    <sc-if value="{{ typeNatural }}" hint-placeholder-val="{{ false }}">
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center">
+        <span style="display:grid;place-items:center;width:58px;height:58px;border:1px solid #C9BEA6;border-radius:50%;background:#FFFCF5"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#C2601F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 26c-4.3 0-7.7-3.2-7.7-7.2 0-4.4 4-8 7.7-13.2 3.7 5.2 7.7 8.8 7.7 13.2 0 4-3.4 7.2-7.7 7.2Z"/><path d="M6.6 6.2 25.4 25.8"/></svg></span>
+        <span style="font-size:12.5px;line-height:1.35;color:#3E3E34">No Added<br>Refined Sugar</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center">
+        <span style="display:grid;place-items:center;width:58px;height:58px;border:1px solid #C9BEA6;border-radius:50%;background:#FFFCF5"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#C2601F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.6 4.4h8.8v2.6h-8.8z"/><path d="M10.6 9.6c0-1.4 1.2-2.6 2.6-2.6h5.6c1.4 0 2.6 1.2 2.6 2.6v13.2c0 1.6-1.3 2.9-2.9 2.9h-5c-1.6 0-2.9-1.3-2.9-2.9z"/><path d="M10.8 15.4c1.8-1.6 3.6-1.6 5.3 0 1.8 1.6 3.5 1.6 5.3 0"/></svg></span>
+        <span style="font-size:12.5px;line-height:1.35;color:#3E3E34">Small Batch<br>Crafted</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center">
+        <span style="display:grid;place-items:center;width:58px;height:58px;border:1px solid #C9BEA6;border-radius:50%;background:#FFFCF5"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#C2601F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.6 23.6 12 10.8l4.6 6.8 2.8-3.9 9 9.9z"/><path d="M12 10.8l3.2 4.7"/><circle cx="23.2" cy="8.4" r="2.4"/></svg></span>
+        <span style="font-size:12.5px;line-height:1.35;color:#3E3E34">Wild-<br>Harvested</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center">
+        <span style="display:grid;place-items:center;width:58px;height:58px;border:1px solid #C9BEA6;border-radius:50%;background:#FFFCF5"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#C2601F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.8 26.4c-6.6-3.2-8.6-9.4-6-16.8 7.4-2.4 13.3.4 16 7.4-3.4 6.8-8.6 9.4-10 9.4Z"/><path d="M6.6 27.4c3.2-5.4 7-9.2 11.4-11.4"/></svg></span>
+        <span style="font-size:12.5px;line-height:1.35;color:#3E3E34">Pure &amp; Clean<br>Ingredients</span>
+      </div>
+    </div>
+    </sc-if>
+    </div>
     <div>
       <div style="font:600 10.5px/1 Karla,sans-serif;letter-spacing:.2em;color:#C2601F">FREE FROM</div>
       <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:16px">
         <sc-for list="{{ freeFrom }}" as="x" hint-placeholder-count="9">
-          <span style="border:1px solid #B9AC90;color:#3E3E34;padding:8px 14px;font:600 11px/1 Karla,sans-serif;letter-spacing:.12em">{{ x }}</span>
+          <span style="border:1px solid #C9BEA6;color:#4A4A40;padding:8px 14px;font:600 11px/1 Karla,sans-serif;letter-spacing:.12em">{{ x }}</span>
         </sc-for>
       </div>
     </div>
@@ -877,7 +938,7 @@ class Component extends DCLogic {
           ? "A classic " + low + " spread with a rich, nostalgic taste and a smooth, comforting finish. Ideal for breakfast, pastries, and everyday enjoyment."
           : "Naturally sweet and fruit-forward, crafted for a clean taste profile with balanced " + low + " character. Perfect for toast, yogurt, and desserts.",
         benefits: fr.benefits, fruitName: fr.name,
-        jars: t.jars, badges: t.badges, badgeAlt: t.badgeAlt,
+        jars: t.jars, type: t.key,
         specs: specs
       });
     }));
@@ -1224,8 +1285,9 @@ class Component extends DCLogic {
       productNoImg: !!(cur && !cur.img),
       productIsFruit: !!(cur && cur.isFruit),
       jarSizes: (cur && cur.jars) || [],
-      productBadges: (cur && cur.badges) || "",
-      productBadgeAlt: (cur && cur.badgeAlt) || "",
+      typeOrganic: !!(cur && cur.type === "organic"),
+      typeTraditional: !!(cur && cur.type === "traditional"),
+      typeNatural: !!(cur && cur.type === "natural"),
       others: cur ? withUrl.filter((p) => p.slug !== cur.slug).map((p) => ({ ...p, fit: "cover", pad: "0" })) : [],
       apricots: withUrl.filter((p) => p.group === "Apricots"),
       oil: withUrl.filter((p) => p.group === "Olive Oil"),
